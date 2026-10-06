@@ -287,6 +287,144 @@
       filter: contrast(1.04) saturate(1.05);
     }
 
+    /* Custom Mouse Pointer Animation */
+    @media (hover: hover) and (pointer: fine) {
+      body, a, button, input, textarea, select, [role="button"], .btn, .chip, .project-card, .skill-card, .credential-card, .service-card, .contact-card, .social-icon, .view-more-link, .feedback-card, .tool-badge, .tab-btn {
+        cursor: none !important;
+      }
+    }
+
+    .custom-cursor-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      opacity: 0;
+      will-change: transform, opacity;
+      transform: translate3d(-100px, -100px, 0);
+      transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    #custom-cursor-dot {
+      z-index: 100000;
+    }
+
+    #custom-cursor-dot .dot-core {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #FFFFFF;
+      box-shadow: 0 0 10px #FBBF24, 0 0 20px rgba(251, 191, 36, 0.85);
+      transform: translate(-50%, -50%);
+      transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+                  background-color 0.2s ease,
+                  box-shadow 0.2s ease;
+    }
+
+    #custom-cursor-follower {
+      z-index: 99999;
+    }
+
+    #custom-cursor-follower .follower-ring {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 1.5px solid rgba(251, 191, 36, 0.55);
+      background: rgba(251, 191, 36, 0.04);
+      box-shadow: 0 0 16px rgba(251, 191, 36, 0.18);
+      transform: translate(-50%, -50%);
+      transition: width 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+                  height 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+                  border-color 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+                  background-color 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+                  box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.2s ease;
+    }
+
+    /* Hovering interactive elements */
+    body.cursor-hover #custom-cursor-follower .follower-ring {
+      width: 58px;
+      height: 58px;
+      border-color: rgba(251, 191, 36, 0.95);
+      background: rgba(251, 191, 36, 0.14);
+      box-shadow: 0 0 28px rgba(251, 191, 36, 0.45);
+      backdrop-filter: blur(2px);
+      -webkit-backdrop-filter: blur(2px);
+    }
+
+    body.cursor-hover #custom-cursor-dot .dot-core {
+      transform: translate(-50%, -50%) scale(1.6);
+      background: #FBBF24;
+      box-shadow: 0 0 14px #FBBF24, 0 0 26px rgba(245, 158, 11, 0.95);
+    }
+
+    /* Click Active State */
+    body.cursor-active #custom-cursor-follower .follower-ring {
+      transform: translate(-50%, -50%) scale(0.82);
+      border-color: #F59E0B;
+      background: rgba(245, 158, 11, 0.35);
+      box-shadow: 0 0 24px rgba(245, 158, 11, 0.65);
+    }
+
+    body.cursor-active #custom-cursor-dot .dot-core {
+      transform: translate(-50%, -50%) scale(0.65);
+    }
+
+    /* Click Ripple Shockwave */
+    .cursor-click-ripple {
+      position: fixed;
+      pointer-events: none;
+      border-radius: 50%;
+      border: 1.5px solid rgba(251, 191, 36, 0.9);
+      box-shadow: 0 0 20px rgba(251, 191, 36, 0.65);
+      z-index: 99998;
+      transform: translate(-50%, -50%) scale(0.2);
+      animation: cursorRippleAnim 0.6s cubic-bezier(0.12, 0.8, 0.32, 1) forwards;
+    }
+
+    @keyframes cursorRippleAnim {
+      0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(0.2);
+      }
+      100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(2.2);
+      }
+    }
+
+    /* Trailing Ember Particle */
+    .cursor-trail-particle {
+      position: fixed;
+      pointer-events: none;
+      border-radius: 50%;
+      background: #FBBF24;
+      box-shadow: 0 0 8px #F59E0B, 0 0 14px rgba(251, 191, 36, 0.6);
+      z-index: 99997;
+      transform: translate(-50%, -50%);
+      animation: trailFadeAnim 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    @keyframes trailFadeAnim {
+      0% {
+        opacity: 0.85;
+        transform: translate(-50%, -50%) scale(1);
+      }
+      100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.15) translateY(10px);
+      }
+    }
+
+    /* Disable custom cursor entirely on mobile touch devices */
+    @media (pointer: coarse) {
+      .custom-cursor-container,
+      .cursor-click-ripple,
+      .cursor-trail-particle {
+        display: none !important;
+      }
+    }
+
     /* Hero interactive items above the cutout */
     .hero-grid {
       position: relative;
@@ -2862,6 +3000,141 @@
 
       // Start animation loop
       requestAnimationFrame(animationLoop);
+    })();
+  </script>
+
+  <!-- Custom Mouse Pointer Elements -->
+  <div id="custom-cursor-dot" class="custom-cursor-container"><div class="dot-core"></div></div>
+  <div id="custom-cursor-follower" class="custom-cursor-container"><div class="follower-ring"></div></div>
+
+  <!-- Custom Mouse Pointer Animation Controller -->
+  <script>
+    (function initCustomCursor() {
+      // Respect touch / coarse pointer devices
+      if (window.matchMedia && window.matchMedia('(pointer: coarse)').matches) return;
+
+      const dot = document.getElementById('custom-cursor-dot');
+      const follower = document.getElementById('custom-cursor-follower');
+      if (!dot || !follower) return;
+
+      let mouseX = -100;
+      let mouseY = -100;
+      let followerX = -100;
+      let followerY = -100;
+      let isVisible = false;
+      let isHovering = false;
+      let lastParticleX = -100;
+      let lastParticleY = -100;
+
+      function onMouseMove(e) {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+
+        if (!isVisible) {
+          isVisible = true;
+          dot.style.opacity = '1';
+          follower.style.opacity = '1';
+          followerX = mouseX;
+          followerY = mouseY;
+        }
+
+        dot.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
+
+        // Check if cursor moved fast enough to spawn delicate amber stardust embers
+        const dist = Math.hypot(mouseX - lastParticleX, mouseY - lastParticleY);
+        if (dist > 36) {
+          lastParticleX = mouseX;
+          lastParticleY = mouseY;
+          createTrailParticle(mouseX, mouseY);
+        }
+      }
+
+      function createTrailParticle(x, y) {
+        const p = document.createElement('div');
+        p.className = 'cursor-trail-particle';
+        const jitterX = (Math.random() - 0.5) * 8;
+        const jitterY = (Math.random() - 0.5) * 8;
+        p.style.left = (x + jitterX) + 'px';
+        p.style.top = (y + jitterY) + 'px';
+        const size = Math.random() * 2.5 + 2;
+        p.style.width = size + 'px';
+        p.style.height = size + 'px';
+        document.body.appendChild(p);
+        setTimeout(() => {
+          if (p.parentNode) p.parentNode.removeChild(p);
+        }, 500);
+      }
+
+      function createClickRipple(x, y) {
+        const ripple = document.createElement('div');
+        ripple.className = 'cursor-click-ripple';
+        ripple.style.left = x + 'px';
+        ripple.style.top = y + 'px';
+        ripple.style.width = '38px';
+        ripple.style.height = '38px';
+        document.body.appendChild(ripple);
+        setTimeout(() => {
+          if (ripple.parentNode) ripple.parentNode.removeChild(ripple);
+        }, 620);
+      }
+
+      function onMouseDown(e) {
+        document.body.classList.add('cursor-active');
+        createClickRipple(e.clientX, e.clientY);
+      }
+
+      function onMouseUp() {
+        document.body.classList.remove('cursor-active');
+      }
+
+      function onMouseLeave() {
+        isVisible = false;
+        dot.style.opacity = '0';
+        follower.style.opacity = '0';
+      }
+
+      function onMouseEnter() {
+        isVisible = true;
+        dot.style.opacity = '1';
+        follower.style.opacity = '1';
+      }
+
+      // Check interactive elements on hover (buttons, cards, links, tags)
+      function checkHover(e) {
+        const target = e.target;
+        if (!target) return;
+        const interactive = target.closest('a, button, input, textarea, select, [role="button"], .btn, .chip, .project-card, .skill-card, .credential-card, .service-card, .contact-card, .social-icon, .view-more-link, .feedback-card, .tool-badge, .tab-btn, .nav-status');
+        if (interactive) {
+          if (!isHovering) {
+            isHovering = true;
+            document.body.classList.add('cursor-hover');
+          }
+        } else {
+          if (isHovering) {
+            isHovering = false;
+            document.body.classList.remove('cursor-hover');
+          }
+        }
+      }
+
+      // Smooth Physics Damping Follower Loop
+      function renderFollower() {
+        if (isVisible) {
+          followerX += (mouseX - followerX) * 0.18;
+          followerY += (mouseY - followerY) * 0.18;
+          follower.style.transform = `translate3d(${followerX}px, ${followerY}px, 0)`;
+        }
+        requestAnimationFrame(renderFollower);
+      }
+
+      window.addEventListener('mousemove', onMouseMove, { passive: true });
+      window.addEventListener('mousemove', checkHover, { passive: true });
+      window.addEventListener('mousedown', onMouseDown, { passive: true });
+      window.addEventListener('mouseup', onMouseUp, { passive: true });
+      document.addEventListener('mouseleave', onMouseLeave, { passive: true });
+      document.addEventListener('mouseenter', onMouseEnter, { passive: true });
+
+      requestAnimationFrame(renderFollower);
     })();
   </script>
 </body>
