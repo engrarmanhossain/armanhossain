@@ -1,0 +1,7 @@
+extracted_content.txt
+*.pyc
+__pycache__/
+.DS_Store
+Thumbs.db
+temp*
+test*
