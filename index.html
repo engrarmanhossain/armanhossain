@@ -1341,7 +1341,7 @@
     }
 
     /* ==========================================================================
-       SECTION: SEND A MESSAGE / GET IN TOUCH
+       SECTION: SEND A MESSAGE / GET IN TOUCH - No Backing Panels
        ========================================================================== */
     .message-section {
       margin-bottom: 90px;
@@ -1351,35 +1351,23 @@
     .message-grid {
       display: grid;
       grid-template-columns: 1fr 1.35fr;
-      gap: 32px;
-      align-items: stretch;
+      gap: 48px;
+      align-items: start;
       margin-top: 24px;
     }
 
-    /* Direct Channels Card (Left Column) */
+    /* Direct Channels (Left Column) - No Backing Panels */
     .direct-channels-card {
-      background: rgba(18, 12, 16, 0.65);
-      border: 1px solid rgba(245, 158, 11, 0.22);
-      border-radius: 12px;
-      padding: 28px 26px;
+      background: transparent;
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+      padding: 0;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .direct-channels-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 3px;
-      background: linear-gradient(90deg, #F59E0B, #DC2626);
     }
 
     .channels-header-badge {
@@ -1391,11 +1379,12 @@
       letter-spacing: 0.14em;
       text-transform: uppercase;
       color: #FBBF24;
-      background: rgba(245, 158, 11, 0.1);
-      border: 1px solid rgba(245, 158, 11, 0.3);
+      background: transparent;
+      border: 1px solid rgba(245, 158, 11, 0.35);
       padding: 4px 10px;
       border-radius: 20px;
       margin-bottom: 12px;
+      width: fit-content;
     }
 
     .channels-title {
@@ -1416,7 +1405,7 @@
     .direct-links-list {
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 8px;
       margin-bottom: 22px;
     }
 
@@ -1424,18 +1413,19 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 10px 14px;
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid rgba(255, 255, 255, 0.07);
-      border-radius: 8px;
+      padding: 10px 0;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 0;
       text-decoration: none;
       transition: all 0.25s ease;
       color: #F8FAFC;
     }
 
     .channel-item:hover {
-      background: rgba(245, 158, 11, 0.1);
-      border-color: rgba(245, 158, 11, 0.4);
+      background: transparent;
+      border-bottom-color: rgba(245, 158, 11, 0.5);
       transform: translateX(4px);
     }
 
@@ -1446,9 +1436,9 @@
     }
 
     .channel-icon {
-      width: 32px;
-      height: 32px;
-      border-radius: 8px;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -1456,21 +1446,21 @@
     }
 
     .channel-icon.email-icon {
-      background: rgba(245, 158, 11, 0.15);
+      background: rgba(245, 158, 11, 0.12);
       color: #FBBF24;
-      border: 1px solid rgba(245, 158, 11, 0.3);
+      border: 1px solid rgba(245, 158, 11, 0.4);
     }
 
     .channel-icon.wa-icon {
-      background: rgba(37, 211, 102, 0.15);
+      background: rgba(37, 211, 102, 0.12);
       color: #25D366;
-      border: 1px solid rgba(37, 211, 102, 0.35);
+      border: 1px solid rgba(37, 211, 102, 0.4);
     }
 
     .channel-icon.fiverr-icon {
-      background: rgba(29, 191, 115, 0.15);
+      background: rgba(29, 191, 115, 0.12);
       color: #1DBF73;
-      border: 1px solid rgba(29, 191, 115, 0.35);
+      border: 1px solid rgba(29, 191, 115, 0.4);
     }
 
     .channel-label {
@@ -1499,11 +1489,11 @@
       transform: translateX(3px);
     }
 
-    /* Topic Tags Selector */
+    /* Topic Tags Selector - Transparent */
     .quick-topics {
       margin-top: 14px;
       padding-top: 14px;
-      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
     }
 
     .quick-topics-label {
@@ -1525,10 +1515,10 @@
       font-size: 10px;
       font-weight: 600;
       padding: 5px 11px;
-      border-radius: 12px;
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      color: #CBD5E1;
+      border-radius: 20px;
+      background: transparent;
+      border: 1px solid rgba(245, 158, 11, 0.28);
+      color: var(--text-slate);
       cursor: pointer;
       transition: all 0.2s ease;
       user-select: none;
@@ -1536,40 +1526,29 @@
 
     .topic-chip:hover {
       background: rgba(245, 158, 11, 0.18);
-      border-color: #F59E0B;
+      border-color: var(--accent-amber);
       color: #FFFFFF;
       transform: translateY(-1px);
     }
 
     .topic-chip.active {
-      background: #F59E0B;
-      border-color: #F59E0B;
+      background: var(--accent-amber);
+      border-color: var(--accent-amber);
       color: #000000;
       font-weight: 700;
     }
 
-    /* Message Form Card (Right Column) */
+    /* Message Form Card (Right Column) - No Backing Panels */
     .message-form-card {
-      background: rgba(18, 12, 16, 0.65);
-      border: 1px solid rgba(245, 158, 11, 0.22);
-      border-radius: 12px;
-      padding: 28px 26px;
+      background: transparent;
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+      padding: 0;
       display: flex;
       flex-direction: column;
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-      position: relative;
-    }
-
-    .message-form-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 3px;
-      background: linear-gradient(90deg, #DC2626, #F59E0B);
     }
 
     .form-header-row {
@@ -1577,6 +1556,8 @@
       justify-content: space-between;
       align-items: center;
       margin-bottom: 18px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(245, 158, 11, 0.35);
     }
 
     .form-heading {
@@ -1595,8 +1576,8 @@
       font-weight: 700;
       letter-spacing: 0.1em;
       color: #34D399;
-      background: rgba(16, 185, 129, 0.12);
-      border: 1px solid rgba(16, 185, 129, 0.3);
+      background: transparent;
+      border: 1px solid rgba(16, 185, 129, 0.35);
       padding: 4px 10px;
       border-radius: 20px;
     }
@@ -1643,9 +1624,9 @@
     .form-select,
     .form-textarea {
       width: 100%;
-      background: rgba(10, 6, 8, 0.82);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: 8px;
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 6px;
       padding: 10px 14px;
       color: #F8FAFC;
       font-family: inherit;
@@ -1659,13 +1640,13 @@
     .form-select:focus,
     .form-textarea:focus {
       border-color: #F59E0B;
-      box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.25), 0 0 12px rgba(245, 158, 11, 0.15);
-      background: rgba(14, 8, 12, 0.95);
+      box-shadow: 0 0 12px rgba(245, 158, 11, 0.2);
+      background: rgba(245, 158, 11, 0.04);
     }
 
     .form-input::placeholder,
     .form-textarea::placeholder {
-      color: rgba(148, 163, 184, 0.55);
+      color: rgba(148, 163, 184, 0.5);
     }
 
     .form-select {
@@ -1711,7 +1692,7 @@
       letter-spacing: 0.1em;
       text-transform: uppercase;
       padding: 12px 20px;
-      border-radius: 8px;
+      border-radius: 6px;
       border: none;
       cursor: pointer;
       box-shadow: 0 4px 14px rgba(245, 158, 11, 0.35);
@@ -1737,7 +1718,7 @@
       letter-spacing: 0.1em;
       text-transform: uppercase;
       padding: 12px 20px;
-      border-radius: 8px;
+      border-radius: 6px;
       border: none;
       cursor: pointer;
       box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3);
@@ -1755,22 +1736,22 @@
       align-items: center;
       justify-content: center;
       gap: 6px;
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.18);
       color: #CBD5E1;
       font-size: 11px;
       font-weight: 700;
       letter-spacing: 0.08em;
       padding: 12px 16px;
-      border-radius: 8px;
+      border-radius: 6px;
       cursor: pointer;
       transition: all 0.2s ease;
     }
 
     .btn-copy-msg:hover {
-      background: rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.08);
       color: #FFFFFF;
-      border-color: rgba(255, 255, 255, 0.25);
+      border-color: rgba(255, 255, 255, 0.35);
     }
 
     /* Toast / Status Box */
@@ -1778,7 +1759,7 @@
       display: none;
       margin-top: 14px;
       padding: 10px 14px;
-      border-radius: 8px;
+      border-radius: 6px;
       font-size: 11.5px;
       font-weight: 600;
       line-height: 1.4;
@@ -1787,15 +1768,15 @@
 
     .msg-feedback.success {
       display: block;
-      background: rgba(16, 185, 129, 0.15);
-      border: 1px solid rgba(16, 185, 129, 0.4);
+      background: transparent;
+      border: 1px solid rgba(16, 185, 129, 0.5);
       color: #34D399;
     }
 
     .msg-feedback.error {
       display: block;
-      background: rgba(239, 68, 68, 0.15);
-      border: 1px solid rgba(239, 68, 68, 0.4);
+      background: transparent;
+      border: 1px solid rgba(239, 68, 68, 0.5);
       color: #F87171;
     }
 
@@ -3090,7 +3071,7 @@
       </div>
     </section>
 
-    <!-- 9. Section: DIRECT MESSAGE & INQUIRIES -->
+    <!-- 9. Section: DIRECT MESSAGE & INQUIRIES - No Backing Panels -->
     <section class="message-section" id="message-section">
       <div class="section-title-wrap">
         <h3 class="section-title">SEND A DIRECT MESSAGE</h3>
