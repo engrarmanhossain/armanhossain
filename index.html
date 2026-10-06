@@ -1340,6 +1340,489 @@
       transform: translateY(-2px);
     }
 
+    /* ==========================================================================
+       SECTION: SEND A MESSAGE / GET IN TOUCH
+       ========================================================================== */
+    .message-section {
+      margin-bottom: 90px;
+      position: relative;
+    }
+
+    .message-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.35fr;
+      gap: 32px;
+      align-items: stretch;
+      margin-top: 24px;
+    }
+
+    /* Direct Channels Card (Left Column) */
+    .direct-channels-card {
+      background: rgba(18, 12, 16, 0.65);
+      border: 1px solid rgba(245, 158, 11, 0.22);
+      border-radius: 12px;
+      padding: 28px 26px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .direct-channels-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, #F59E0B, #DC2626);
+    }
+
+    .channels-header-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #FBBF24;
+      background: rgba(245, 158, 11, 0.1);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      padding: 4px 10px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+    }
+
+    .channels-title {
+      font-family: var(--font-display);
+      font-size: 24px;
+      letter-spacing: 0.05em;
+      color: #FFFFFF;
+      margin: 0 0 8px;
+    }
+
+    .channels-desc {
+      font-size: 12px;
+      line-height: 1.6;
+      color: var(--text-slate);
+      margin-bottom: 20px;
+    }
+
+    .direct-links-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 22px;
+    }
+
+    .channel-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 14px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      color: #F8FAFC;
+    }
+
+    .channel-item:hover {
+      background: rgba(245, 158, 11, 0.1);
+      border-color: rgba(245, 158, 11, 0.4);
+      transform: translateX(4px);
+    }
+
+    .channel-item-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .channel-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .channel-icon.email-icon {
+      background: rgba(245, 158, 11, 0.15);
+      color: #FBBF24;
+      border: 1px solid rgba(245, 158, 11, 0.3);
+    }
+
+    .channel-icon.wa-icon {
+      background: rgba(37, 211, 102, 0.15);
+      color: #25D366;
+      border: 1px solid rgba(37, 211, 102, 0.35);
+    }
+
+    .channel-icon.fiverr-icon {
+      background: rgba(29, 191, 115, 0.15);
+      color: #1DBF73;
+      border: 1px solid rgba(29, 191, 115, 0.35);
+    }
+
+    .channel-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: #94A3B8;
+      text-transform: uppercase;
+    }
+
+    .channel-val {
+      font-size: 12px;
+      font-weight: 600;
+      color: #FFFFFF;
+      letter-spacing: 0.02em;
+    }
+
+    .channel-action-arrow {
+      font-size: 13px;
+      color: #94A3B8;
+      transition: transform 0.2s ease, color 0.2s ease;
+    }
+
+    .channel-item:hover .channel-action-arrow {
+      color: #FBBF24;
+      transform: translateX(3px);
+    }
+
+    /* Topic Tags Selector */
+    .quick-topics {
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .quick-topics-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: #94A3B8;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .quick-topics-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .topic-chip {
+      font-size: 10px;
+      font-weight: 600;
+      padding: 5px 11px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #CBD5E1;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      user-select: none;
+    }
+
+    .topic-chip:hover {
+      background: rgba(245, 158, 11, 0.18);
+      border-color: #F59E0B;
+      color: #FFFFFF;
+      transform: translateY(-1px);
+    }
+
+    .topic-chip.active {
+      background: #F59E0B;
+      border-color: #F59E0B;
+      color: #000000;
+      font-weight: 700;
+    }
+
+    /* Message Form Card (Right Column) */
+    .message-form-card {
+      background: rgba(18, 12, 16, 0.65);
+      border: 1px solid rgba(245, 158, 11, 0.22);
+      border-radius: 12px;
+      padding: 28px 26px;
+      display: flex;
+      flex-direction: column;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      position: relative;
+    }
+
+    .message-form-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, #DC2626, #F59E0B);
+    }
+
+    .form-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+
+    .form-heading {
+      font-family: var(--font-display);
+      font-size: 24px;
+      letter-spacing: 0.05em;
+      color: #FFFFFF;
+      margin: 0;
+    }
+
+    .form-status-indicator {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: #34D399;
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      padding: 4px 10px;
+      border-radius: 20px;
+    }
+
+    .form-status-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #34D399;
+      box-shadow: 0 0 6px #34D399;
+      animation: pulseDot 2s infinite ease-in-out;
+    }
+
+    .form-row-2col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 16px;
+    }
+
+    .form-group.no-margin {
+      margin-bottom: 0;
+    }
+
+    .form-label {
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #94A3B8;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .form-input,
+    .form-select,
+    .form-textarea {
+      width: 100%;
+      background: rgba(10, 6, 8, 0.82);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 8px;
+      padding: 10px 14px;
+      color: #F8FAFC;
+      font-family: inherit;
+      font-size: 12.5px;
+      transition: all 0.2s ease;
+      box-sizing: border-box;
+      outline: none;
+    }
+
+    .form-input:focus,
+    .form-select:focus,
+    .form-textarea:focus {
+      border-color: #F59E0B;
+      box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.25), 0 0 12px rgba(245, 158, 11, 0.15);
+      background: rgba(14, 8, 12, 0.95);
+    }
+
+    .form-input::placeholder,
+    .form-textarea::placeholder {
+      color: rgba(148, 163, 184, 0.55);
+    }
+
+    .form-select {
+      cursor: pointer;
+      appearance: none;
+      -webkit-appearance: none;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23F59E0B' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+      background-repeat: no-repeat;
+      background-position: right 12px center;
+      background-size: 14px;
+      padding-right: 36px;
+    }
+
+    .form-select option {
+      background: #120b0e;
+      color: #F8FAFC;
+      padding: 10px;
+    }
+
+    .form-textarea {
+      resize: vertical;
+      min-height: 95px;
+      line-height: 1.5;
+    }
+
+    .form-action-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 6px;
+    }
+
+    .btn-submit-email {
+      flex: 1 1 180px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+      color: #000000;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 12px 20px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(245, 158, 11, 0.35);
+      transition: all 0.25s ease;
+    }
+
+    .btn-submit-email:hover {
+      background: linear-gradient(135deg, #FBBF24 0%, #F59E0B 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(245, 158, 11, 0.5);
+    }
+
+    .btn-submit-whatsapp {
+      flex: 1 1 180px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: #25D366;
+      color: #FFFFFF;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 12px 20px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3);
+      transition: all 0.25s ease;
+    }
+
+    .btn-submit-whatsapp:hover {
+      background: #20BA5A;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
+    }
+
+    .btn-copy-msg {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #CBD5E1;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      padding: 12px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-copy-msg:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #FFFFFF;
+      border-color: rgba(255, 255, 255, 0.25);
+    }
+
+    /* Toast / Status Box */
+    .msg-feedback {
+      display: none;
+      margin-top: 14px;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-size: 11.5px;
+      font-weight: 600;
+      line-height: 1.4;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .msg-feedback.success {
+      display: block;
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.4);
+      color: #34D399;
+    }
+
+    .msg-feedback.error {
+      display: block;
+      background: rgba(239, 68, 68, 0.15);
+      border: 1px solid rgba(239, 68, 68, 0.4);
+      color: #F87171;
+    }
+
+    /* Nav Send Message Button in Top Bar */
+    .nav-msg-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(245, 158, 11, 0.12);
+      border: 1px solid rgba(245, 158, 11, 0.35);
+      color: #FBBF24;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      padding: 5px 12px;
+      border-radius: 16px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .nav-msg-btn:hover {
+      background: #F59E0B;
+      color: #000000;
+      box-shadow: 0 0 14px rgba(245, 158, 11, 0.4);
+      transform: translateY(-1px);
+    }
+
     /* Section: LET'S COLLABORATE / FOOTER - No Backing Panels */
     .footer-section {
       background: transparent;
@@ -1507,6 +1990,9 @@
       .credentials-grid {
         grid-template-columns: 1fr;
       }
+      .message-grid {
+        grid-template-columns: 1fr;
+      }
       .footer-section {
         grid-template-columns: 1fr;
       }
@@ -1536,6 +2022,23 @@
       }
       .tools-bar {
         flex-wrap: wrap;
+      }
+      .form-row-2col {
+        grid-template-columns: 1fr;
+      }
+      .form-action-row {
+        flex-direction: column;
+      }
+      .btn-submit-email,
+      .btn-submit-whatsapp,
+      .btn-copy-msg {
+        width: 100%;
+      }
+      .nav-msg-btn span {
+        display: none;
+      }
+      .nav-msg-btn {
+        padding: 6px 8px;
       }
     }
 
@@ -1811,9 +2314,17 @@
       <!-- 1. Top Bar -->
       <header class="top-nav">
         <div class="nav-left">ELECTRICAL ENGINEER & RESEARCHER PORTFOLIO</div>
-        <div class="nav-status">
-          <span class="status-dot"></span>
-          AVAILABLE FOR OPPORTUNITIES
+        <div style="display: flex; align-items: center; gap: 14px;">
+          <div class="nav-status">
+            <span class="status-dot"></span>
+            AVAILABLE FOR OPPORTUNITIES
+          </div>
+          <a href="#message-section" class="nav-msg-btn">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+            <span>SEND MESSAGE</span>
+          </a>
         </div>
       </header>
 
@@ -2579,7 +3090,166 @@
       </div>
     </section>
 
-    <!-- 9. Section: LET'S COLLABORATE / FOOTER -->
+    <!-- 9. Section: DIRECT MESSAGE & INQUIRIES -->
+    <section class="message-section" id="message-section">
+      <div class="section-title-wrap">
+        <h3 class="section-title">SEND A DIRECT MESSAGE</h3>
+        <div class="section-bar"></div>
+      </div>
+      <p style="font-size: 12.5px; color: var(--text-slate); margin: -10px 0 24px; max-width: 780px; line-height: 1.6;">
+        Have an engineering project, research collaboration, sub-station CAD inquiry, or graduate opportunity? Send a direct dispatch below or reach out instantly via WhatsApp or Email.
+      </p>
+
+      <div class="message-grid">
+        <!-- Col 1: Direct Channels & Fast Topics -->
+        <div class="direct-channels-card">
+          <div>
+            <div class="channels-header-badge">
+              <span class="status-dot"></span>
+              Fast Response Desk
+            </div>
+            <h4 class="channels-title">DIRECT CHANNELS</h4>
+            <p class="channels-desc">
+              Preferred for urgent engineering reviews, architectural drafts, research inquiries, and project tenders.
+            </p>
+
+            <div class="direct-links-list">
+              <!-- Email Item -->
+              <a href="mailto:armanhossain.eee.info@gmail.com" class="channel-item">
+                <div class="channel-item-left">
+                  <div class="channel-icon email-icon">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                      <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="channel-label">Official Email</div>
+                    <div class="channel-val">armanhossain.eee.info@gmail.com</div>
+                  </div>
+                </div>
+                <span class="channel-action-arrow">&rarr;</span>
+              </a>
+
+              <!-- WhatsApp Item -->
+              <a href="https://wa.me/8801724472229?text=Hello%20Engr.%20Arman%20Hossain,%20I%20would%20like%20to%20discuss%20an%20engineering%20project." target="_blank" rel="noopener" class="channel-item">
+                <div class="channel-item-left">
+                  <div class="channel-icon wa-icon">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="channel-label">Direct WhatsApp</div>
+                    <div class="channel-val">+880 1724-472229</div>
+                  </div>
+                </div>
+                <span class="channel-action-arrow">&rarr;</span>
+              </a>
+
+              <!-- Fiverr Gig Item -->
+              <a href="https://www.fiverr.com/arman_ecap" target="_blank" rel="noopener" class="channel-item">
+                <div class="channel-item-left">
+                  <div class="channel-icon fiverr-icon">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <path d="M10 8h4M10 12h3M10 16h4"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="channel-label">Freelance Orders (Fiverr)</div>
+                    <div class="channel-val">fiverr.com/arman_ecap</div>
+                  </div>
+                </div>
+                <span class="channel-action-arrow">&rarr;</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Topic Autofills -->
+          <div class="quick-topics">
+            <div class="quick-topics-label">Click Topic to Autofill Form:</div>
+            <div class="quick-topics-chips">
+              <span class="topic-chip" onclick="selectTopic('Power Engineering & Substation Design')">⚡ Substation & SLD</span>
+              <span class="topic-chip" onclick="selectTopic('Architectural 3D Modeling (Revit / AutoCAD)')">🏛 3D BIM & Revit</span>
+              <span class="topic-chip" onclick="selectTopic('Academic Research & IEEE Collaboration')">🔬 IEEE Research</span>
+              <span class="topic-chip" onclick="selectTopic('Solar PV & Renewable Energy Systems')">☀️ Solar PV Setup</span>
+              <span class="topic-chip" onclick="selectTopic('General Engineering Inquiry')">💬 Consultation</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Col 2: Interactive Message Form Card -->
+        <div class="message-form-card">
+          <div class="form-header-row">
+            <h4 class="form-heading">DISPATCH MESSAGE</h4>
+            <div class="form-status-indicator">
+              <span class="form-status-dot"></span>
+              DIRECT DISPATCH
+            </div>
+          </div>
+
+          <form id="portfolio-msg-form" onsubmit="event.preventDefault();">
+            <div class="form-row-2col">
+              <div class="form-group no-margin">
+                <label class="form-label" for="msg-name">Your Name / Org *</label>
+                <input type="text" id="msg-name" class="form-input" placeholder="e.g. Dr. Rahman / Tesla Grid" required autocomplete="name">
+              </div>
+              <div class="form-group no-margin">
+                <label class="form-label" for="msg-email">Your Email Address *</label>
+                <input type="email" id="msg-email" class="form-input" placeholder="e.g. client@organization.com" required autocomplete="email">
+              </div>
+            </div>
+
+            <div class="form-group" style="margin-top: 14px;">
+              <label class="form-label" for="msg-category">Inquiry Subject / Domain</label>
+              <select id="msg-category" class="form-select">
+                <option value="Power Engineering & Substation Design">⚡ Power Engineering & Substation Design</option>
+                <option value="Architectural 3D Modeling (Revit / AutoCAD)">🏛 Architectural 3D Modeling (Revit / AutoCAD)</option>
+                <option value="Academic Research & IEEE Collaboration">🔬 Academic Research & IEEE Collaboration</option>
+                <option value="Solar PV & Renewable Energy Systems">☀️ Solar PV & Renewable Energy Systems</option>
+                <option value="General Engineering Inquiry">💬 General Engineering Inquiry / Consultation</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="msg-body">Message / Project Scope *</label>
+              <textarea id="msg-body" class="form-textarea" placeholder="Detail your project requirements, scope of work, timeline, or research collaboration questions..." required></textarea>
+            </div>
+
+            <div class="form-action-row">
+              <button type="button" class="btn-submit-email" onclick="handleSendEmail()">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                Send via Email
+              </button>
+
+              <button type="button" class="btn-submit-whatsapp" onclick="handleSendWhatsApp()">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                </svg>
+                Send via WhatsApp
+              </button>
+
+              <button type="button" class="btn-copy-msg" id="btn-copy-msg" onclick="handleCopyMessage()" title="Copy formatted message to clipboard">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                Copy Text
+              </button>
+            </div>
+
+            <!-- Interactive Feedback Toast -->
+            <div id="msg-feedback" class="msg-feedback"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. Section: LET'S COLLABORATE / FOOTER -->
     <footer class="footer-section">
       <!-- Col 1: Contact Info -->
       <div class="collab-info">
@@ -3103,7 +3773,7 @@
       function checkHover(e) {
         const target = e.target;
         if (!target) return;
-        const interactive = target.closest('a, button, input, textarea, select, [role="button"], .btn, .chip, .project-card, .skill-card, .credential-card, .service-card, .contact-card, .social-icon, .view-more-link, .feedback-card, .tool-badge, .tab-btn, .nav-status');
+        const interactive = target.closest('a, button, input, textarea, select, [role="button"], .btn, .chip, .project-card, .skill-card, .credential-card, .service-card, .contact-card, .social-icon, .view-more-link, .feedback-card, .tool-badge, .tab-btn, .nav-status, .topic-chip, .channel-item, .nav-msg-btn');
         if (interactive) {
           if (!isHovering) {
             isHovering = true;
@@ -3136,6 +3806,123 @@
 
       requestAnimationFrame(renderFollower);
     })();
+  </script>
+
+  <!-- Portfolio Message Form Dispatch Handler -->
+  <script>
+    function selectTopic(topic) {
+      var categorySelect = document.getElementById('msg-category');
+      if (categorySelect) {
+        categorySelect.value = topic;
+      }
+      var chips = document.querySelectorAll('.topic-chip');
+      chips.forEach(function(c) {
+        if (c.textContent.indexOf(topic.split(' ')[0]) !== -1) {
+          c.classList.add('active');
+        } else {
+          c.classList.remove('active');
+        }
+      });
+      var msgBody = document.getElementById('msg-body');
+      if (msgBody) {
+        msgBody.focus();
+      }
+    }
+
+    function showMsgFeedback(msg, isSuccess) {
+      var fb = document.getElementById('msg-feedback');
+      if (!fb) return;
+      fb.className = 'msg-feedback ' + (isSuccess ? 'success' : 'error');
+      fb.innerHTML = msg;
+      fb.style.display = 'block';
+    }
+
+    function validateMsgForm() {
+      var nameEl = document.getElementById('msg-name');
+      var emailEl = document.getElementById('msg-email');
+      var bodyEl = document.getElementById('msg-body');
+      
+      var name = (nameEl ? nameEl.value : '').trim();
+      var email = (emailEl ? emailEl.value : '').trim();
+      var body = (bodyEl ? bodyEl.value : '').trim();
+      
+      if (!name) {
+        showMsgFeedback('&#9888; Please enter your name or organization.', false);
+        if (nameEl) nameEl.focus();
+        return null;
+      }
+      if (!email || email.indexOf('@') === -1 || email.indexOf('.') === -1) {
+        showMsgFeedback('&#9888; Please enter a valid email address (e.g. name@domain.com).', false);
+        if (emailEl) emailEl.focus();
+        return null;
+      }
+      if (!body) {
+        showMsgFeedback('&#9888; Please describe your project requirements or message.', false);
+        if (bodyEl) bodyEl.focus();
+        return null;
+      }
+      var categoryEl = document.getElementById('msg-category');
+      var category = categoryEl ? categoryEl.value : 'General Engineering Inquiry';
+      return { name: name, email: email, category: category, body: body };
+    }
+
+    function handleSendEmail() {
+      var data = validateMsgForm();
+      if (!data) return;
+      var recipient = 'armanhossain.eee.info@gmail.com';
+      var subject = encodeURIComponent('[Portfolio Inquiry] ' + data.category + ' - ' + data.name);
+      var emailBody = encodeURIComponent(
+        'Dear Engr. Arman Hossain,\n\n' +
+        data.body + '\n\n' +
+        '--------------------------------------------------\n' +
+        'Sender Name: ' + data.name + '\n' +
+        'Contact Email: ' + data.email + '\n' +
+        'Inquiry Category: ' + data.category + '\n' +
+        'Sent via: armanhossain.github.io\n'
+      );
+      showMsgFeedback('&#10004; Launching your default email application with pre-addressed dispatch... If it doesn\'t open, you can send via WhatsApp or Copy Text.', true);
+      window.location.href = 'mailto:' + recipient + '?subject=' + subject + '&body=' + emailBody;
+    }
+
+    function handleSendWhatsApp() {
+      var data = validateMsgForm();
+      if (!data) return;
+      var phone = '8801724472229';
+      var text = encodeURIComponent(
+        '*New Inquiry via Portfolio*\n\n' +
+        '*Sender:* ' + data.name + '\n' +
+        '*Email:* ' + data.email + '\n' +
+        '*Domain:* ' + data.category + '\n\n' +
+        '*Message:*\n' + data.body
+      );
+      showMsgFeedback('&#10004; Redirecting to WhatsApp chat with Engr. Arman Hossain (+880 1724-472229)...', true);
+      window.open('https://wa.me/' + phone + '?text=' + text, '_blank');
+    }
+
+    function handleCopyMessage() {
+      var data = validateMsgForm();
+      if (!data) return;
+      var formatted = 
+        'Subject: [Portfolio Inquiry] ' + data.category + ' - ' + data.name + '\n\n' +
+        data.body + '\n\n' +
+        'Sender: ' + data.name + ' (' + data.email + ')\n' +
+        'Category: ' + data.category;
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(formatted).then(function() {
+          showMsgFeedback('&#10004; Formatted message copied to clipboard! You can paste it into any email client or chat.', true);
+          var btn = document.getElementById('btn-copy-msg');
+          if (btn) {
+            var orig = btn.innerHTML;
+            btn.innerHTML = '&#10004; Copied!';
+            setTimeout(function() { btn.innerHTML = orig; }, 2500);
+          }
+        }).catch(function() {
+          showMsgFeedback('&#9888; Clipboard permission denied. Please copy manually.', false);
+        });
+      } else {
+        showMsgFeedback('&#9888; Clipboard not available in this browser. Please copy manually.', false);
+      }
+    }
   </script>
 </body>
 </html>
