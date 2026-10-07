@@ -2265,146 +2265,6 @@
       text-shadow: 0 1px 4px rgba(0, 0, 0, 0.75);
       font-family: monospace;
     }
-    /* ═══════════════════════════════════════════════════════════
-       LANDING PAGE ENTRANCE ANIMATIONS
-       Play once after the preloader finishes.
-       All hero elements start hidden (opacity:0, offset, or scaled)
-       and animate in with staggered delays via .hero-revealed class.
-    ═══════════════════════════════════════════════════════════ */
-
-    /* ── Keyframes ────────────────────────────────────────── */
-    @keyframes heroFadeUp {
-      from { opacity: 0; transform: translateY(36px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes heroFadeDown {
-      from { opacity: 0; transform: translateY(-32px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes heroFadeLeft {
-      from { opacity: 0; transform: translateX(-48px); }
-      to   { opacity: 1; transform: translateX(0); }
-    }
-    @keyframes heroFadeRight {
-      from { opacity: 0; transform: translateX(48px); }
-      to   { opacity: 1; transform: translateX(0); }
-    }
-    @keyframes heroTitleReveal {
-      0%   { opacity: 0; letter-spacing: 0.25em; filter: blur(14px); transform: scaleX(1.12); }
-      60%  { opacity: 1; filter: blur(0px); }
-      100% { opacity: 1; letter-spacing: 0.04em; filter: blur(0px); transform: scaleX(1); }
-    }
-    @keyframes personCutoutReveal {
-      0%   { opacity: 0; transform: scale(1.06) translateY(24px); }
-      100% { opacity: 1; transform: scale(1) translateY(0); }
-    }
-    @keyframes glintSweep {
-      0%   { background-position: -200% center; }
-      100% { background-position: 300% center; }
-    }
-    @keyframes redLineBounce {
-      0%   { opacity: 0; transform: scaleX(0); transform-origin: left; }
-      70%  { transform: scaleX(1.15); }
-      100% { opacity: 1; transform: scaleX(1); }
-    }
-    @keyframes statCountUp {
-      from { opacity: 0; transform: translateY(12px) scale(0.85); }
-      to   { opacity: 1; transform: translateY(0) scale(1); }
-    }
-    @keyframes heroLineDraw {
-      from { stroke-dashoffset: 600; opacity: 0; }
-      to   { stroke-dashoffset: 0;   opacity: 1; }
-    }
-
-    /* ── Initial hidden state for all hero elements ─────────── */
-    /* Applied before preloader ends so nothing flashes in early */
-    body:not(.hero-revealed) .top-nav,
-    body:not(.hero-revealed) .hero-title,
-    body:not(.hero-revealed) .hero-left,
-    body:not(.hero-revealed) .hero-right,
-    body:not(.hero-revealed) #hero-person-cutout,
-    body:not(.hero-revealed) .badge-stamp,
-    body:not(.hero-revealed) .red-line,
-    body:not(.hero-revealed) .stat-item {
-      opacity: 0;
-    }
-
-    /* ── Animation triggers on .hero-revealed ───────────────── */
-
-    /* Top Nav: slides down from above */
-    body.hero-revealed .top-nav {
-      animation: heroFadeDown 0.65s cubic-bezier(0.22, 1, 0.36, 1) 0.1s both;
-    }
-
-    /* Giant PORTFOLIO title: dramatic blur+letter-spacing expand */
-    body.hero-revealed .hero-title {
-      animation: heroTitleReveal 1.1s cubic-bezier(0.22, 1, 0.36, 1) 0.25s both;
-    }
-
-    /* Left column: slides in from left */
-    body.hero-revealed .hero-left {
-      animation: heroFadeLeft 0.75s cubic-bezier(0.22, 1, 0.36, 1) 0.45s both;
-    }
-
-    /* Red accent line in left column: draws out */
-    body.hero-revealed .red-line {
-      animation: redLineBounce 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.85s both;
-    }
-
-    /* Right column: slides in from right */
-    body.hero-revealed .hero-right {
-      animation: heroFadeRight 0.75s cubic-bezier(0.22, 1, 0.36, 1) 0.55s both;
-    }
-
-    /* Rotating badge stamp: fades up after right column */
-    body.hero-revealed .badge-stamp {
-      animation: statCountUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.9s both;
-    }
-
-    /* Stat items: staggered fade-up from below */
-    body.hero-revealed .stat-item:nth-child(1) {
-      animation: statCountUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.75s both;
-    }
-    body.hero-revealed .stat-item:nth-child(2) {
-      animation: statCountUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.88s both;
-    }
-    body.hero-revealed .stat-item:nth-child(3) {
-      animation: statCountUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) 1.01s both;
-    }
-
-    /* Person cutout: scale + fade up for a dramatic entrance */
-    body.hero-revealed #hero-person-cutout {
-      animation: personCutoutReveal 1.0s cubic-bezier(0.22, 1, 0.36, 1) 0.35s both;
-    }
-
-    /* ── Post-reveal glint sweep on PORTFOLIO text ─────────── */
-    body.hero-revealed .hero-title::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(105deg,
-        transparent 30%,
-        rgba(248, 250, 252, 0.18) 50%,
-        rgba(220, 38, 38, 0.1) 55%,
-        transparent 70%);
-      background-size: 300% 100%;
-      animation: glintSweep 0.9s ease-out 1.4s 1 forwards;
-      pointer-events: none;
-    }
-
-    /* ── Landing burst particles ───────────────────────────── */
-    .hero-burst-particle {
-      position: fixed;
-      border-radius: 50%;
-      pointer-events: none;
-      z-index: 9999;
-      animation: heroBurstParticle var(--dur, 0.9s) ease-out var(--delay, 0s) 1 forwards;
-    }
-    @keyframes heroBurstParticle {
-      0%   { opacity: 1; transform: translate(0, 0) scale(1); }
-      100% { opacity: 0; transform: translate(var(--tx), var(--ty)) scale(0.2); }
-    }
-
   </style>
 </head>
 <body>
@@ -3767,14 +3627,6 @@
           setTimeout(() => {
             if (preloader) {
               preloader.classList.add('loader-hidden');
-
-              // ── Trigger landing page entrance animations ──────────
-              // Slight delay so preloader fade-out doesn't clash with hero reveal
-              setTimeout(() => {
-                document.body.classList.add('hero-revealed');
-                fireLandingBurst();
-              }, 150);
-
               setTimeout(() => {
                 preloader.style.display = 'none';
               }, 850);
@@ -3782,45 +3634,6 @@
           }, 350);
         } else {
           requestAnimationFrame(checkLoaderCompletion);
-        }
-      }
-
-      // ── Landing burst particle emitter ───────────────────────────
-      function fireLandingBurst() {
-        const colors = [
-          'rgba(220,38,38,0.9)',   // crimson red
-          'rgba(248,250,252,0.85)', // off-white
-          'rgba(245,158,11,0.9)',   // amber gold
-          'rgba(239,68,68,0.75)',   // soft red
-        ];
-        const cx = window.innerWidth / 2;
-        const cy = window.innerHeight * 0.48;
-        const count = 28;
-
-        for (let i = 0; i < count; i++) {
-          const angle = (i / count) * Math.PI * 2 + Math.random() * 0.35;
-          const dist  = 80 + Math.random() * 180;
-          const size  = Math.random() * 5 + 2;
-          const dur   = (0.65 + Math.random() * 0.55).toFixed(2);
-          const delay = (0.05 + Math.random() * 0.35).toFixed(2);
-          const col   = colors[Math.floor(Math.random() * colors.length)];
-          const tx    = Math.round(Math.cos(angle) * dist);
-          const ty    = Math.round(Math.sin(angle) * dist);
-
-          const p = document.createElement('div');
-          p.className = 'hero-burst-particle';
-          p.style.cssText = [
-            `left:${cx}px`, `top:${cy}px`,
-            `width:${size}px`, `height:${size}px`,
-            `background:${col}`,
-            `box-shadow:0 0 ${size * 2}px ${col}`,
-            `--dur:${dur}s`, `--delay:${delay}s`,
-            `--tx:${tx}px`, `--ty:${ty}px`,
-            `margin-left:-${size/2}px`, `margin-top:-${size/2}px`,
-          ].join(';');
-          document.body.appendChild(p);
-          setTimeout(() => { if (p.parentNode) p.parentNode.removeChild(p); },
-            (parseFloat(dur) + parseFloat(delay) + 0.15) * 1000);
         }
       }
 
