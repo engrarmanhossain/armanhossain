@@ -7,6 +7,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="ezgif-frame-001.jpg" fetchpriority="high">
+  <link rel="preload" as="image" href="profile.png">
   <style>
     *, *::before, *::after {
       margin: 0;
@@ -2081,7 +2083,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.8s;
+      transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.5s;
       overflow: hidden;
     }
 
@@ -3584,18 +3586,25 @@
         requestAnimationFrame(animationLoop);
       }
 
-      // Preloader Controller
+      // High-Performance Progressive Frame Streaming Controller
       const preloader = document.getElementById('site-preloader');
       const progressBar = document.getElementById('progress-bar-fill');
       const progressText = document.getElementById('progress-text');
       const orbitProgress = document.getElementById('orbit-progress-bar');
       const CIRCUMFERENCE = 2 * Math.PI * 102; // ~640.88
 
-      let loadedCount = 0;
+      // Critical buffer: Only wait for the first 12 frames before opening the site
+      const CRITICAL_FRAMES = 12;
+      let criticalLoadedCount = 0;
+      let totalLoadedCount = 0;
       let displayProgress = 0;
       let isLoaderFinished = false;
-      const minDisplayMs = 1500;
+      const minDisplayMs = 500; // Sleek, responsive 500ms initialization ramp
+      const maxWaitMs = 1100;   // Absolute ceiling to guarantee instant access on any connection
       const loadStartTime = performance.now();
+
+      const loadingSet = new Set();
+      const loadedSet = new Set();
 
       function updateLoaderUI(pct) {
         const val = Math.min(100, Math.max(0, Math.round(pct)));
@@ -3607,61 +3616,142 @@
         }
       }
 
+      function dismissLoader() {
+        if (isLoaderFinished) return;
+        isLoaderFinished = true;
+        updateLoaderUI(100);
+        setTimeout(() => {
+          if (preloader) {
+            preloader.classList.add('loader-hidden');
+            setTimeout(() => {
+              preloader.style.display = 'none';
+            }, 550);
+          }
+        }, 160);
+      }
+
       function checkLoaderCompletion() {
         if (isLoaderFinished) return;
         const elapsed = performance.now() - loadStartTime;
-        const targetPercent = Math.min(100, (loadedCount / TOTAL_FRAMES) * 100);
 
-        if (elapsed < minDisplayMs) {
-          const timeProgress = (elapsed / minDisplayMs) * 100;
-          displayProgress = Math.max(displayProgress, Math.min(timeProgress, targetPercent));
-        } else {
-          displayProgress += (targetPercent - displayProgress) * 0.3;
-        }
+        // Progress calculated against critical buffer
+        const criticalPercent = Math.min(100, (criticalLoadedCount / CRITICAL_FRAMES) * 100);
+        const timePercent = Math.min(100, (elapsed / minDisplayMs) * 100);
 
+        // Smoothly lerp display progress towards whichever is ahead
+        const targetPercent = Math.max(criticalPercent, timePercent);
+        displayProgress += (targetPercent - displayProgress) * 0.35;
         updateLoaderUI(displayProgress);
 
-        if (displayProgress >= 99.5 && elapsed >= minDisplayMs) {
-          isLoaderFinished = true;
-          updateLoaderUI(100);
-          setTimeout(() => {
-            if (preloader) {
-              preloader.classList.add('loader-hidden');
-              setTimeout(() => {
-                preloader.style.display = 'none';
-              }, 850);
-            }
-          }, 350);
+        // Complete when critical buffer is loaded OR safety timeout is reached
+        if ((criticalLoadedCount >= CRITICAL_FRAMES && elapsed >= minDisplayMs && displayProgress >= 98) || elapsed >= maxWaitMs) {
+          dismissLoader();
         } else {
           requestAnimationFrame(checkLoaderCompletion);
         }
       }
 
-      // Preload all 240 frames
-      function preloadFrames() {
-        const firstImg = new Image();
-        firstImg.src = getFrameUrl(0);
-        images[0] = firstImg;
-        firstImg.onload = () => {
-          loadedCount++;
-          renderFrame(0, true);
+      function loadSingleFrame(index, onComplete) {
+        if (images[index] && images[index].complete) {
+          if (onComplete) onComplete(images[index]);
+          return;
+        }
+        if (loadingSet.has(index)) {
+          if (onComplete) onComplete(null);
+          return;
+        }
+        loadingSet.add(index);
+
+        const img = new Image();
+        img.src = getFrameUrl(index);
+        img.onload = () => {
+          images[index] = img;
+          loadedSet.add(index);
+          loadingSet.delete(index);
+          totalLoadedCount++;
+          if (index < CRITICAL_FRAMES) {
+            criticalLoadedCount++;
+          }
+          if (index === 0 || Math.round(currentFrame) === index) {
+            renderFrame(index, true);
+          }
+          if (onComplete) onComplete(img);
         };
-        if (firstImg.complete) {
-          loadedCount++;
-          renderFrame(0, true);
+        img.onerror = () => {
+          loadingSet.delete(index);
+          if (index < CRITICAL_FRAMES) {
+            criticalLoadedCount++; // Prevent hanging loader on error
+          }
+          if (onComplete) onComplete(null);
+        };
+      }
+
+      // Intelligent background streaming queue with concurrency limiter
+      function startBackgroundStreaming() {
+        const queue = [];
+
+        // Tier 1: Keyframe anchors across the entire timeline (every 5th frame: 15, 20, 25 ... 295)
+        for (let i = CRITICAL_FRAMES; i < TOTAL_FRAMES; i += 5) {
+          queue.push(i);
         }
 
-        for (let i = 1; i < TOTAL_FRAMES; i++) {
-          const img = new Image();
-          img.src = getFrameUrl(i);
-          images[i] = img;
-          img.onload = () => {
-            loadedCount++;
-            if (Math.round(currentFrame) === i) {
-              renderFrame(i, true);
-            }
-          };
+        // Tier 2: All remaining intermediate frames
+        for (let i = CRITICAL_FRAMES; i < TOTAL_FRAMES; i++) {
+          if (i % 5 !== 0) {
+            queue.push(i);
+          }
         }
+
+        const MAX_CONCURRENT = 4;
+        let activeLoads = 0;
+
+        function pump() {
+          while (activeLoads < MAX_CONCURRENT && queue.length > 0) {
+            const nextIdx = queue.shift();
+            if (images[nextIdx] || loadingSet.has(nextIdx)) continue;
+            activeLoads++;
+            loadSingleFrame(nextIdx, () => {
+              activeLoads--;
+              pump();
+            });
+          }
+        }
+
+        // Run smoothly in idle frames or via microtask
+        if ('requestIdleCallback' in window) {
+          requestIdleCallback(() => pump(), { timeout: 800 });
+        } else {
+          setTimeout(pump, 50);
+        }
+
+        // Dynamic proximity loading: boost frames around current scroll position
+        let lastScrolledFrame = -1;
+        window.addEventListener('scroll', () => {
+          const cur = Math.round(currentFrame);
+          if (Math.abs(cur - lastScrolledFrame) >= 2) {
+            lastScrolledFrame = cur;
+            for (let offset = -2; offset <= 6; offset++) {
+              const target = cur + offset;
+              if (target >= 0 && target < TOTAL_FRAMES && !images[target] && !loadingSet.has(target)) {
+                queue.unshift(target); // Prepend to top of queue
+              }
+            }
+            pump();
+          }
+        }, { passive: true });
+      }
+
+      function initLoadingPipeline() {
+        // Step 1: Immediately fetch critical frames
+        for (let i = 0; i < CRITICAL_FRAMES; i++) {
+          loadSingleFrame(i);
+        }
+
+        // Step 2: Stream remaining frames in background after initial paint
+        setTimeout(startBackgroundStreaming, 350);
+
+        // Step 3: Run the responsive loader UI loop
+        requestAnimationFrame(checkLoaderCompletion);
       }
 
       // Window resize listener
@@ -3688,8 +3778,7 @@
 
       // Initialize
       resizeCanvas();
-      preloadFrames();
-      requestAnimationFrame(checkLoaderCompletion);
+      initLoadingPipeline();
 
       // Immediate first draw
       currentFrame = getScrollProgress() * (TOTAL_FRAMES - 1);
