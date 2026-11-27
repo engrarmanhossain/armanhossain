@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#04060A">
+  <meta name="theme-color" content="#030712">
   <meta name="description" content="Engr. Arman Hossain — Assistant Electrical Engineer at Akij Resources & Published IEEE Researcher. Specializing in 30 MW power plant erection, industrial SCADA, and renewable energy systems.">
   <meta property="og:title" content="Engr. Arman Hossain — Electrical Engineer & Researcher Portfolio">
   <meta property="og:description" content="Assistant Electrical Engineer @ Akij Resources • 30 MW Power Plant Erection • Published IEEE Researcher.">
@@ -12,10 +12,9 @@
   <title>Engr. Arman Hossain — Electrical Engineer & Researcher Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=JetBrains+Mono:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="ezgif-frame-001.jpg" fetchpriority="high">
-  <link rel="preload" as="image" href="profile.png">
-  <style>
+  <link rel="preload" as="image" href="profile.png">  <style>
     *, *::before, *::after {
       margin: 0;
       padding: 0;
@@ -23,22 +22,23 @@
     }
 
     :root {
-      --bg-dark: #04060A;
-      --card-bg: rgba(8, 13, 22, 0.78);
-      --card-border: rgba(0, 240, 255, 0.16);
-      --card-hover-border: rgba(0, 240, 255, 0.6);
+      --bg-dark: #030712;
+      --card-bg: rgba(15, 23, 42, 0.65);
+      --card-bg-hover: rgba(15, 23, 42, 0.85);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --card-hover-border: rgba(56, 189, 248, 0.45);
+      --accent-sky: #38BDF8;
       --accent-cyan: #00F0FF;
-      --accent-blue: #38BDF8;
-      --accent-cobalt: #0284C7;
-      --accent-glow: rgba(0, 240, 255, 0.35);
-      --text-white: #FFFFFF;
+      --accent-indigo: #818CF8;
+      --accent-emerald: #10B981;
+      --accent-glow: rgba(56, 189, 248, 0.35);
+      --text-white: #F8FAFC;
       --text-slate: #CBD5E1;
-      --text-cream: #F8FAFC;
       --text-muted: #94A3B8;
       --text-dim: #64748B;
       --font-display: 'Bebas Neue', 'Oswald', sans-serif;
       --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
-      --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      --font-body: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
     }
 
     html, body {
@@ -98,10 +98,10 @@
       height: 100%;
       pointer-events: none;
       z-index: 4;
-      background: radial-gradient(circle at 50% 40%, rgba(4, 7, 13, 0.42) 0%, rgba(4, 7, 13, 0.78) 65%, rgba(3, 5, 9, 0.97) 100%);
+      background: radial-gradient(circle at 50% 40%, rgba(3, 7, 18, 0.45) 0%, rgba(3, 7, 18, 0.8) 65%, rgba(2, 4, 10, 0.98) 100%);
     }
 
-    /* Giant Hero Title - Layered behind cutout on load */
+    /* Hero Background Title */
     .hero-title-wrap {
       position: absolute;
       top: 10vh;
@@ -122,7 +122,7 @@
       letter-spacing: 0.04em;
       line-height: 0.82;
       color: #FFFFFF;
-      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.95), 0 8px 30px rgba(0, 0, 0, 0.9), 0 0 30px rgba(0, 240, 255, 0.35);
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.95), 0 8px 30px rgba(0, 0, 0, 0.9), 0 0 30px rgba(56, 189, 248, 0.25);
       user-select: none;
       display: inline-block;
       white-space: nowrap;
@@ -149,7 +149,7 @@
     }
 
     /* ==========================================================================
-       FLOATING GLASS DOCK NAVIGATION
+       LUXURY FLOATING GLASS DOCK (APPLE / VERCEL STYLE)
        ========================================================================== */
     .nav-dock-wrapper {
       position: sticky;
@@ -166,29 +166,34 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 12px;
-      background: rgba(6, 10, 18, 0.85);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(0, 240, 255, 0.22);
-      border-radius: 40px;
-      padding: 8px 16px 8px 20px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 240, 255, 0.15);
-      max-width: 1080px;
+      gap: 16px;
+      background: rgba(11, 17, 33, 0.78);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 9999px;
+      padding: 8px 14px 8px 20px;
+      box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.12), 0 16px 36px -10px rgba(0, 0, 0, 0.6), 0 0 20px rgba(56, 189, 248, 0.12);
+      max-width: 1020px;
       width: 100%;
-      transition: all 0.3s ease;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .nav-dock:hover {
+      border-color: rgba(56, 189, 248, 0.35);
+      box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.18), 0 20px 40px -10px rgba(0, 0, 0, 0.7), 0 0 28px rgba(56, 189, 248, 0.2);
     }
 
     .nav-brand {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
       text-decoration: none;
       color: #FFFFFF;
-      font-family: var(--font-mono);
-      font-size: 12px;
+      font-family: var(--font-body);
+      font-size: 13px;
       font-weight: 700;
-      letter-spacing: 0.1em;
+      letter-spacing: -0.01em;
       white-space: nowrap;
     }
 
@@ -196,8 +201,8 @@
       width: 8px;
       height: 8px;
       border-radius: 50%;
-      background: var(--accent-cyan);
-      box-shadow: 0 0 10px var(--accent-cyan);
+      background: var(--accent-sky);
+      box-shadow: 0 0 12px var(--accent-sky);
       animation: pulseDot 2s infinite ease-in-out;
     }
 
@@ -209,7 +214,7 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 4px;
       list-style: none;
       margin: 0;
       padding: 0;
@@ -217,565 +222,397 @@
 
     .nav-link-item a {
       display: inline-block;
-      padding: 6px 12px;
+      padding: 6px 14px;
       color: var(--text-slate);
       text-decoration: none;
-      font-family: var(--font-mono);
-      font-size: 11px;
+      font-family: var(--font-body);
+      font-size: 12px;
       font-weight: 600;
-      letter-spacing: 0.08em;
-      border-radius: 20px;
+      letter-spacing: 0.01em;
+      border-radius: 9999px;
       transition: all 0.2s ease;
       white-space: nowrap;
     }
 
-    .nav-link-item a:hover,
+    .nav-link-item a:hover {
+      color: #FFFFFF;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
     .nav-link-item a.active {
-      color: #04070D;
-      background: var(--accent-cyan);
-      box-shadow: 0 0 12px rgba(0, 240, 255, 0.5);
+      color: #FFFFFF;
+      background: rgba(56, 189, 248, 0.18);
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      box-shadow: 0 0 14px rgba(56, 189, 248, 0.25);
     }
 
     .nav-cta-btn {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      padding: 7px 16px;
-      border-radius: 20px;
-      background: linear-gradient(135deg, var(--accent-cyan) 0%, var(--accent-cobalt) 100%);
-      color: #04070D;
-      font-family: var(--font-mono);
-      font-size: 10.5px;
+      padding: 8px 18px;
+      border-radius: 9999px;
+      background: linear-gradient(135deg, #38BDF8 0%, #6366F1 100%);
+      color: #FFFFFF;
+      font-family: var(--font-body);
+      font-size: 11.5px;
       font-weight: 700;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.02em;
       text-decoration: none;
-      transition: all 0.25s ease;
-      box-shadow: 0 0 14px rgba(0, 240, 255, 0.35);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 4px 16px rgba(56, 189, 248, 0.3);
       white-space: nowrap;
     }
 
     .nav-cta-btn:hover {
       transform: translateY(-2px);
-      box-shadow: 0 0 22px rgba(0, 240, 255, 0.7);
+      box-shadow: 0 8px 24px rgba(56, 189, 248, 0.55);
     }
 
-    /* Page Content Layer */
+    /* Content Container */
     #content-container {
       position: relative;
       z-index: 5;
       width: 100%;
-      max-width: 1280px;
+      max-width: 1240px;
       margin: 0 auto;
-      padding: 12px 32px 100px;
+      padding: 8px 24px 100px;
     }
 
     /* ==========================================================================
-       EXECUTIVE HERO SECTION
+       HERO BENTO CONSOLE
        ========================================================================== */
     .hero-viewport-section {
       position: relative;
       width: 100%;
-      min-height: 88vh;
+      min-height: 86vh;
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-      padding: 20px 20px 40px;
-      margin-bottom: 70px;
+      padding: 24px 0 36px;
+      margin-bottom: 60px;
     }
 
-    .hero-executive-console {
+    .hero-bento-card {
+      background: rgba(11, 17, 33, 0.72);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 24px;
+      padding: 40px 36px;
+      box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.15), 0 24px 48px -12px rgba(0, 0, 0, 0.6), 0 0 30px rgba(56, 189, 248, 0.12);
+      max-width: 860px;
       display: flex;
       flex-direction: column;
       gap: 22px;
-      max-width: 820px;
-      z-index: 10;
       position: relative;
+      overflow: hidden;
     }
 
-    .hero-telemetry-pill {
+    .hero-bento-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 10%;
+      right: 10%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.6), transparent);
+      pointer-events: none;
+    }
+
+    .hero-status-pill {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      background: rgba(0, 240, 255, 0.08);
-      border: 1px solid rgba(0, 240, 255, 0.35);
+      gap: 8px;
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.3);
       padding: 6px 14px;
-      border-radius: 30px;
+      border-radius: 9999px;
       width: fit-content;
-      font-family: var(--font-mono);
-      font-size: 10.5px;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      color: var(--accent-cyan);
-      box-shadow: 0 0 16px rgba(0, 240, 255, 0.15);
-    }
-
-    .hero-name-plate {
-      font-family: var(--font-display);
-      font-size: clamp(48px, 6.5vw, 84px);
-      line-height: 0.95;
-      letter-spacing: 0.04em;
-      color: #FFFFFF;
-      text-shadow: 0 2px 14px rgba(0, 0, 0, 0.9);
-    }
-
-    .hero-name-plate span {
-      color: var(--accent-cyan);
-      font-size: 0.45em;
-      letter-spacing: 0.18em;
-      display: block;
-      margin-bottom: 4px;
-      font-family: var(--font-mono);
-      font-weight: 700;
-    }
-
-    .hero-domain-strip {
-      font-family: var(--font-mono);
-      font-size: 13px;
+      font-family: var(--font-body);
+      font-size: 11.5px;
       font-weight: 600;
-      color: var(--accent-cyan);
-      letter-spacing: 0.06em;
+      color: var(--accent-sky);
+    }
+
+    .hero-headline {
+      font-family: var(--font-display);
+      font-size: clamp(52px, 7vw, 92px);
+      line-height: 0.92;
+      letter-spacing: 0.03em;
+      color: #FFFFFF;
+      text-shadow: 0 2px 14px rgba(0, 0, 0, 0.85);
+    }
+
+    .hero-headline span {
+      display: block;
+      font-family: var(--font-body);
+      font-size: 0.35em;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      color: var(--accent-sky);
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .hero-gradient-subtitle {
+      font-family: var(--font-body);
+      font-size: clamp(14px, 1.8vw, 17px);
+      font-weight: 700;
+      background: linear-gradient(135deg, #38BDF8 0%, #818CF8 50%, #C084FC 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: -0.01em;
       line-height: 1.4;
     }
 
-    .hero-bio-summary {
-      font-size: 13.5px;
+    .hero-summary-text {
+      font-size: 14px;
       line-height: 1.65;
       color: var(--text-slate);
-      max-width: 680px;
-      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.85);
+      max-width: 720px;
     }
 
-    .hero-cta-group {
+    .hero-action-row {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       gap: 12px;
-      margin-top: 6px;
+      margin-top: 4px;
     }
 
-    .btn-hero-primary {
+    .btn-bento-primary {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: linear-gradient(135deg, var(--accent-cyan) 0%, var(--accent-cobalt) 100%);
-      color: #04070D;
-      font-family: var(--font-mono);
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: 0.1em;
-      padding: 12px 24px;
-      border-radius: 6px;
-      text-decoration: none;
-      box-shadow: 0 4px 18px rgba(0, 240, 255, 0.35);
-      transition: all 0.25s ease;
-    }
-
-    .btn-hero-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 26px rgba(0, 240, 255, 0.6);
-    }
-
-    .btn-hero-secondary {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(8, 14, 24, 0.7);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(0, 240, 255, 0.35);
-      color: var(--accent-cyan);
-      font-family: var(--font-mono);
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      padding: 12px 22px;
-      border-radius: 6px;
-      text-decoration: none;
-      transition: all 0.25s ease;
-    }
-
-    .btn-hero-secondary:hover {
-      background: rgba(0, 240, 255, 0.15);
-      border-color: var(--accent-cyan);
-      transform: translateY(-2px);
+      padding: 12px 26px;
+      border-radius: 9999px;
+      background: linear-gradient(135deg, #38BDF8 0%, #6366F1 100%);
       color: #FFFFFF;
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      text-decoration: none;
+      box-shadow: 0 8px 24px -4px rgba(56, 189, 248, 0.45);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    /* Telemetry HUD Bar */
-    .telemetry-hud-row {
+    .btn-bento-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px -4px rgba(56, 189, 248, 0.65);
+    }
+
+    .btn-bento-glass {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      border-radius: 9999px;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      color: #FFFFFF;
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .btn-bento-glass:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(56, 189, 248, 0.5);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Bento Hero Metric Grid */
+    .bento-hud-strip {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 16px;
-      margin-top: 28px;
+      margin-top: 24px;
       width: 100%;
     }
 
-    .hud-stat-box {
-      background: rgba(8, 13, 22, 0.75);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(0, 240, 255, 0.16);
-      border-radius: 10px;
-      padding: 16px;
+    .bento-hud-item {
+      background: rgba(11, 17, 33, 0.72);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 18px;
+      padding: 22px 20px;
       display: flex;
       flex-direction: column;
-      gap: 4px;
-      transition: all 0.25s ease;
+      gap: 6px;
+      box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.1), 0 12px 28px -10px rgba(0, 0, 0, 0.5);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    .hud-stat-box:hover {
-      border-color: rgba(0, 240, 255, 0.55);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 240, 255, 0.15);
+    .bento-hud-item:hover {
+      border-color: rgba(56, 189, 248, 0.4);
       transform: translateY(-3px);
+      box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.15), 0 16px 36px -10px rgba(0, 0, 0, 0.6), 0 0 20px rgba(56, 189, 248, 0.15);
     }
 
-    .hud-num {
+    .bento-hud-num {
       font-family: var(--font-display);
-      font-size: 34px;
+      font-size: 38px;
       line-height: 1;
-      color: var(--accent-cyan);
-      text-shadow: 0 0 12px rgba(0, 240, 255, 0.45);
+      background: linear-gradient(135deg, #FFFFFF 0%, #38BDF8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
-    .hud-label {
-      font-family: var(--font-mono);
-      font-size: 9.5px;
+    .bento-hud-label {
+      font-family: var(--font-body);
+      font-size: 12px;
       font-weight: 700;
-      letter-spacing: 0.1em;
-      color: var(--text-slate);
-      text-transform: uppercase;
-    }
-
-    .hud-sub {
-      font-size: 11px;
-      color: var(--text-muted);
-      margin-top: 2px;
-    }
-
-    /* Common Section Titles */
-    .section-title-wrap {
-      margin-bottom: 24px;
-      position: relative;
-    }
-
-    .section-eyebrow {
-      font-family: var(--font-mono);
-      font-size: 10.5px;
-      font-weight: 700;
-      color: var(--accent-cyan);
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      margin-bottom: 4px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .section-eyebrow::before {
-      content: '//';
-      color: var(--accent-blue);
-    }
-
-    .section-title {
-      font-family: var(--font-display);
-      font-size: 32px;
-      letter-spacing: 0.05em;
       color: #FFFFFF;
-      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.85);
-      display: inline-block;
+      letter-spacing: -0.01em;
     }
 
-    .section-bar {
-      width: 38px;
-      height: 2.5px;
-      background: linear-gradient(90deg, #00F0FF, #0284C7);
-      box-shadow: 0 0 10px rgba(0, 240, 255, 0.65);
-      margin-top: 6px;
-      border-radius: 2px;
+    .bento-hud-sub {
+      font-size: 11.5px;
+      color: var(--text-muted);
+      line-height: 1.4;
     }
 
     /* ==========================================================================
-       SECTION 1: ENGINEERING SPEC SHEET CONSOLE
+       SECTION HEADINGS (APPLE / VERCEL STYLE)
        ========================================================================== */
-    .spec-sheet-section {
-      margin-bottom: 80px;
+    .section-wrap-header {
+      margin-bottom: 28px;
+      position: relative;
     }
 
-    .spec-console-card {
-      background: rgba(8, 13, 22, 0.82);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      border: 1px solid rgba(0, 240, 255, 0.2);
-      border-radius: 14px;
-      padding: 28px;
-      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 240, 255, 0.12);
-    }
-
-    .spec-console-header {
-      display: flex;
-      justify-content: space-between;
+    .section-tag-pill {
+      display: inline-flex;
       align-items: center;
-      padding-bottom: 16px;
-      border-bottom: 1px solid rgba(0, 240, 255, 0.15);
-      margin-bottom: 24px;
+      gap: 6px;
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      padding: 5px 12px;
+      border-radius: 9999px;
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--accent-sky);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
     }
 
-    .spec-header-title {
-      font-family: var(--font-mono);
-      font-size: 13px;
-      font-weight: 700;
+    .section-heading-lg {
+      font-family: var(--font-display);
+      font-size: clamp(34px, 4.5vw, 44px);
+      letter-spacing: 0.04em;
       color: #FFFFFF;
-      letter-spacing: 0.1em;
-      display: flex;
-      align-items: center;
-      gap: 10px;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+      line-height: 1;
     }
 
-    .spec-badge {
-      font-family: var(--font-mono);
-      font-size: 9.5px;
-      font-weight: 700;
-      background: rgba(0, 240, 255, 0.12);
-      border: 1px solid rgba(0, 240, 255, 0.4);
-      color: var(--accent-cyan);
-      padding: 4px 10px;
-      border-radius: 20px;
-      letter-spacing: 0.1em;
+    .section-heading-sub {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-top: 6px;
+      max-width: 650px;
     }
 
-    .spec-grid {
+    /* ==========================================================================
+       BENTO CORE MATRIX (EXPERTISE & WHAT I DO)
+       ========================================================================== */
+    .bento-section {
+      margin-bottom: 90px;
+    }
+
+    .bento-matrix-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-
-    .spec-block {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-
-    .spec-block-tag {
-      font-family: var(--font-mono);
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      color: var(--accent-cyan);
-      text-transform: uppercase;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .spec-block-tag::before {
-      content: '>';
-      color: var(--accent-blue);
-    }
-
-    .spec-block-title {
-      font-size: 14px;
-      font-weight: 700;
-      color: #FFFFFF;
-      letter-spacing: 0.04em;
-    }
-
-    .spec-block-desc {
-      font-size: 11.5px;
-      line-height: 1.6;
-      color: var(--text-slate);
-    }
-
-    .spec-pills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 6px;
-    }
-
-    .spec-pill {
-      font-family: var(--font-mono);
-      font-size: 9px;
-      font-weight: 600;
-      padding: 3px 8px;
-      border-radius: 4px;
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      color: var(--text-slate);
-    }
-
-    /* ==========================================================================
-       SECTION 2: CORE EXPERTISE GRID (WHAT I DO)
-       ========================================================================== */
-    .what-i-do-section {
-      margin-bottom: 80px;
-    }
-
-    .what-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 18px;
-    }
-
-    .what-card {
-      position: relative;
-      background: rgba(8, 13, 22, 0.78);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(0, 240, 255, 0.16);
-      border-radius: 12px;
-      padding: 22px 18px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
-    }
-
-    .what-card:hover {
-      border-color: rgba(0, 240, 255, 0.55);
-      transform: translateY(-4px);
-      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 240, 255, 0.2);
-    }
-
-    .what-icon-box {
-      width: 40px;
-      height: 40px;
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--accent-cyan);
-      background: rgba(0, 240, 255, 0.1);
-      border: 1px solid rgba(0, 240, 255, 0.35);
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
-    }
-
-    .what-card-title {
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      color: var(--text-white);
-      text-transform: uppercase;
-      line-height: 1.3;
-    }
-
-    .what-card-desc {
-      font-size: 11px;
-      line-height: 1.6;
-      color: var(--text-muted);
-    }
-
-    /* ==========================================================================
-       SECTION 3: CAREER TIMELINE & EDUCATION
-       ========================================================================== */
-    .career-section {
-      margin-bottom: 80px;
-    }
-
-    .career-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 28px;
-    }
-
-    .career-panel {
-      background: rgba(8, 13, 22, 0.78);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(0, 240, 255, 0.16);
-      border-radius: 14px;
-      padding: 26px;
-      display: flex;
-      flex-direction: column;
       gap: 20px;
     }
 
-    .career-panel-header {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid rgba(0, 240, 255, 0.16);
-      font-family: var(--font-display);
-      font-size: 22px;
-      color: #FFFFFF;
-      letter-spacing: 0.06em;
-    }
-
-    .timeline-list {
+    .bento-box {
+      background: rgba(11, 17, 33, 0.72);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      padding: 28px 24px;
       display: flex;
       flex-direction: column;
-      gap: 18px;
-    }
-
-    .timeline-item {
-      display: flex;
+      justify-content: space-between;
       gap: 16px;
+      box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.1), 0 12px 30px -10px rgba(0, 0, 0, 0.5);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
       position: relative;
+      overflow: hidden;
     }
 
-    .timeline-node {
+    .bento-box:hover {
+      border-color: rgba(56, 189, 248, 0.45);
+      transform: translateY(-4px);
+      box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.15), 0 20px 40px -12px rgba(0, 0, 0, 0.7), 0 0 25px rgba(56, 189, 248, 0.15);
+    }
+
+    .bento-box.span-2 {
+      grid-column: span 2;
+    }
+
+    .bento-box.span-3 {
+      grid-column: span 3;
+    }
+
+    .bento-box-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
       display: flex;
-      flex-direction: column;
       align-items: center;
+      justify-content: center;
+      color: var(--accent-sky);
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.28);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
     }
 
-    .node-dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: var(--accent-cyan);
-      box-shadow: 0 0 10px var(--accent-cyan);
-      flex-shrink: 0;
-      margin-top: 4px;
-    }
-
-    .node-line {
-      width: 1px;
-      background: rgba(0, 240, 255, 0.2);
-      flex: 1;
-      margin-top: 6px;
-    }
-
-    .timeline-info {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-    }
-
-    .timeline-role {
-      font-size: 13.5px;
+    .bento-box-title {
+      font-size: 16px;
       font-weight: 700;
       color: #FFFFFF;
-      letter-spacing: 0.04em;
+      letter-spacing: -0.01em;
+      line-height: 1.35;
     }
 
-    .timeline-org {
-      font-family: var(--font-mono);
-      font-size: 10.5px;
-      font-weight: 700;
-      color: var(--accent-cyan);
-      letter-spacing: 0.08em;
-    }
-
-    .timeline-period {
-      font-family: var(--font-mono);
-      font-size: 9.5px;
-      color: var(--text-muted);
-    }
-
-    .timeline-desc {
-      font-size: 11.5px;
+    .bento-box-desc {
+      font-size: 12.5px;
       line-height: 1.6;
       color: var(--text-slate);
+    }
+
+    .bento-tag-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
       margin-top: 4px;
+    }
+
+    .bento-tag-pill {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 600;
+      padding: 3px 9px;
+      border-radius: 9999px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--text-slate);
     }
 
     /* ==========================================================================
-       SECTION 4: TABBED RESEARCH PUBLICATIONS HUB
+       RESEARCH PUBLICATIONS BENTO HUB
        ========================================================================== */
-    .research-section {
-      margin-bottom: 80px;
-    }
-
-    .research-filter-bar {
+    .bento-filter-bar {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
@@ -783,863 +620,668 @@
       margin-bottom: 24px;
     }
 
-    .filter-tab-btn {
-      font-family: var(--font-mono);
-      font-size: 10.5px;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      padding: 7px 16px;
-      border-radius: 20px;
-      background: rgba(8, 14, 24, 0.7);
-      border: 1px solid rgba(0, 240, 255, 0.2);
+    .bento-filter-btn {
+      font-family: var(--font-body);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 8px 18px;
+      border-radius: 9999px;
+      background: rgba(11, 17, 33, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.1);
       color: var(--text-slate);
       cursor: pointer;
       transition: all 0.2s ease;
     }
 
-    .filter-tab-btn:hover,
-    .filter-tab-btn.active {
-      background: var(--accent-cyan);
-      border-color: var(--accent-cyan);
-      color: #04070D;
-      box-shadow: 0 0 16px rgba(0, 240, 255, 0.45);
+    .bento-filter-btn:hover {
+      background: rgba(255, 255, 255, 0.08);
+      color: #FFFFFF;
     }
 
-    .projects-grid {
+    .bento-filter-btn.active {
+      background: linear-gradient(135deg, #38BDF8 0%, #6366F1 100%);
+      border-color: transparent;
+      color: #FFFFFF;
+      box-shadow: 0 4px 16px rgba(56, 189, 248, 0.35);
+    }
+
+    .bento-pub-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
     }
 
-    .project-card {
-      position: relative;
-      background: rgba(8, 13, 22, 0.78);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(0, 240, 255, 0.16);
-      border-radius: 12px;
-      padding: 20px;
+    .bento-pub-card {
+      background: rgba(11, 17, 33, 0.72);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      padding: 24px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       gap: 16px;
-      transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+      box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.1), 0 12px 30px -10px rgba(0, 0, 0, 0.5);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
       text-decoration: none;
       color: inherit;
     }
 
-    .project-card:hover {
-      border-color: rgba(0, 240, 255, 0.55);
+    .bento-pub-card:hover {
+      border-color: rgba(56, 189, 248, 0.45);
       transform: translateY(-4px);
-      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 240, 255, 0.2);
-    }
-
-    .pub-card-top {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
+      box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.15), 0 20px 40px -12px rgba(0, 0, 0, 0.7), 0 0 25px rgba(56, 189, 248, 0.15);
     }
 
     .pub-venue-badge {
       display: inline-block;
-      align-self: flex-start;
       font-family: var(--font-mono);
-      font-size: 9px;
+      font-size: 9.5px;
       font-weight: 700;
-      letter-spacing: 0.12em;
-      padding: 3px 8px;
-      border-radius: 4px;
-      background: rgba(0, 240, 255, 0.12);
-      border: 1px solid rgba(0, 240, 255, 0.35);
-      color: var(--accent-cyan);
+      padding: 4px 10px;
+      border-radius: 9999px;
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      color: var(--accent-sky);
+      width: fit-content;
     }
 
-    .project-title {
-      font-size: 13.5px;
+    .bento-pub-title {
+      font-size: 14.5px;
       font-weight: 700;
-      letter-spacing: 0.04em;
       color: #FFFFFF;
-      text-transform: uppercase;
+      letter-spacing: -0.01em;
       line-height: 1.4;
     }
 
-    .pub-abstract {
-      font-size: 11px;
+    .bento-pub-abstract {
+      font-size: 12px;
       line-height: 1.6;
       color: var(--text-slate);
     }
 
-    .pub-card-footer {
+    .bento-pub-footer {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding-top: 12px;
-      border-top: 1px solid rgba(0, 240, 255, 0.12);
+      padding-top: 14px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
       font-family: var(--font-mono);
-      font-size: 10px;
+      font-size: 10.5px;
     }
 
-    .pub-doi-link {
-      color: var(--accent-cyan);
+    .pub-doi-pill {
+      color: var(--accent-sky);
       font-weight: 600;
       display: flex;
       align-items: center;
       gap: 4px;
     }
 
-    .pub-category-tag {
+    .pub-domain-label {
       color: var(--text-muted);
     }
 
     /* ==========================================================================
-       SECTION 5: ABOUT ME + TOOLS I USE
+       CAREER & INDUSTRIAL TRAINING BENTO
        ========================================================================== */
-    .about-section-wrap {
+    .bento-career-grid {
       display: grid;
       grid-template-columns: 1.2fr 1fr;
-      gap: 28px;
-      margin-bottom: 80px;
+      gap: 20px;
     }
 
-    .about-card {
-      background: rgba(8, 13, 22, 0.78);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(0, 240, 255, 0.16);
-      border-radius: 14px;
-      padding: 26px;
+    .career-bento-box {
+      background: rgba(11, 17, 33, 0.72);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      padding: 30px 28px;
       display: flex;
-      gap: 24px;
-      align-items: center;
+      flex-direction: column;
+      gap: 22px;
+      box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.1), 0 12px 30px -10px rgba(0, 0, 0, 0.5);
     }
 
-    .about-portrait-box {
-      width: 140px;
-      height: 180px;
-      border-radius: 8px;
-      border: 1px solid rgba(0, 240, 255, 0.45);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 240, 255, 0.2);
+    .career-bento-header {
       display: flex;
       align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
+      gap: 12px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      font-family: var(--font-body);
+      font-size: 16px;
+      font-weight: 700;
+      color: #FFFFFF;
+    }
+
+    .career-step-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .career-step-item {
+      display: flex;
+      gap: 16px;
       position: relative;
-      overflow: hidden;
-      background: transparent;
     }
 
-    .about-portrait-img {
+    .step-indicator {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .step-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--accent-sky);
+      box-shadow: 0 0 10px var(--accent-sky);
+      flex-shrink: 0;
+      margin-top: 4px;
+    }
+
+    .step-line {
+      width: 1px;
+      background: rgba(255, 255, 255, 0.12);
+      flex: 1;
+      margin-top: 8px;
+    }
+
+    .step-content {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .step-role {
+      font-size: 14px;
+      font-weight: 700;
+      color: #FFFFFF;
+    }
+
+    .step-org {
+      font-family: var(--font-body);
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--accent-sky);
+    }
+
+    .step-period {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      color: var(--text-muted);
+    }
+
+    .step-desc {
+      font-size: 12px;
+      line-height: 1.6;
+      color: var(--text-slate);
+      margin-top: 4px;
+    }
+
+    /* ==========================================================================
+       ABOUT & TOOLKIT BENTO
+       ========================================================================== */
+    .about-bento-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 20px;
+      margin-bottom: 90px;
+    }
+
+    .profile-bento-card {
+      background: rgba(11, 17, 33, 0.72);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 18px;
+      box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.1), 0 12px 30px -10px rgba(0, 0, 0, 0.5);
+    }
+
+    .profile-avatar-frame {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      border: 3px solid rgba(56, 189, 248, 0.6);
+      box-shadow: 0 0 24px rgba(56, 189, 248, 0.35);
+      overflow: hidden;
+      margin-bottom: 4px;
+    }
+
+    .profile-avatar-img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       object-position: top center;
-      display: block;
-      transition: transform 0.3s ease;
     }
 
-    .about-portrait-box:hover .about-portrait-img {
-      transform: scale(1.05);
+    .profile-name {
+      font-family: var(--font-body);
+      font-size: 20px;
+      font-weight: 800;
+      color: #FFFFFF;
     }
 
-    .about-text-content {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .about-bio {
+    .profile-role-pill {
+      font-family: var(--font-body);
       font-size: 11.5px;
+      font-weight: 600;
+      color: var(--accent-sky);
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      padding: 4px 12px;
+      border-radius: 9999px;
+    }
+
+    .profile-bio-text {
+      font-size: 12.5px;
       line-height: 1.65;
       color: var(--text-slate);
     }
 
-    .about-bullets {
+    .toolkit-bento-card {
+      background: rgba(11, 17, 33, 0.72);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      padding: 30px;
       display: flex;
       flex-direction: column;
-      gap: 6px;
-      margin-top: 4px;
+      justify-content: space-between;
+      gap: 20px;
+      box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.1), 0 12px 30px -10px rgba(0, 0, 0, 0.5);
     }
 
-    .bullet-item {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 11px;
-      font-weight: 600;
+    .toolkit-bento-header {
+      font-family: var(--font-body);
+      font-size: 16px;
+      font-weight: 700;
       color: #FFFFFF;
-    }
-
-    .bullet-dot {
-      width: 5px;
-      height: 5px;
-      border-radius: 50%;
-      background-color: var(--accent-cyan);
-      box-shadow: 0 0 6px var(--accent-cyan);
-    }
-
-    .tools-column {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    .tools-bar {
       display: flex;
       align-items: center;
       gap: 10px;
-      background: rgba(8, 13, 22, 0.78);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(0, 240, 255, 0.16);
-      border-radius: 12px;
-      padding: 16px;
     }
 
-    .tool-pill {
+    .toolkit-pills-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    .toolkit-pill-box {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      border-radius: 12px;
+      padding: 14px 10px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 6px;
-      flex: 1;
+      gap: 8px;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    .tool-icon-box {
-      width: 38px;
-      height: 38px;
-      border-radius: 8px;
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: transform 0.2s, border-color 0.2s;
-    }
-
-    .tool-pill:hover .tool-icon-box {
+    .toolkit-pill-box:hover {
+      background: rgba(56, 189, 248, 0.1);
+      border-color: rgba(56, 189, 248, 0.4);
       transform: translateY(-3px);
-      border-color: var(--accent-cyan);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
     }
 
-    .tool-label {
-      font-size: 8.5px;
+    .toolkit-pill-icon {
+      color: var(--accent-sky);
+    }
+
+    .toolkit-pill-name {
+      font-family: var(--font-body);
+      font-size: 11px;
       font-weight: 700;
-      color: var(--text-slate);
-      letter-spacing: 0.04em;
+      color: #FFFFFF;
       text-align: center;
     }
 
-    .feedback-card {
-      background: rgba(8, 13, 22, 0.78);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(0, 240, 255, 0.16);
-      border-radius: 12px;
-      padding: 20px;
-      display: flex;
-      gap: 16px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .feedback-quote {
-      font-size: 11px;
-      line-height: 1.6;
-      color: var(--text-slate);
-    }
-
-    .feedback-author {
-      font-family: var(--font-mono);
-      font-size: 10px;
-      font-weight: 700;
-      color: var(--accent-cyan);
-      letter-spacing: 0.08em;
-      margin-top: 8px;
-      text-align: right;
-    }
-
     /* ==========================================================================
-       SECTION 6: CREDENTIALS, IN-PLANT & HONORS
+       CREDENTIALS BENTO GRID
        ========================================================================== */
-    .credentials-section {
-      margin-bottom: 80px;
-    }
-
-    .credentials-grid {
+    .bento-cred-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
+      gap: 20px;
+      margin-bottom: 90px;
     }
 
-    .cred-column {
-      background: rgba(8, 13, 22, 0.78);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(0, 240, 255, 0.16);
-      border-radius: 14px;
-      padding: 24px;
+    .cred-bento-box {
+      background: rgba(11, 17, 33, 0.72);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      padding: 26px 24px;
       display: flex;
       flex-direction: column;
       gap: 16px;
+      box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.1), 0 12px 30px -10px rgba(0, 0, 0, 0.5);
     }
 
-    .cred-col-header {
+    .cred-bento-title-row {
       display: flex;
       align-items: center;
       gap: 10px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid rgba(0, 240, 255, 0.2);
-    }
-
-    .cred-col-icon {
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      background: rgba(0, 240, 255, 0.12);
-      border: 1px solid rgba(0, 240, 255, 0.4);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--accent-cyan);
-      flex-shrink: 0;
-    }
-
-    .cred-col-title {
-      font-family: var(--font-display);
-      font-size: 20px;
-      letter-spacing: 0.06em;
-      color: #FFFFFF;
-      margin: 0;
-    }
-
-    .cred-card {
-      padding: 12px 0;
+      padding-bottom: 14px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      font-family: var(--font-body);
+      font-size: 15px;
+      font-weight: 700;
+      color: #FFFFFF;
+    }
+
+    .cred-item-card {
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
       display: flex;
       flex-direction: column;
-      gap: 6px;
+      gap: 4px;
     }
 
-    .cred-card:last-child {
+    .cred-item-card:last-child {
       border-bottom: none;
     }
 
-    .cred-card-top {
+    .cred-item-top {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 8px;
     }
 
-    .cred-card-title {
+    .cred-item-name {
       font-size: 13px;
       font-weight: 700;
-      letter-spacing: 0.05em;
       color: #FFFFFF;
-      text-transform: uppercase;
-      line-height: 1.3;
     }
 
-    .cred-badge {
-      display: inline-block;
+    .cred-item-badge {
       font-family: var(--font-mono);
       font-size: 9px;
       font-weight: 700;
-      letter-spacing: 0.12em;
-      color: var(--accent-cyan);
-      background: rgba(0, 240, 255, 0.1);
-      border: 1px solid rgba(0, 240, 255, 0.35);
-      border-radius: 4px;
-      padding: 3px 8px;
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      color: var(--accent-sky);
+      padding: 2px 8px;
+      border-radius: 9999px;
       white-space: nowrap;
-      flex-shrink: 0;
     }
 
-    .cred-desc {
+    .cred-item-desc {
       font-size: 11.5px;
       line-height: 1.55;
       color: var(--text-slate);
     }
 
-    .cred-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-      margin-top: 4px;
-      padding: 0;
-    }
-
-    .cred-list li {
-      font-size: 11px;
-      color: var(--text-slate);
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      line-height: 1.4;
-    }
-
-    .cred-list li::before {
-      content: '';
-      width: 5px;
-      height: 5px;
-      border-radius: 50%;
-      background-color: var(--accent-cyan);
-      box-shadow: 0 0 6px rgba(0, 240, 255, 0.6);
-      flex-shrink: 0;
-    }
-
     /* ==========================================================================
-       SECTION 7: SERVICES
+       SERVICES BENTO
        ========================================================================== */
-    .services-section {
-      margin-bottom: 80px;
-    }
-
-    .services-grid {
+    .bento-services-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
+      gap: 20px;
+      margin-bottom: 90px;
     }
 
-    .service-card {
-      background: rgba(8, 13, 22, 0.78);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(0, 240, 255, 0.16);
-      border-radius: 12px;
-      padding: 24px;
+    .service-bento-card {
+      background: rgba(11, 17, 33, 0.72);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      padding: 28px;
       display: flex;
       flex-direction: column;
-      gap: 12px;
-      transition: all 0.25s ease;
+      justify-content: space-between;
+      gap: 16px;
+      box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.1), 0 12px 30px -10px rgba(0, 0, 0, 0.5);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    .service-card:hover {
-      border-color: rgba(0, 240, 255, 0.55);
+    .service-bento-card:hover {
+      border-color: rgba(56, 189, 248, 0.45);
       transform: translateY(-4px);
-      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 240, 255, 0.2);
+      box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.15), 0 20px 40px -12px rgba(0, 0, 0, 0.7), 0 0 25px rgba(56, 189, 248, 0.15);
     }
 
-    .service-title {
-      font-size: 14px;
+    .service-card-title {
+      font-size: 15px;
       font-weight: 700;
       color: #FFFFFF;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
+      letter-spacing: -0.01em;
     }
 
-    .service-desc {
-      font-size: 11px;
+    .service-card-desc {
+      font-size: 12px;
       line-height: 1.6;
       color: var(--text-slate);
     }
 
-    .service-action-row {
+    .service-card-actions {
       display: flex;
-      gap: 12px;
-      margin-top: 8px;
+      gap: 10px;
+      margin-top: 6px;
     }
 
-    .service-btn {
-      padding: 8px 16px;
-      border-radius: 4px;
-      font-family: var(--font-mono);
-      font-size: 10px;
+    .service-action-btn {
+      padding: 8px 18px;
+      border-radius: 9999px;
+      font-family: var(--font-body);
+      font-size: 11px;
       font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
       text-decoration: none;
-      transition: all 0.2s;
+      transition: all 0.2s ease;
       display: inline-flex;
       align-items: center;
       gap: 6px;
     }
 
-    .service-btn-fiverr {
-      background: #1dbf73;
-      color: #fff;
-    }
-    .service-btn-fiverr:hover {
-      background: #18a362;
+    .btn-fiverr {
+      background: rgba(29, 191, 115, 0.15);
+      border: 1px solid rgba(29, 191, 115, 0.4);
+      color: #22C55E;
     }
 
-    .service-btn-whatsapp {
-      background: #25d366;
-      color: #fff;
+    .btn-fiverr:hover {
+      background: #1DBF73;
+      color: #FFFFFF;
+      box-shadow: 0 4px 16px rgba(29, 191, 115, 0.4);
     }
-    .service-btn-whatsapp:hover {
-      background: #20ba5a;
+
+    .btn-whatsapp {
+      background: rgba(37, 211, 102, 0.15);
+      border: 1px solid rgba(37, 211, 102, 0.4);
+      color: #25D366;
+    }
+
+    .btn-whatsapp:hover {
+      background: #25D366;
+      color: #FFFFFF;
+      box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
     }
 
     /* ==========================================================================
-       SECTION 8: SEND DIRECT MESSAGE & DISPATCH CONSOLE
+       DIRECT DISPATCH & CONTACT BENTO
        ========================================================================== */
-    .message-section {
-      margin-bottom: 80px;
-      position: relative;
-    }
-
-    .message-grid {
+    .bento-contact-grid {
       display: grid;
       grid-template-columns: 1fr 1.35fr;
-      gap: 36px;
-      align-items: start;
-      margin-top: 24px;
+      gap: 24px;
+      margin-bottom: 90px;
     }
 
-    .direct-channels-card {
-      background: rgba(8, 13, 22, 0.78) !important;
-      backdrop-filter: blur(12px) !important;
-      -webkit-backdrop-filter: blur(12px) !important;
-      border: 1px solid rgba(0, 240, 255, 0.16) !important;
-      border-radius: 14px !important;
-      padding: 26px !important;
+    .contact-channels-bento {
+      background: rgba(11, 17, 33, 0.72);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      padding: 30px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      gap: 20px;
+      box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.1), 0 12px 30px -10px rgba(0, 0, 0, 0.5);
     }
 
-    .channels-header-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      font-family: var(--font-mono);
-      font-size: 10px;
-      font-weight: 800;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--accent-cyan);
-      background: transparent !important;
-      border: 1.5px solid rgba(0, 240, 255, 0.45);
-      padding: 5px 12px;
-      border-radius: 20px;
-      margin-bottom: 12px;
-      width: fit-content;
-    }
-
-    .channels-title {
-      font-family: var(--font-display);
-      font-size: 26px;
-      letter-spacing: 0.05em;
-      color: #FFFFFF !important;
-      margin: 0 0 8px;
-    }
-
-    .channels-desc {
-      font-size: 12.5px;
-      line-height: 1.6;
-      color: var(--text-slate) !important;
-      margin-bottom: 20px;
-    }
-
-    .direct-links-list {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      margin-bottom: 22px;
-    }
-
-    .channel-item {
+    .channel-item-row {
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 12px 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
       text-decoration: none;
-      transition: all 0.25s ease;
       color: #FFFFFF;
+      transition: all 0.2s ease;
     }
 
-    .channel-item:hover {
-      border-bottom-color: var(--accent-cyan) !important;
-      transform: translateX(6px);
+    .channel-item-row:hover {
+      border-bottom-color: var(--accent-sky);
+      transform: translateX(4px);
     }
 
-    .channel-item-left {
+    .channel-left-meta {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 12px;
     }
 
-    .channel-icon {
-      width: 32px;
-      height: 32px;
+    .channel-icon-circle {
+      width: 36px;
+      height: 36px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
-      box-shadow: 0 0 8px rgba(0, 240, 255, 0.25);
     }
 
-    .channel-icon.email-icon {
-      background: rgba(0, 240, 255, 0.2);
-      color: var(--accent-cyan);
-      border: 1.5px solid rgba(0, 240, 255, 0.6);
-    }
-
-    .channel-icon.wa-icon {
-      background: rgba(37, 211, 102, 0.2);
-      color: #25D366;
-      border: 1.5px solid rgba(37, 211, 102, 0.6);
-    }
-
-    .channel-icon.fiverr-icon {
-      background: rgba(29, 191, 115, 0.2);
-      color: #1DBF73;
-      border: 1.5px solid rgba(29, 191, 115, 0.6);
-    }
-
-    .channel-label {
-      font-family: var(--font-mono);
+    .channel-title-tag {
       font-size: 11px;
-      font-weight: 800;
-      letter-spacing: 0.1em;
-      color: var(--accent-cyan) !important;
+      font-weight: 700;
+      color: var(--accent-sky);
       text-transform: uppercase;
+      letter-spacing: 0.04em;
     }
 
-    .channel-val {
+    .channel-value-text {
       font-size: 13px;
-      font-weight: 700;
-      color: #FFFFFF !important;
-      letter-spacing: 0.02em;
-    }
-
-    .channel-action-arrow {
-      font-size: 14px;
-      color: var(--accent-cyan);
-      transition: transform 0.2s ease;
-    }
-
-    .channel-item:hover .channel-action-arrow {
-      transform: translateX(4px);
-    }
-
-    .quick-topics {
-      margin-top: 14px;
-      padding-top: 14px;
-      border-top: 1px solid rgba(255, 255, 255, 0.15);
-    }
-
-    .quick-topics-label {
-      font-family: var(--font-mono);
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: 0.1em;
-      color: #FFFFFF !important;
-      text-transform: uppercase;
-      margin-bottom: 10px;
-    }
-
-    .quick-topics-chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 7px;
-    }
-
-    .topic-chip {
-      font-family: var(--font-mono);
-      font-size: 10px;
-      font-weight: 700;
-      padding: 6px 12px;
-      border-radius: 20px;
-      background: rgba(8, 14, 24, 0.7);
-      border: 1px solid rgba(0, 240, 255, 0.25);
-      color: var(--text-slate);
-      cursor: pointer;
-      transition: all 0.2s ease;
-      user-select: none;
-    }
-
-    .topic-chip:hover {
-      background: rgba(0, 240, 255, 0.2);
-      border-color: var(--accent-cyan);
+      font-weight: 600;
       color: #FFFFFF;
-      transform: translateY(-2px);
     }
 
-    .topic-chip.active {
-      background: var(--accent-cyan);
-      border-color: #FFFFFF;
-      color: #04070D;
-      box-shadow: 0 0 12px rgba(0, 240, 255, 0.5);
-    }
-
-    .message-form-card {
-      background: rgba(8, 13, 22, 0.78) !important;
-      backdrop-filter: blur(12px) !important;
-      -webkit-backdrop-filter: blur(12px) !important;
-      border: 1px solid rgba(0, 240, 255, 0.16) !important;
-      border-radius: 14px !important;
-      padding: 26px !important;
+    .bento-form-card {
+      background: rgba(11, 17, 33, 0.72);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      padding: 30px;
       display: flex;
       flex-direction: column;
-    }
-
-    .form-header-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 20px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid rgba(0, 240, 255, 0.2);
-    }
-
-    .form-heading {
-      font-family: var(--font-display);
-      font-size: 26px;
-      letter-spacing: 0.06em;
-      color: #FFFFFF !important;
-      margin: 0;
-    }
-
-    .form-status-indicator {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      font-family: var(--font-mono);
-      font-size: 10.5px;
-      font-weight: 800;
-      letter-spacing: 0.12em;
-      color: #34D399;
-      background: rgba(52, 211, 153, 0.1) !important;
-      border: 1.5px solid rgba(52, 211, 153, 0.4);
-      padding: 5px 12px;
-      border-radius: 20px;
-    }
-
-    .form-status-dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: #34D399;
-      box-shadow: 0 0 8px #34D399;
-      animation: pulseDot 2s infinite ease-in-out;
+      gap: 18px;
+      box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.1), 0 12px 30px -10px rgba(0, 0, 0, 0.5);
     }
 
     .form-row-2col {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 16px;
-      margin-bottom: 16px;
     }
 
     .form-group {
       display: flex;
       flex-direction: column;
       gap: 6px;
-      margin-bottom: 16px;
-    }
-
-    .form-group.no-margin {
-      margin-bottom: 0;
     }
 
     .form-label {
-      font-family: var(--font-mono);
-      font-size: 11px;
+      font-family: var(--font-body);
+      font-size: 11.5px;
       font-weight: 700;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.04em;
       text-transform: uppercase;
-      color: #FFFFFF !important;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 6px;
+      color: #FFFFFF;
     }
 
     .form-input,
     .form-select,
     .form-textarea {
       width: 100%;
-      background: rgba(4, 7, 13, 0.6) !important;
-      border: 1px solid rgba(0, 240, 255, 0.22) !important;
-      border-radius: 8px;
+      background: rgba(3, 7, 18, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 10px;
       padding: 12px 16px;
-      color: #FFFFFF !important;
+      color: #FFFFFF;
       font-family: inherit;
       font-size: 13.5px;
-      font-weight: 600;
-      letter-spacing: 0.02em;
-      transition: all 0.25s ease;
-      box-sizing: border-box;
+      font-weight: 500;
+      transition: all 0.2s ease;
       outline: none;
     }
 
     .form-input:focus,
     .form-select:focus,
     .form-textarea:focus {
-      border-color: var(--accent-cyan) !important;
-      box-shadow: 0 0 16px rgba(0, 240, 255, 0.4) !important;
-      background: rgba(0, 240, 255, 0.05) !important;
-    }
-
-    .form-input::placeholder,
-    .form-textarea::placeholder {
-      color: var(--text-muted) !important;
-      font-size: 12.5px;
-    }
-
-    .form-select {
-      cursor: pointer;
-      appearance: none;
-      -webkit-appearance: none;
-      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2300F0FF' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
-      background-repeat: no-repeat;
-      background-position: right 14px center;
-      background-size: 15px;
-      padding-right: 40px;
-    }
-
-    .form-select option {
-      background: #080D16;
-      color: #FFFFFF;
-      font-weight: 600;
-      padding: 12px;
+      border-color: var(--accent-sky);
+      box-shadow: 0 0 16px rgba(56, 189, 248, 0.35);
+      background: rgba(56, 189, 248, 0.04);
     }
 
     .form-textarea {
       resize: vertical;
       min-height: 100px;
-      line-height: 1.5;
     }
 
-    .form-action-row {
+    .bento-btn-row {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 6px;
+      gap: 10px;
+      margin-top: 4px;
     }
 
-    .btn-submit-email {
+    .btn-bento-submit-email {
       flex: 1 1 180px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 8px;
-      background: linear-gradient(135deg, var(--accent-cyan) 0%, var(--accent-cobalt) 100%);
-      color: #04070D;
-      font-family: var(--font-mono);
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
+      background: linear-gradient(135deg, #38BDF8 0%, #6366F1 100%);
+      color: #FFFFFF;
+      font-family: var(--font-body);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
       padding: 12px 20px;
-      border-radius: 6px;
+      border-radius: 9999px;
       border: none;
       cursor: pointer;
-      box-shadow: 0 4px 18px rgba(0, 240, 255, 0.4);
+      box-shadow: 0 4px 18px rgba(56, 189, 248, 0.4);
       transition: all 0.25s ease;
     }
 
-    .btn-submit-email:hover {
-      background: linear-gradient(135deg, #38BDF8 0%, #00F0FF 100%);
+    .btn-bento-submit-email:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 24px rgba(0, 240, 255, 0.65);
+      box-shadow: 0 6px 24px rgba(56, 189, 248, 0.6);
     }
 
-    .btn-submit-whatsapp {
+    .btn-bento-submit-whatsapp {
       flex: 1 1 180px;
       display: inline-flex;
       align-items: center;
@@ -1647,59 +1289,53 @@
       gap: 8px;
       background: #25D366;
       color: #FFFFFF;
-      font-family: var(--font-mono);
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
+      font-family: var(--font-body);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
       padding: 12px 20px;
-      border-radius: 6px;
+      border-radius: 9999px;
       border: none;
       cursor: pointer;
-      box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3);
+      box-shadow: 0 4px 16px rgba(37, 211, 102, 0.35);
       transition: all 0.25s ease;
     }
 
-    .btn-submit-whatsapp:hover {
+    .btn-bento-submit-whatsapp:hover {
       background: #20BA5A;
       transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
+      box-shadow: 0 6px 22px rgba(37, 211, 102, 0.5);
     }
 
-    .btn-copy-msg {
+    .btn-bento-copy {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 6px;
-      background: rgba(0, 240, 255, 0.08) !important;
-      border: 1px solid rgba(0, 240, 255, 0.35) !important;
-      color: var(--accent-cyan) !important;
-      font-family: var(--font-mono);
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 12px 18px;
-      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: var(--text-slate);
+      font-family: var(--font-body);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 12px 20px;
+      border-radius: 9999px;
       cursor: pointer;
       transition: all 0.2s ease;
     }
 
-    .btn-copy-msg:hover {
-      background: rgba(0, 240, 255, 0.2) !important;
-      border-color: var(--accent-cyan) !important;
+    .btn-bento-copy:hover {
+      background: rgba(255, 255, 255, 0.12);
       color: #FFFFFF;
     }
 
     .msg-feedback {
       display: none;
-      margin-top: 14px;
       padding: 12px 16px;
-      border-radius: 6px;
+      border-radius: 10px;
       font-size: 12px;
-      font-weight: 700;
+      font-weight: 600;
       line-height: 1.4;
-      animation: fadeIn 0.3s ease;
       background: rgba(0, 0, 0, 0.85);
     }
 
@@ -1718,143 +1354,59 @@
     }
 
     /* ==========================================================================
-       SECTION 9: FOOTER
+       EXECUTIVE FOOTER (APPLE / VERCEL STYLE)
        ========================================================================== */
-    .footer-section {
-      background: rgba(8, 13, 22, 0.78);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(0, 240, 255, 0.16);
-      border-radius: 16px;
+    .bento-footer {
+      background: rgba(11, 17, 33, 0.72);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
       padding: 36px 32px;
-      display: grid;
-      grid-template-columns: 1.2fr 1fr 1fr;
-      gap: 40px;
+      display: flex;
+      justify-content: space-between;
       align-items: center;
+      gap: 30px;
+      box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
     }
 
-    .collab-title {
-      font-family: var(--font-display);
-      font-size: 32px;
-      letter-spacing: 0.05em;
-      color: #FFFFFF;
-      margin-bottom: 6px;
-    }
-
-    .collab-desc {
-      font-size: 11.5px;
-      line-height: 1.6;
-      color: var(--text-slate);
-      margin-bottom: 18px;
-    }
-
-    .contact-list {
+    .footer-left-meta {
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 8px;
     }
 
-    .contact-item {
+    .footer-brand {
+      font-family: var(--font-body);
+      font-size: 16px;
+      font-weight: 800;
+      color: #FFFFFF;
+    }
+
+    .footer-desc {
+      font-size: 12.5px;
+      color: var(--text-muted);
+      max-width: 440px;
+      line-height: 1.5;
+    }
+
+    .footer-links-row {
       display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 11px;
-      font-weight: 600;
+      gap: 20px;
+    }
+
+    .footer-link {
+      font-size: 12px;
       color: var(--text-slate);
       text-decoration: none;
       transition: color 0.2s;
     }
 
-    .contact-item:hover {
-      color: var(--accent-cyan);
+    .footer-link:hover {
+      color: var(--accent-sky);
     }
 
-    .contact-icon {
-      width: 22px;
-      height: 22px;
-      border-radius: 50%;
-      border: 1px solid rgba(0, 240, 255, 0.45);
-      background: rgba(0, 240, 255, 0.1);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--accent-cyan);
-      flex-shrink: 0;
-    }
-
-    .scan-wrap {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .scan-title {
-      font-family: var(--font-display);
-      font-size: 20px;
-      letter-spacing: 0.08em;
-      color: var(--text-white);
-    }
-
-    .qr-row {
-      display: flex;
-      gap: 20px;
-    }
-
-    .qr-card {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 6px;
-      text-decoration: none;
-    }
-
-    .qr-box {
-      width: 76px;
-      height: 76px;
-      border-radius: 8px;
-      background: #FFFFFF;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 4px;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
-      transition: transform 0.2s;
-    }
-
-    .qr-card:hover .qr-box {
-      transform: scale(1.05);
-    }
-
-    .qr-label {
-      font-family: var(--font-mono);
-      font-size: 9px;
-      font-weight: 700;
-      color: var(--accent-cyan);
-      letter-spacing: 0.08em;
-    }
-
-    .slogan-wrap {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      align-items: flex-end;
-      text-align: right;
-    }
-
-    .slogan-icon {
-      width: 28px;
-      height: 28px;
-    }
-
-    .slogan-text {
-      font-family: var(--font-display);
-      font-size: 26px;
-      line-height: 1.05;
-      letter-spacing: 0.06em;
-      color: #FFFFFF;
-    }
-
-    /* Preloader CSS */
+    /* Preloader CSS - PRESERVED */
     #site-preloader {
       position: fixed;
       top: 0;
@@ -1899,7 +1451,7 @@
       width: 180px;
       height: 180px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(0, 240, 255, 0.45) 0%, rgba(0, 240, 255, 0) 70%);
+      background: radial-gradient(circle, rgba(56, 189, 248, 0.45) 0%, rgba(56, 189, 248, 0) 70%);
       filter: blur(16px);
       animation: pulseGlow 2.5s infinite ease-in-out;
     }
@@ -1924,13 +1476,13 @@
 
     .orbit-progress {
       fill: none;
-      stroke: var(--accent-cyan);
+      stroke: var(--accent-sky);
       stroke-width: 3;
       stroke-linecap: round;
       stroke-dasharray: 641;
       stroke-dashoffset: 641;
       transition: stroke-dashoffset 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
-      filter: drop-shadow(0 0 10px rgba(0, 240, 255, 0.95));
+      filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.95));
     }
 
     .avatar-inner {
@@ -1938,8 +1490,8 @@
       height: 172px;
       border-radius: 50%;
       overflow: hidden;
-      border: 3px solid rgba(0, 240, 255, 0.85);
-      box-shadow: 0 0 35px rgba(0, 240, 255, 0.4);
+      border: 3px solid rgba(56, 189, 248, 0.85);
+      box-shadow: 0 0 35px rgba(56, 189, 248, 0.4);
       background: #000;
       position: relative;
     }
@@ -1972,7 +1524,7 @@
       font-size: 11px;
       font-weight: 700;
       letter-spacing: 0.18em;
-      color: var(--accent-cyan);
+      color: var(--accent-sky);
     }
 
     .progress-box {
@@ -1994,8 +1546,8 @@
     .progress-bar-fill {
       height: 100%;
       width: 0%;
-      background: linear-gradient(90deg, #38BDF8, #00F0FF);
-      box-shadow: 0 0 10px #00F0FF;
+      background: linear-gradient(90deg, #38BDF8, #818CF8);
+      box-shadow: 0 0 10px #38BDF8;
       transition: width 0.15s ease-out;
     }
 
@@ -2007,9 +1559,9 @@
       letter-spacing: 0.1em;
     }
 
-    /* Custom Cursor */
+    /* Custom Cursor - PRESERVED */
     @media (hover: hover) and (pointer: fine) {
-      body, a, button, input, textarea, select, [role="button"], .btn, .chip, .project-card, .skill-card, .credential-card, .service-card, .contact-card, .social-icon, .view-more-link, .feedback-card, .tool-badge, .tab-btn {
+      body, a, button, input, textarea, select, [role="button"], .btn, .chip, .bento-box, .bento-pub-card, .service-bento-card, .btn-bento-primary, .btn-bento-glass {
         cursor: none !important;
       }
     }
@@ -2034,7 +1586,7 @@
       height: 6px;
       border-radius: 50%;
       background: #FFFFFF;
-      box-shadow: 0 0 10px #00F0FF, 0 0 20px rgba(0, 240, 255, 0.9);
+      box-shadow: 0 0 10px #38BDF8, 0 0 20px rgba(56, 189, 248, 0.9);
       transform: translate(-50%, -50%);
       transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1),
                   background-color 0.2s ease,
@@ -2049,9 +1601,9 @@
       width: 36px;
       height: 36px;
       border-radius: 50%;
-      border: 1.5px solid rgba(0, 240, 255, 0.55);
-      background: rgba(0, 240, 255, 0.04);
-      box-shadow: 0 0 16px rgba(0, 240, 255, 0.25);
+      border: 1.5px solid rgba(56, 189, 248, 0.55);
+      background: rgba(56, 189, 248, 0.04);
+      box-shadow: 0 0 16px rgba(56, 189, 248, 0.25);
       transform: translate(-50%, -50%);
       transition: width 0.28s cubic-bezier(0.16, 1, 0.3, 1),
                   height 0.28s cubic-bezier(0.16, 1, 0.3, 1),
@@ -2064,24 +1616,24 @@
     body.cursor-hover #custom-cursor-follower .follower-ring {
       width: 58px;
       height: 58px;
-      border-color: rgba(0, 240, 255, 0.95);
-      background: rgba(0, 240, 255, 0.12);
-      box-shadow: 0 0 28px rgba(0, 240, 255, 0.55);
+      border-color: rgba(56, 189, 248, 0.95);
+      background: rgba(56, 189, 248, 0.12);
+      box-shadow: 0 0 28px rgba(56, 189, 248, 0.55);
       backdrop-filter: blur(2px);
       -webkit-backdrop-filter: blur(2px);
     }
 
     body.cursor-hover #custom-cursor-dot .dot-core {
       transform: translate(-50%, -50%) scale(1.6);
-      background: #00F0FF;
-      box-shadow: 0 0 14px #00F0FF, 0 0 26px rgba(0, 240, 255, 0.95);
+      background: #38BDF8;
+      box-shadow: 0 0 14px #38BDF8, 0 0 26px rgba(56, 189, 248, 0.95);
     }
 
     body.cursor-active #custom-cursor-follower .follower-ring {
       transform: translate(-50%, -50%) scale(0.82);
-      border-color: #00F0FF;
-      background: rgba(0, 240, 255, 0.35);
-      box-shadow: 0 0 24px rgba(0, 240, 255, 0.7);
+      border-color: #38BDF8;
+      background: rgba(56, 189, 248, 0.35);
+      box-shadow: 0 0 24px rgba(56, 189, 248, 0.7);
     }
 
     body.cursor-active #custom-cursor-dot .dot-core {
@@ -2092,8 +1644,8 @@
       position: fixed;
       pointer-events: none;
       border-radius: 50%;
-      border: 1.5px solid rgba(0, 240, 255, 0.9);
-      box-shadow: 0 0 20px rgba(0, 240, 255, 0.7);
+      border: 1.5px solid rgba(56, 189, 248, 0.9);
+      box-shadow: 0 0 20px rgba(56, 189, 248, 0.7);
       z-index: 99998;
       transform: translate(-50%, -50%) scale(0.2);
       animation: cursorRippleAnim 0.6s cubic-bezier(0.12, 0.8, 0.32, 1) forwards;
@@ -2108,8 +1660,8 @@
       position: fixed;
       pointer-events: none;
       border-radius: 50%;
-      background: #00F0FF;
-      box-shadow: 0 0 8px #00E5FF, 0 0 14px rgba(0, 240, 255, 0.6);
+      background: #38BDF8;
+      box-shadow: 0 0 8px #00F0FF, 0 0 14px rgba(56, 189, 248, 0.6);
       z-index: 99997;
       transform: translate(-50%, -50%);
       animation: trailFadeAnim 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
@@ -2129,58 +1681,88 @@
     }
 
     /* ==========================================================================
-       RESPONSIVE BREAKPOINTS
+       RESPONSIVE BREAKPOINTS (BENTO STYLE)
        ========================================================================== */
     @media (max-width: 1024px) {
-      .nav-links {
+      .nav-dock-wrapper {
+        top: 10px;
+        padding: 0 8px;
+      }
+      .nav-dock {
+        padding: 6px 14px;
+        gap: 10px;
+        max-width: 100%;
+        overflow-x: auto;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+      }
+      .nav-dock::-webkit-scrollbar {
         display: none;
       }
-      .telemetry-hud-row {
+      .nav-links {
+        display: flex !important;
+        gap: 4px;
+        flex-shrink: 0;
+      }
+      .nav-link-item a {
+        font-size: 11px;
+        padding: 5px 10px;
+      }
+      .nav-brand {
+        font-size: 12px;
+        flex-shrink: 0;
+      }
+      .nav-cta-btn {
+        font-size: 10px;
+        padding: 6px 14px;
+        flex-shrink: 0;
+      }
+      .bento-hud-strip {
         grid-template-columns: repeat(2, 1fr);
       }
-      .spec-grid {
-        grid-template-columns: 1fr;
-      }
-      .what-grid {
+      .bento-matrix-grid {
         grid-template-columns: repeat(2, 1fr);
       }
-      .career-grid {
-        grid-template-columns: 1fr;
+      .bento-box.span-2,
+      .bento-box.span-3 {
+        grid-column: span 2;
       }
-      .projects-grid {
+      .bento-pub-grid {
         grid-template-columns: repeat(2, 1fr);
       }
-      .about-section-wrap {
+      .bento-career-grid {
         grid-template-columns: 1fr;
       }
-      .credentials-grid {
+      .about-bento-grid {
         grid-template-columns: 1fr;
       }
-      .services-grid {
+      .bento-cred-grid {
         grid-template-columns: 1fr;
       }
-      .message-grid {
+      .bento-services-grid {
         grid-template-columns: 1fr;
       }
-      .footer-section {
+      .bento-contact-grid {
         grid-template-columns: 1fr;
-        gap: 32px;
       }
-      .slogan-wrap {
+      .bento-footer {
+        flex-direction: column;
         align-items: flex-start;
-        text-align: left;
       }
     }
 
     @media (max-width: 768px) {
       #content-container {
-        padding: 12px 16px 80px;
+        padding: 8px 16px 80px;
       }
       .hero-viewport-section {
         min-height: auto;
-        padding: 20px 8px 30px;
+        padding: 20px 0 24px;
       }
-      .projects-grid {
+      .hero-bento-card {
+        padding: 28px 20px;
+      }
+      .bento-pub-grid {
         grid-template-columns: 1fr;
       }
       .form-input,
@@ -2191,113 +1773,67 @@
     }
 
     @media (max-width: 640px) {
-      .nav-dock {
-        padding: 6px 12px;
-      }
-      .nav-brand {
-        font-size: 11px;
-      }
-      .nav-cta-btn {
-        padding: 6px 12px;
-        font-size: 9.5px;
-      }
       .hero-title-wrap {
         top: 6vh;
       }
       .hero-title {
         font-size: clamp(42px, 14vw, 78px);
       }
-      .telemetry-hud-row {
+      .bento-hud-strip {
         grid-template-columns: 1fr;
       }
-      .what-grid {
+      .bento-matrix-grid {
         grid-template-columns: 1fr;
       }
-      .about-card {
-        flex-direction: column;
-        align-items: center;
-        text-align: left;
-        padding: 20px 16px;
+      .bento-box.span-2,
+      .bento-box.span-3 {
+        grid-column: span 1;
       }
-      .tools-bar {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 10px;
-        padding: 14px 10px;
-      }
-      .tool-pill {
-        min-width: 0;
+      .toolkit-pills-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
       .form-row-2col {
         grid-template-columns: 1fr;
       }
-      .form-action-row {
+      .bento-btn-row {
         flex-direction: column;
       }
-      .btn-submit-email,
-      .btn-submit-whatsapp,
-      .btn-copy-msg {
+      .btn-bento-submit-email,
+      .btn-bento-submit-whatsapp,
+      .btn-bento-copy {
         width: 100%;
         min-height: 46px;
       }
-      .footer-section {
-        padding: 24px 18px;
-      }
-      .qr-row {
-        gap: 14px;
-      }
     }
-
-    @media (max-width: 380px) {
-      .tools-bar {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      .hero-name-plate {
-        font-size: 38px;
-      }
-    }
-  </style></style>
-</head>
+  </style></head>
 <body>
 
   <!-- First Opening Circular Image Preloader -->
   <div id="site-preloader">
     <div class="loader-content">
-      <!-- Circular Avatar Container with Animated Rings -->
       <div class="circular-avatar-wrapper">
-        <!-- Outer Glowing Pulse Ring -->
         <div class="glow-ring"></div>
-
-        <!-- Rotating SVG Orbit with Progress Trace -->
         <svg class="orbit-svg" viewBox="0 0 226 226">
           <circle class="orbit-track" cx="113" cy="113" r="102" />
           <circle class="orbit-progress" id="orbit-progress-bar" cx="113" cy="113" r="102" />
         </svg>
-
-        <!-- Rotating Circular Badge Typography -->
         <svg class="circular-text-svg" viewBox="0 0 240 240">
           <path id="preloaderCirclePath" d="M 120, 120 m -94, 0 a 94,94 0 1,1 188,0 a 94,94 0 1,1 -188,0" fill="none" />
-          <text font-size="8.2" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" fill="#00F0FF" letter-spacing="3.2">
+          <text font-size="8.2" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" fill="#38BDF8" letter-spacing="3.2">
             <textPath href="#preloaderCirclePath">
               • ENGR. ARMAN HOSSAIN • ELECTRICAL & ELECTRONIC ENGINEER •
             </textPath>
           </text>
         </svg>
-
-        <!-- Center Image Circle with Portrait Picture -->
         <div class="avatar-circle">
           <img src="profile.png" alt="Engr. Arman Hossain" class="avatar-img">
-          <!-- Light sweep shimmer -->
           <div class="avatar-shimmer"></div>
         </div>
       </div>
 
-      <!-- Text Details below avatar -->
       <div class="loader-meta">
         <h2 class="loader-name">ENGR. ARMAN HOSSAIN</h2>
         <div class="loader-sub">INITIALIZING EXPERIENCE</div>
-
-        <!-- Progress Counter & Bar -->
         <div class="progress-box">
           <div class="progress-bar-track">
             <div class="progress-bar-fill" id="progress-bar-fill"></div>
@@ -2323,13 +1859,10 @@
 
   <!-- Foreground Person Cutout: puts PORTFOLIO behind person on initial load -->
   <div id="hero-person-cutout"><img src="person-cutout.png" alt="Arman Hossain"></div>
-
-  <!-- Foreground Content Structure -->
-  
   <!-- Foreground Content Structure -->
   <div id="content-container">
 
-    <!-- FLOATING DOCK NAVIGATION -->
+    <!-- LUXURY FLOATING GLASS DOCK -->
     <div class="nav-dock-wrapper">
       <nav class="nav-dock">
         <a href="#" class="nav-brand">
@@ -2337,679 +1870,719 @@
           ENGR. ARMAN HOSSAIN
         </a>
         <ul class="nav-links">
-          <li class="nav-link-item"><a href="#spec-sheet">// SPECS</a></li>
-          <li class="nav-link-item"><a href="#expertise">// EXPERTISE</a></li>
-          <li class="nav-link-item"><a href="#career">// CAREER</a></li>
-          <li class="nav-link-item"><a href="#research">// RESEARCH</a></li>
-          <li class="nav-link-item"><a href="#credentials">// CREDENTIALS</a></li>
-          <li class="nav-link-item"><a href="#services">// SERVICES</a></li>
+          <li class="nav-link-item"><a href="#expertise">Overview</a></li>
+          <li class="nav-link-item"><a href="#research">Research Hub</a></li>
+          <li class="nav-link-item"><a href="#career">Career</a></li>
+          <li class="nav-link-item"><a href="#about">About</a></li>
+          <li class="nav-link-item"><a href="#credentials">Credentials</a></li>
+          <li class="nav-link-item"><a href="#services">Services</a></li>
         </ul>
         <a href="#message-section" class="nav-cta-btn">
-          DISPATCH ✉
+          Get in Touch ↗
         </a>
       </nav>
     </div>
 
-    <!-- EXECUTIVE HERO SECTION -->
+    <!-- HERO BENTO SECTION -->
     <section class="hero-viewport-section">
-      <div class="hero-executive-console">
-        <div class="hero-telemetry-pill">
-          <span class="status-dot"></span>
-          SYS.OP // GRID ERECTION &amp; IEEE RESEARCHER
+      <div class="hero-bento-card">
+        <div class="hero-status-pill">
+          <span class="nav-brand-dot"></span>
+          Available for Global Engineering Roles &amp; Research Collaborations
         </div>
 
-        <h1 class="hero-name-plate">
+        <h1 class="hero-headline">
           <span>ELECTRICAL &amp; ELECTRONIC ENGINEER</span>
           ENGR. ARMAN HOSSAIN
         </h1>
 
-        <div class="hero-domain-strip">
-          POWER PLANT ERECTION (30 MW) • INDUSTRIAL SCADA • RENEWABLE ENERGY &amp; STORAGE OPTIMIZATION
+        <div class="hero-gradient-subtitle">
+          Power Plant Erection (30 MW) • Industrial SCADA &amp; Substation CAD • Renewable Microgrid Research
         </div>
 
-        <p class="hero-bio-summary">
-          Assistant Electrical Engineer at Akij Resources Limited. Leading the erection of heavy industrial power generation facilities with Rolls-Royce B35:40 &amp; MWM gas engines. Published IEEE author in smart grids, energy storage economics, and IoT automation.
+        <p class="hero-summary-text">
+          Assistant Electrical Engineer at Akij Resources Limited. Leading the erection &amp; commissioning of heavy industrial power generation facilities with Rolls-Royce B35:40 &amp; MWM gas engines. Published IEEE researcher in smart grid optimization, energy storage economics, and IoT industrial controllers.
         </p>
 
-        <div class="hero-cta-group">
-          <a href="#research" class="btn-hero-primary">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
-            EXPLORE RESEARCH HUB
+        <div class="hero-action-row">
+          <a href="#research" class="btn-bento-primary">
+            Explore Research Hub ↓
           </a>
-          <a href="#spec-sheet" class="btn-hero-secondary">
-            ENGINEERING SPEC SHEET ↓
+          <a href="#expertise" class="btn-bento-glass">
+            Bento Competencies ↓
           </a>
-          <a href="https://ieeexplore.ieee.org/author/37089320934" target="_blank" class="btn-hero-secondary">
-            IEEE XPLORE PROFILE ↗
+          <a href="https://ieeexplore.ieee.org/author/37089320934" target="_blank" class="btn-bento-glass">
+            IEEE Xplore Profile ↗
           </a>
         </div>
+      </div>
 
-        <!-- Telemetry HUD Bar -->
-        <div class="telemetry-hud-row">
-          <div class="hud-stat-box">
-            <div class="hud-num">30 MW+</div>
-            <div class="hud-label">Power Generation</div>
-            <div class="hud-sub">Rolls-Royce &amp; MWM Gas Engines</div>
+      <!-- Telemetry HUD Metric Bento Strip -->
+      <div class="bento-hud-strip">
+        <div class="bento-hud-item">
+          <div class="bento-hud-num">30 MW+</div>
+          <div class="bento-hud-label">Power Generation Managed</div>
+          <div class="bento-hud-sub">Rolls-Royce B35:40 &amp; MWM TCG Engines</div>
+        </div>
+        <div class="bento-hud-item">
+          <div class="bento-hud-num">06+</div>
+          <div class="bento-hud-label">Peer-Reviewed Papers</div>
+          <div class="bento-hud-sub">Published IEEE &amp; Scopus Citations</div>
+        </div>
+        <div class="bento-hud-item">
+          <div class="bento-hud-num">100%</div>
+          <div class="bento-hud-label">Industrial QA &amp; SCADA</div>
+          <div class="bento-hud-sub">Six Sigma Yellow Belt Certified</div>
+        </div>
+        <div class="bento-hud-item">
+          <div class="bento-hud-num">05x</div>
+          <div class="bento-hud-label">Academic Honors</div>
+          <div class="bento-hud-sub">IIUC Merit Scholarship Awardee</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: CORE COMPETENCIES BENTO GRID -->
+    <section class="bento-section" id="expertise">
+      <div class="section-wrap-header">
+        <span class="section-tag-pill">ENGINEERING DOMAINS</span>
+        <h2 class="section-heading-lg">CORE COMPETENCIES BENTO</h2>
+        <p class="section-heading-sub">Hands-on industrial erection, heavy power generation engineering, and computational grid simulation.</p>
+      </div>
+
+      <div class="bento-matrix-grid">
+        <!-- Box 1 (Span 2): Flagship Power Plant Erection -->
+        <div class="bento-box span-2">
+          <div class="bento-box-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg>
           </div>
-          <div class="hud-stat-box">
-            <div class="hud-num">06+</div>
-            <div class="hud-label">Peer-Reviewed Papers</div>
-            <div class="hud-sub">IEEE &amp; AJSE Publications</div>
+          <div>
+            <div class="bento-box-title">POWER PLANT ERECTION &amp; COMMISSIONING (30 MW)</div>
+            <p class="bento-box-desc">
+              Managing the erection of heavy industrial captive power plants utilizing Rolls-Royce B35:40 (9.34 MW each), MWM TCG 2032, MTU 16V4000, and Caterpillar gas engines. Direct oversight of cooling water circuits, lubrication systems, auxiliary fuel delivery, and exhaust heat recovery boilers.
+            </p>
           </div>
-          <div class="hud-stat-box">
-            <div class="hud-num">100%</div>
-            <div class="hud-label">Industrial QA &amp; SCADA</div>
-            <div class="hud-sub">Six Sigma Yellow Belt Certified</div>
+          <div class="bento-tag-pills">
+            <span class="bento-tag-pill">Rolls-Royce B35:40</span>
+            <span class="bento-tag-pill">MWM TCG 2032</span>
+            <span class="bento-tag-pill">Auxiliary Commissioning</span>
+            <span class="bento-tag-pill">30 MW Captive Grid</span>
           </div>
-          <div class="hud-stat-box">
-            <div class="hud-num">05x</div>
-            <div class="hud-label">Academic Honors</div>
-            <div class="hud-sub">IIUC Merit Scholarship Awardee</div>
+        </div>
+
+        <!-- Box 2: SCADA & Automation -->
+        <div class="bento-box">
+          <div class="bento-box-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+          </div>
+          <div>
+            <div class="bento-box-title">SCADA &amp; INDUSTRIAL PLC AUTOMATION</div>
+            <p class="bento-box-desc">
+              Siemens S7-1200/1500, TIA Portal v17, WinCC SCADA pipelines, VFD speed controllers, and Modbus RTU/TCP telemetry integration for heavy manufacturing plant loads.
+            </p>
+          </div>
+          <div class="bento-tag-pills">
+            <span class="bento-tag-pill">Siemens TIA Portal</span>
+            <span class="bento-tag-pill">WinCC SCADA</span>
+            <span class="bento-tag-pill">VFD Controls</span>
+          </div>
+        </div>
+
+        <!-- Box 3: Substation & AutoCAD SLD -->
+        <div class="bento-box">
+          <div class="bento-box-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+          </div>
+          <div>
+            <div class="bento-box-title">SUB-STATION MODELING &amp; SLD CAD</div>
+            <p class="bento-box-desc">
+              Comprehensive 33/11 kV sub-station modeling, Single-Line Diagrams (SLD), HT/LT switchgear layouts, transformer sizing, breaker coordination, and cable schedules compliant with IEC standards.
+            </p>
+          </div>
+          <div class="bento-tag-pills">
+            <span class="bento-tag-pill">AutoCAD Electrical</span>
+            <span class="bento-tag-pill">33/11 kV Substation</span>
+            <span class="bento-tag-pill">SLD Verification</span>
+          </div>
+        </div>
+
+        <!-- Box 4: IoT & Embedded Systems -->
+        <div class="bento-box">
+          <div class="bento-box-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+          </div>
+          <div>
+            <div class="bento-box-title">IOT &amp; EMBEDDED AUTOMATION GATEWAYS</div>
+            <p class="bento-box-desc">
+              Hardware prototyping with ESP32, Arduino, GSM/GPRS gateways, seismic bank vault sensors, and automated smart street light fault detection controllers published in IEEE proceedings.
+            </p>
+          </div>
+          <div class="bento-tag-pills">
+            <span class="bento-tag-pill">ESP32 &amp; Sensors</span>
+            <span class="bento-tag-pill">GSM Telemetry</span>
+            <span class="bento-tag-pill">Remote Fault Alert</span>
+          </div>
+        </div>
+
+        <!-- Box 5: Academic Research & HOMER Pro -->
+        <div class="bento-box">
+          <div class="bento-box-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+          </div>
+          <div>
+            <div class="bento-box-title">RENEWABLE TECHNO-ECONOMICS &amp; SIMULATION</div>
+            <p class="bento-box-desc">
+              Optimization of hybrid renewable microgrids with HOMER Pro, battery energy storage economics (BESS), transient circuit analysis in MATLAB/Simulink, and GIS mini-hydro potential site mapping.
+            </p>
+          </div>
+          <div class="bento-tag-pills">
+            <span class="bento-tag-pill">HOMER Pro</span>
+            <span class="bento-tag-pill">MATLAB / Simulink</span>
+            <span class="bento-tag-pill">BESS Optimization</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 1: ENGINEERING SPEC SHEET CONSOLE -->
-    <section class="spec-sheet-section" id="spec-sheet">
-      <div class="section-title-wrap">
-        <div class="section-eyebrow">SYSTEM ARCHITECTURE &amp; MATRIX</div>
-        <h2 class="section-title">ENGINEERING SPEC SHEET</h2>
-        <div class="section-bar"></div>
+    <!-- SECTION: RESEARCH PUBLICATIONS BENTO HUB -->
+    <section class="bento-section" id="research">
+      <div class="section-wrap-header">
+        <span class="section-tag-pill">SCIENTIFIC PUBLICATIONS</span>
+        <h2 class="section-heading-lg">PEER-REVIEWED RESEARCH HUB</h2>
+        <p class="section-heading-sub">Scopus-indexed journal papers and IEEE conference publications in renewable power systems, smart grids, and embedded controllers.</p>
       </div>
 
-      <div class="spec-console-card">
-        <div class="spec-console-header">
-          <div class="spec-header-title">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
-            TECHNICAL PROFICIENCY SPECIFICATION
-          </div>
-          <span class="spec-badge">LIVE REPO SPEC v2.5</span>
-        </div>
-
-        <div class="spec-grid">
-          <!-- Col 1 -->
-          <div class="spec-block">
-            <div class="spec-block-tag">GENERATION &amp; PRIME MOVERS</div>
-            <div class="spec-block-title">Heavy Industrial Gas Engines</div>
-            <p class="spec-block-desc">Erection, auxiliary commissioning, lubrication circuits, and exhaust gas heat recovery systems.</p>
-            <div class="spec-pills">
-              <span class="spec-pill">Rolls-Royce B35:40</span>
-              <span class="spec-pill">MWM TCG 2032</span>
-              <span class="spec-pill">MTU 16V4000</span>
-              <span class="spec-pill">Caterpillar G3520</span>
-            </div>
-          </div>
-
-          <!-- Col 2 -->
-          <div class="spec-block">
-            <div class="spec-block-tag">AUTOMATION &amp; CONTROL</div>
-            <div class="spec-block-title">PLC, SCADA &amp; Substation CAD</div>
-            <p class="spec-block-desc">33/11 kV Single-Line Diagrams (SLD), switchgear layouts, Siemens automation, and telemetry telemetry.</p>
-            <div class="spec-pills">
-              <span class="spec-pill">Siemens TIA Portal</span>
-              <span class="spec-pill">SCADA WinCC</span>
-              <span class="spec-pill">AutoCAD Electrical</span>
-              <span class="spec-pill">VFD Controls</span>
-            </div>
-          </div>
-
-          <!-- Col 3 -->
-          <div class="spec-block">
-            <div class="spec-block-tag">COMPUTATIONAL &amp; SIMULATION</div>
-            <div class="spec-block-title">Power Systems &amp; Techno-Economics</div>
-            <p class="spec-block-desc">Microgrid simulation, transient stability analysis, electromagnetic modeling, and mini-hydro GIS site mapping.</p>
-            <div class="spec-pills">
-              <span class="spec-pill">HOMER Pro</span>
-              <span class="spec-pill">MATLAB / Simulink</span>
-              <span class="spec-pill">LTspice</span>
-              <span class="spec-pill">CST Studio Suite</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 2: CORE EXPERTISE (WHAT I DO) -->
-    <section class="what-i-do-section" id="expertise">
-      <div class="section-title-wrap">
-        <div class="section-eyebrow">FIELD COMPETENCIES</div>
-        <h2 class="section-title">CORE ENGINEERING DOMAINS</h2>
-        <div class="section-bar"></div>
+      <!-- Filter Tabs -->
+      <div class="bento-filter-bar">
+        <button type="button" class="bento-filter-btn active" onclick="filterResearch('all', this)">All Papers (06)</button>
+        <button type="button" class="bento-filter-btn" onclick="filterResearch('renewable', this)">Renewable Energy &amp; Storage</button>
+        <button type="button" class="bento-filter-btn" onclick="filterResearch('iot', this)">IoT &amp; Automation</button>
+        <button type="button" class="bento-filter-btn" onclick="filterResearch('power', this)">Power Electronics</button>
       </div>
 
-      <div class="what-grid">
-        <!-- Card 1 -->
-        <div class="what-card">
-          <div class="what-icon-box">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg>
-          </div>
-          <div class="what-card-title">POWER PLANT ERECTION</div>
-          <p class="what-card-desc">Managing 30 MW, 22 MW &amp; 5 MW plants with Rolls Royce, MWM, MTU &amp; Caterpillar gas engines.</p>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="what-card">
-          <div class="what-icon-box">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
-          </div>
-          <div class="what-card-title">SCADA &amp; AUTOMATION</div>
-          <p class="what-card-desc">Load distribution, auxiliary monitoring, switchgear, substations, and troubleshooting operations.</p>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="what-card">
-          <div class="what-icon-box">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
-          </div>
-          <div class="what-card-title">ELECTRICAL AUTOCAD</div>
-          <p class="what-card-desc">Sub-station modeling, single-line diagrams (SLD), industrial wiring, and distribution design.</p>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="what-card">
-          <div class="what-icon-box">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
-          </div>
-          <div class="what-card-title">IOT &amp; EMBEDDED SYSTEMS</div>
-          <p class="what-card-desc">Smart street light controllers, bank vault security gateways, and automatic railway gate alerts.</p>
-        </div>
-
-        <!-- Card 5 -->
-        <div class="what-card">
-          <div class="what-icon-box">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
-          </div>
-          <div class="what-card-title">ACADEMIC RESEARCH</div>
-          <p class="what-card-desc">Renewable techno-economics, energy storage optimization, GIS mini-hydro mapping, and metamaterials.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 3: CAREER & EDUCATION TIMELINE -->
-    <section class="career-section" id="career">
-      <div class="section-title-wrap">
-        <div class="section-eyebrow">EXPERIENCE &amp; FOUNDATION</div>
-        <h2 class="section-title">CAREER &amp; EDUCATION</h2>
-        <div class="section-bar"></div>
-      </div>
-
-      <div class="career-grid">
-        <!-- Panel 1: Industrial Power Engineering -->
-        <div class="career-panel">
-          <div class="career-panel-header">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent-cyan)" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
-            INDUSTRIAL POWER PLANT EXPERIENCE
-          </div>
-
-          <div class="timeline-list">
-            <div class="timeline-item">
-              <div class="timeline-node">
-                <div class="node-dot"></div>
-                <div class="node-line"></div>
-              </div>
-              <div class="timeline-info">
-                <div class="timeline-role">ASSISTANT ENGINEER (ELECTRICAL)</div>
-                <div class="timeline-org">AKIJ RESOURCES / AKIJ ISPAT LTD. (30 MW PLANT)</div>
-                <div class="timeline-period">MARCH 2025 – PRESENT // MUNSHIGANJ, DHAKA</div>
-                <p class="timeline-desc">Leading erection &amp; commissioning of three 9.34 MW Rolls-Royce B35:40 gas engines. Managing switchgear, substation modeling, cable schedules, and SCADA automation.</p>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="timeline-node">
-                <div class="node-dot"></div>
-                <div class="node-line"></div>
-              </div>
-              <div class="timeline-info">
-                <div class="timeline-role">IN-PLANT INDUSTRIAL ENGINEER</div>
-                <div class="timeline-org">BSRM STEELS LTD. // HEAVY RE-ROLLING</div>
-                <div class="timeline-period">CHITTAGONG, BANGLADESH</div>
-                <p class="timeline-desc">Operational monitoring of 132/33kV substations, induction furnaces, continuous casting machines, and automated drives.</p>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="timeline-node">
-                <div class="node-dot"></div>
-              </div>
-              <div class="timeline-info">
-                <div class="timeline-role">APPARATUS TESTING &amp; MANUFACTURING</div>
-                <div class="timeline-org">GEMCO (GENERAL ELECTRICAL MFG. CO.)</div>
-                <div class="timeline-period">CHITTAGONG, BANGLADESH</div>
-                <p class="timeline-desc">Hands-on testing of power &amp; distribution transformers, core assembly, vacuum drying, and HT/LT breakdown testing.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Panel 2: Academic & Research Background -->
-        <div class="career-panel">
-          <div class="career-panel-header">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent-cyan)" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
-            ACADEMIC BACKGROUND &amp; HONORS
-          </div>
-
-          <div class="timeline-list">
-            <div class="timeline-item">
-              <div class="timeline-node">
-                <div class="node-dot"></div>
-                <div class="node-line"></div>
-              </div>
-              <div class="timeline-info">
-                <div class="timeline-role">B.SC IN ELECTRICAL &amp; ELECTRONIC ENGINEERING</div>
-                <div class="timeline-org">INTERNATIONAL ISLAMIC UNIVERSITY CHITTAGONG (IIUC)</div>
-                <div class="timeline-period">GRADUATED 2022 // 5X MERIT SCHOLARSHIP AWARDEE</div>
-                <p class="timeline-desc">Graduated with high honors. Core concentration in power systems, microgrid optimization, renewable techno-economics, and smart telemetry.</p>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="timeline-node">
-                <div class="node-dot"></div>
-                <div class="node-line"></div>
-              </div>
-              <div class="timeline-info">
-                <div class="timeline-role">FORMER FINANCE &amp; CULTURAL SECRETARY</div>
-                <div class="timeline-org">IIUC EEE CLUB &amp; IEEE STUDENT BRANCH</div>
-                <div class="timeline-period">LEADERSHIP // 2020 – 2022</div>
-                <p class="timeline-desc">Managed budget allocations, coordinated national electrical symposiums, and mentored junior engineering researchers.</p>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="timeline-node">
-                <div class="node-dot"></div>
-              </div>
-              <div class="timeline-info">
-                <div class="timeline-role">IDEA GENERATION CHAMPION</div>
-                <div class="timeline-org">NATIONAL ENGINEERING INNOVATION AWARDS</div>
-                <div class="timeline-period">FIRST PLACE CHAMPION</div>
-                <p class="timeline-desc">Awarded 1st Place for presenting novel smart grid energy storage architectures and renewable fault detection controllers.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 4: TABBED RESEARCH PUBLICATIONS HUB -->
-    <section class="research-section" id="research">
-      <div class="section-title-wrap">
-        <div class="section-eyebrow">PEER-REVIEWED SCIENTIFIC OUTPUT</div>
-        <h2 class="section-title">RESEARCH PUBLICATIONS HUB</h2>
-        <div class="section-bar"></div>
-      </div>
-
-      <!-- Interactive Category Filter Tabs -->
-      <div class="research-filter-bar">
-        <button type="button" class="filter-tab-btn active" onclick="filterResearch('all', this)">[ALL PAPERS (6)]</button>
-        <button type="button" class="filter-tab-btn" onclick="filterResearch('renewable', this)">[RENEWABLE &amp; STORAGE]</button>
-        <button type="button" class="filter-tab-btn" onclick="filterResearch('iot', this)">[IOT &amp; AUTOMATION]</button>
-        <button type="button" class="filter-tab-btn" onclick="filterResearch('power', this)">[POWER ELECTRONICS]</button>
-      </div>
-
-      <div class="projects-grid" id="research-cards-container">
+      <!-- Bento Pub Grid -->
+      <div class="bento-pub-grid" id="research-cards-container">
         <!-- Paper 1 -->
-        <a href="https://doi.org/10.53799/ajse.v23i3.1033" target="_blank" class="project-card" data-category="renewable">
-          <div class="pub-card-top">
+        <a href="https://doi.org/10.53799/ajse.v23i3.1033" target="_blank" class="bento-pub-card" data-category="renewable">
+          <div>
             <span class="pub-venue-badge">AJSE JOURNAL • SCOPUS</span>
-            <div class="project-title">TECHNO-ECONOMIC RICE STRAW EVALUATION</div>
-            <p class="pub-abstract">Techno-economic viability and biomass gasification feasibility for off-grid hybrid power systems in agrarian regions.</p>
+            <div class="bento-pub-title" style="margin-top: 12px;">Techno-Economic Rice Straw Hybrid Power System Evaluation</div>
+            <p class="bento-pub-abstract" style="margin-top: 8px;">
+              Techno-economic viability and biomass gasification feasibility assessment for decentralized hybrid microgrids in agrarian rural zones.
+            </p>
           </div>
-          <div class="pub-card-footer">
-            <span class="pub-doi-link">DOI: 10.53799/ajse.v23i3.1033 ↗</span>
-            <span class="pub-category-tag">RENEWABLE</span>
+          <div class="bento-pub-footer">
+            <span class="pub-doi-pill">DOI: 10.53799/ajse.v23i3.1033 ↗</span>
+            <span class="pub-domain-label">RENEWABLE ENERGY</span>
           </div>
         </a>
 
         <!-- Paper 2 -->
-        <a href="https://doi.org/10.1109/ECCE64574.2025.11013236" target="_blank" class="project-card" data-category="iot">
-          <div class="pub-card-top">
+        <a href="https://doi.org/10.1109/ECCE64574.2025.11013236" target="_blank" class="bento-pub-card" data-category="iot">
+          <div>
             <span class="pub-venue-badge">IEEE ECCE 2025</span>
-            <div class="project-title">IOT STREET LIGHTING FAULT DETECTION</div>
-            <p class="pub-abstract">Microcontroller-driven telemetry architecture for automated cable break, voltage dip, and fixture fault identification.</p>
+            <div class="bento-pub-title" style="margin-top: 12px;">IoT-Enabled Smart Street Lighting Fault Detection System</div>
+            <p class="bento-pub-abstract" style="margin-top: 8px;">
+              Real-time microcontroller-driven telemetry controller for automated cable break, voltage dip, and luminaire failure identification.
+            </p>
           </div>
-          <div class="pub-card-footer">
-            <span class="pub-doi-link">DOI: 10.1109/ECCE64574 ↗</span>
-            <span class="pub-category-tag">IOT &amp; CONTROLLER</span>
+          <div class="bento-pub-footer">
+            <span class="pub-doi-pill">DOI: 10.1109/ECCE64574 ↗</span>
+            <span class="pub-domain-label">IOT &amp; CONTROLLERS</span>
           </div>
         </a>
 
         <!-- Paper 3 -->
-        <a href="https://doi.org/10.1109/ECCE64574.2025.11013316" target="_blank" class="project-card" data-category="renewable">
-          <div class="pub-card-top">
+        <a href="https://doi.org/10.1109/ECCE64574.2025.11013316" target="_blank" class="bento-pub-card" data-category="renewable">
+          <div>
             <span class="pub-venue-badge">IEEE ECCE 2025</span>
-            <div class="project-title">ENERGY STORAGE SYSTEM OPTIMIZATION</div>
-            <p class="pub-abstract">Comparative optimization of lithium-ion, flow batteries, and supercapacitors in intermittent microgrids with HOMER Pro.</p>
+            <div class="bento-pub-title" style="margin-top: 12px;">Energy Storage System Optimization in Grid-Tied Microgrids</div>
+            <p class="bento-pub-abstract" style="margin-top: 8px;">
+              Comparative techno-economic dispatch optimization of lithium-ion, flow batteries, and supercapacitors utilizing HOMER Pro.
+            </p>
           </div>
-          <div class="pub-card-footer">
-            <span class="pub-doi-link">DOI: 10.1109/ECCE64574 ↗</span>
-            <span class="pub-category-tag">SMART GRID</span>
+          <div class="bento-pub-footer">
+            <span class="pub-doi-pill">DOI: 10.1109/ECCE64574 ↗</span>
+            <span class="pub-domain-label">SMART GRID &amp; BESS</span>
           </div>
         </a>
 
         <!-- Paper 4 -->
-        <a href="https://doi.org/10.1109/STI59863.2023.10464852" target="_blank" class="project-card" data-category="iot">
-          <div class="pub-card-top">
+        <a href="https://doi.org/10.1109/STI59863.2023.10464852" target="_blank" class="bento-pub-card" data-category="iot">
+          <div>
             <span class="pub-venue-badge">IEEE STI 2023</span>
-            <div class="project-title">SMART GATEWAY SECURITY FOR BANK VAULT</div>
-            <p class="pub-abstract">Multi-sensor embedded security gateway utilizing biometrics, seismic vibration sensing, and encrypted SMS alerts.</p>
+            <div class="bento-pub-title" style="margin-top: 12px;">Smart Gateway Embedded Security Architecture for Bank Vaults</div>
+            <p class="bento-pub-abstract" style="margin-top: 8px;">
+              Multi-sensor automation gateway utilizing biometric verification, seismic vibration sensors, and encrypted cellular SMS alerts.
+            </p>
           </div>
-          <div class="pub-card-footer">
-            <span class="pub-doi-link">DOI: 10.1109/STI59863 ↗</span>
-            <span class="pub-category-tag">EMBEDDED AUTOMATION</span>
+          <div class="bento-pub-footer">
+            <span class="pub-doi-pill">DOI: 10.1109/STI59863 ↗</span>
+            <span class="pub-domain-label">EMBEDDED AUTOMATION</span>
           </div>
         </a>
 
         <!-- Paper 5 -->
-        <a href="https://ieeexplore.ieee.org/author/37089320934" target="_blank" class="project-card" data-category="power">
-          <div class="pub-card-top">
+        <a href="https://ieeexplore.ieee.org/author/37089320934" target="_blank" class="bento-pub-card" data-category="power">
+          <div>
             <span class="pub-venue-badge">IEEE CONFERENCE</span>
-            <div class="project-title">MULTI-INPUT MULTI-OUTPUT BOOST CONVERTER</div>
-            <p class="pub-abstract">Novel MIMO topology for hybrid renewable integration minimizing voltage ripple and maximizing conversion efficiency.</p>
+            <div class="bento-pub-title" style="margin-top: 12px;">Multi-Input Multi-Output (MIMO) Boost Converter Topology</div>
+            <p class="bento-pub-abstract" style="margin-top: 8px;">
+              High-gain multi-source DC-DC converter for hybrid renewable integration with reduced component stress and voltage ripple.
+            </p>
           </div>
-          <div class="pub-card-footer">
-            <span class="pub-doi-link">IEEE Xplore Author Profile ↗</span>
-            <span class="pub-category-tag">POWER ELECTRONICS</span>
+          <div class="bento-pub-footer">
+            <span class="pub-doi-pill">IEEE Xplore Author Profile ↗</span>
+            <span class="pub-domain-label">POWER ELECTRONICS</span>
           </div>
         </a>
 
         <!-- Paper 6 -->
-        <a href="https://ieeexplore.ieee.org/author/37089320934" target="_blank" class="project-card" data-category="renewable">
-          <div class="pub-card-top">
+        <a href="https://ieeexplore.ieee.org/author/37089320934" target="_blank" class="bento-pub-card" data-category="renewable">
+          <div>
             <span class="pub-venue-badge">IEEE CONFERENCE</span>
-            <div class="project-title">GIS MAPPING OF MINI-HYDRO POTENTIAL SITES</div>
-            <p class="pub-abstract">Hydrological elevation modeling and GIS geographic analysis for optimal micro-hydro turbine placement.</p>
+            <div class="bento-pub-title" style="margin-top: 12px;">GIS Hydrological Mapping for Mini-Hydro Potential Sites</div>
+            <p class="bento-pub-abstract" style="margin-top: 8px;">
+              Digital elevation modeling and GIS geographic analysis for optimal micro-hydro run-of-river turbine placement and discharge estimation.
+            </p>
           </div>
-          <div class="pub-card-footer">
-            <span class="pub-doi-link">IEEE Xplore Author Profile ↗</span>
-            <span class="pub-category-tag">RENEWABLE MAPPING</span>
+          <div class="bento-pub-footer">
+            <span class="pub-doi-pill">IEEE Xplore Author Profile ↗</span>
+            <span class="pub-domain-label">RENEWABLE MAPPING</span>
           </div>
         </a>
       </div>
     </section>
 
-    <!-- SECTION 5: ABOUT ME & TOOLS -->
-    <section class="about-section-wrap" id="about">
-      <div class="about-card">
-        <div class="about-portrait-box">
-          <img src="profile.png" alt="Engr. Arman Hossain" class="about-portrait-img">
-        </div>
-        <div class="about-text-content">
-          <div class="section-eyebrow">RESEARCHER PROFILE</div>
-          <h3 style="font-family:var(--font-display); font-size:24px; color:#FFFFFF; margin:0;">ENGR. ARMAN HOSSAIN</h3>
-          <p class="about-bio">
-            Electrical &amp; Electronic Engineer with comprehensive industrial grounding in heavy power generation, switchgear, and substation commissioning. Passionate about lifelong technical exploration, academic research, and international graduate opportunities.
-          </p>
-          <div class="about-bullets">
-            <div class="bullet-item"><div class="bullet-dot"></div> 3+ Years Industrial Erection &amp; Operations Experience</div>
-            <div class="bullet-item"><div class="bullet-dot"></div> 6+ Published International IEEE &amp; Scopus Papers</div>
-            <div class="bullet-item"><div class="bullet-dot"></div> Six Sigma Yellow Belt Certified (ID: 881599)</div>
-            <div class="bullet-item"><div class="bullet-dot"></div> Siemens TIA Portal &amp; Industrial SCADA Certified</div>
-          </div>
-        </div>
+    <!-- SECTION: CAREER & INDUSTRIAL EXPERIENCE BENTO -->
+    <section class="bento-section" id="career">
+      <div class="section-wrap-header">
+        <span class="section-tag-pill">TRACK RECORD</span>
+        <h2 class="section-heading-lg">CAREER &amp; IN-PLANT TRAINING BENTO</h2>
+        <p class="section-heading-sub">Industrial engineering appointments, in-plant heavy apparatus training, and academic foundations.</p>
       </div>
 
-      <div class="tools-column">
-        <div class="tools-bar">
-          <div class="tool-pill"><div class="tool-icon-box"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"></path></svg></div><div class="tool-label">MATLAB</div></div>
-          <div class="tool-pill"><div class="tool-icon-box"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg></div><div class="tool-label">HOMER PRO</div></div>
-          <div class="tool-pill"><div class="tool-icon-box"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></div><div class="tool-label">LTSPICE</div></div>
-          <div class="tool-pill"><div class="tool-icon-box"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect></svg></div><div class="tool-label">AUTOCAD</div></div>
-          <div class="tool-pill"><div class="tool-icon-box"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"></circle></svg></div><div class="tool-label">CST STUDIO</div></div>
-          <div class="tool-pill"><div class="tool-icon-box"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg></div><div class="tool-label">PYTHON</div></div>
-        </div>
-
-        <div class="feedback-card">
-          <div>
-            <div class="feedback-quote">
-              "Arman combines rigorous analytical research depth with hands-on industrial precision in power plant erection and electrical distribution."
-            </div>
-            <div class="feedback-author">// RESEARCH COLLABORATORS &amp; INDUSTRY MENTORS</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 6: CREDENTIALS, IN-PLANT TRAINING & HONORS -->
-    <section class="credentials-section" id="credentials">
-      <div class="section-title-wrap">
-        <div class="section-eyebrow">VERIFIED QUALIFICATIONS</div>
-        <h2 class="section-title">CREDENTIALS, TRAINING &amp; RECOGNITION</h2>
-        <div class="section-bar"></div>
-      </div>
-
-      <div class="credentials-grid">
-        <!-- Col 1 -->
-        <div class="cred-column">
-          <div class="cred-col-header">
-            <div class="cred-col-icon">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
-            </div>
-            <h4 class="cred-col-title">CERTIFICATIONS</h4>
+      <div class="bento-career-grid">
+        <!-- Box 1: Industrial Power Engineering -->
+        <div class="career-bento-box">
+          <div class="career-bento-header">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-sky)" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+            Industrial Power Plant Engineering Appointments
           </div>
 
-          <div class="cred-card">
-            <div class="cred-card-top">
-              <div class="cred-card-title">SIX SIGMA YELLOW BELT</div>
-              <span class="cred-badge">ID: 881599</span>
-            </div>
-            <p class="cred-desc">Quality management, DMAIC methodology, defect reduction, and industrial process capability analysis.</p>
-          </div>
-
-          <div class="cred-card">
-            <div class="cred-card-top">
-              <div class="cred-card-title">INDUSTRIAL AUTOMATION &amp; SCADA</div>
-              <span class="cred-badge">PLC CERTIFIED</span>
-            </div>
-            <p class="cred-desc">Siemens PLC / TIA Portal, HMI interface, VFD speed control, SCADA telemetry pipelines, and Power BI analytics.</p>
-          </div>
-
-          <div class="cred-card">
-            <div class="cred-card-top">
-              <div class="cred-card-title">ELECTRICAL DRAWING &amp; SUBSTATION</div>
-              <span class="cred-badge">AUTOCAD 2D/3D</span>
-            </div>
-            <p class="cred-desc">Single-Line Diagrams (SLD), HT/LT switchgear layouts, Autodesk Revit BIM, and cable schedule routing.</p>
-          </div>
-        </div>
-
-        <!-- Col 2 -->
-        <div class="cred-column">
-          <div class="cred-col-header">
-            <div class="cred-col-icon">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
-            </div>
-            <h4 class="cred-col-title">IN-PLANT TRAINING</h4>
-          </div>
-
-          <div class="cred-card">
-            <div class="cred-card-top">
-              <div class="cred-card-title">BSRM STEELS LTD.</div>
-              <span class="cred-badge">STEEL MFG.</span>
-            </div>
-            <p class="cred-desc">Hands-on heavy manufacturing: 132/33 kV substation operation, auxiliary transformers, and arc furnace drive circuits.</p>
-          </div>
-
-          <div class="cred-card">
-            <div class="cred-card-top">
-              <div class="cred-card-title">GEMCO (GENERAL ELECTRICAL)</div>
-              <span class="cred-badge">TRANSFORMER MFG.</span>
-            </div>
-            <p class="cred-desc">Core fabrication, high-voltage insulation tests, winding temperature indicators, and dielectric oil testing.</p>
-          </div>
-
-          <div class="cred-card">
-            <div class="cred-card-top">
-              <div class="cred-card-title">SAMSUNG C&amp;T SAFETY ACADEMY</div>
-              <span class="cred-badge">SAFETY LEADERSHIP</span>
-            </div>
-            <p class="cred-desc">Workplace safety protocols, LOTO systems, hazard identification, and risk mitigation in hazardous power environments.</p>
-          </div>
-        </div>
-
-        <!-- Col 3 -->
-        <div class="cred-column">
-          <div class="cred-col-header">
-            <div class="cred-col-icon">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
-            </div>
-            <h4 class="cred-col-title">HONORS &amp; LEADERSHIP</h4>
-          </div>
-
-          <div class="cred-card">
-            <div class="cred-card-top">
-              <div class="cred-card-title">FIVE MERIT SCHOLARSHIP AWARDS</div>
-              <span class="cred-badge">IIUC HONORS</span>
-            </div>
-            <p class="cred-desc">Awarded by International Islamic University Chittagong for outstanding academic standing throughout B.Sc in EEE.</p>
-          </div>
-
-          <div class="cred-card">
-            <div class="cred-card-top">
-              <div class="cred-card-title">IDEA GENERATION CHAMPION</div>
-              <span class="cred-badge">1ST PLACE</span>
-            </div>
-            <p class="cred-desc">Champion at IIUC innovation competition for presenting smart energy and engineering automation concepts.</p>
-          </div>
-
-          <div class="cred-card">
-            <div class="cred-card-top">
-              <div class="cred-card-title">ORGANIZING TEAM - ICISET 2018</div>
-              <span class="cred-badge">IEEE CONF.</span>
-            </div>
-            <p class="cred-desc">Core organizing committee member for the International Conference on Innovations in Science, Engineering and Technology.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 7: FREELANCE SERVICES -->
-    <section class="services-section" id="services">
-      <div class="section-title-wrap">
-        <div class="section-eyebrow">CONSULTING &amp; FREELANCE</div>
-        <h2 class="section-title">ENGINEERING SERVICES</h2>
-        <div class="section-bar"></div>
-      </div>
-
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-title">AUTOCAD ELECTRICAL &amp; SUB-STATION DESIGN</div>
-          <p class="service-desc">Single-line diagrams (SLD), industrial wiring layouts, HT/LT panel modeling, breaker selection, and distribution schematics compliant with IEC standards.</p>
-          <div class="service-action-row">
-            <a href="https://www.fiverr.com/arman_ecap" target="_blank" class="service-btn service-btn-fiverr">ORDER ON FIVERR ↗</a>
-            <a href="https://wa.link/618kfv" target="_blank" class="service-btn service-btn-whatsapp">WHATSAPP DIRECT ↗</a>
-          </div>
-        </div>
-
-        <div class="service-card">
-          <div class="service-title">ACADEMIC RESEARCH &amp; THESIS CONSULTING</div>
-          <p class="service-desc">Assistance with renewable microgrid modeling (HOMER Pro), MATLAB Simulink circuits, IEEE paper drafting, techno-economic assessments, and LaTeX typesetting.</p>
-          <div class="service-action-row">
-            <a href="https://www.fiverr.com/arman_ecap" target="_blank" class="service-btn service-btn-fiverr">ORDER ON FIVERR ↗</a>
-            <a href="https://wa.link/618kfv" target="_blank" class="service-btn service-btn-whatsapp">WHATSAPP DIRECT ↗</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 8: SEND DIRECT MESSAGE -->
-    <section class="message-section" id="message-section">
-      <div class="section-title-wrap">
-        <div class="section-eyebrow">COMMUNICATION TERMINAL</div>
-        <h2 class="section-title">SEND A DIRECT MESSAGE</h2>
-        <div class="section-bar"></div>
-      </div>
-
-      <div class="message-grid">
-        <div class="direct-channels-card">
-          <div>
-            <div class="channels-header-badge">
-              <span class="status-dot"></span>
-              DIRECT DISPATCH DESK
-            </div>
-            <h4 class="channels-title">CONTACT CHANNELS</h4>
-            <p class="channels-desc">
-              Have an engineering project, research collaboration, sub-station CAD inquiry, or graduate opportunity? Send a dispatch or connect instantly via WhatsApp or Email.
-            </p>
-
-            <div class="direct-links-list">
-              <a href="mailto:armanhossain.eee.info@gmail.com" class="channel-item">
-                <div class="channel-item-left">
-                  <div class="channel-icon email-icon">
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                  </div>
-                  <div>
-                    <div class="channel-label">DIRECT EMAIL</div>
-                    <div class="channel-val">armanhossain.eee.info@gmail.com</div>
-                  </div>
-                </div>
-                <div class="channel-action-arrow">&rarr;</div>
-              </a>
-
-              <a href="https://wa.link/618kfv" target="_blank" class="channel-item">
-                <div class="channel-item-left">
-                  <div class="channel-icon wa-icon">
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.93 11.93 0 0 0 12.07 0C5.46 0 .09 5.37.09 11.98c0 2.11.55 4.17 1.6 6L0 24l6.2-1.63a11.95 11.95 0 0 0 5.87 1.51h.01c6.61 0 11.98-5.37 11.98-11.98 0-3.2-1.25-6.21-3.54-8.4zM12.08 21.88a9.92 9.92 0 0 1-5.06-1.39l-.36-.22-3.76.99 1-3.66-.24-.38a9.92 9.92 0 0 1-1.52-5.24C2.14 6.5 6.6 2.05 12.08 2.05c2.66 0 5.15 1.03 7.03 2.91a9.88 9.88 0 0 1 2.92 7.02c0 5.49-4.46 9.9-9.95 9.9zm5.45-7.44c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/></svg>
-                  </div>
-                  <div>
-                    <div class="channel-label">WHATSAPP DIRECT</div>
-                    <div class="channel-val">+880 1724-472229</div>
-                  </div>
-                </div>
-                <div class="channel-action-arrow">&rarr;</div>
-              </a>
-
-              <a href="https://www.fiverr.com/arman_ecap" target="_blank" class="channel-item">
-                <div class="channel-item-left">
-                  <div class="channel-icon fiverr-icon">
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
-                  </div>
-                  <div>
-                    <div class="channel-label">FIVERR PRO PROFILE</div>
-                    <div class="channel-val">fiverr.com/arman_ecap</div>
-                  </div>
-                </div>
-                <div class="channel-action-arrow">&rarr;</div>
-              </a>
+          <div class="career-step-list">
+            <div class="career-step-item">
+              <div class="step-indicator">
+                <div class="step-dot"></div>
+                <div class="step-line"></div>
+              </div>
+              <div class="step-content">
+                <div class="step-role">Assistant Engineer (Electrical)</div>
+                <div class="step-org">Akij Resources Limited / Akij Ispat Ltd. (30 MW Plant)</div>
+                <div class="step-period">March 2025 – Present // Munshiganj, Dhaka</div>
+                <p class="step-desc">
+                  Leading the erection &amp; commissioning of three 9.34 MW Rolls-Royce B35:40 gas engines. Managing substation single-line diagrams (SLD), HT/LT switchgear commissioning, auxiliary monitoring, and SCADA automation.
+                </p>
+              </div>
             </div>
 
-            <div class="quick-topics">
-              <div class="quick-topics-label">POPULAR INQUIRY TOPICS:</div>
-              <div class="quick-topics-chips">
-                <span class="topic-chip active" onclick="selectTopic('Power Plant Erection')">Power Plant Erection</span>
-                <span class="topic-chip" onclick="selectTopic('Sub-station AutoCAD')">Sub-station AutoCAD</span>
-                <span class="topic-chip" onclick="selectTopic('Research Collaboration')">Research Collaboration</span>
-                <span class="topic-chip" onclick="selectTopic('SCADA Automation')">SCADA Automation</span>
+            <div class="career-step-item">
+              <div class="step-indicator">
+                <div class="step-dot"></div>
+                <div class="step-line"></div>
+              </div>
+              <div class="step-content">
+                <div class="step-role">In-Plant Industrial Engineering Trainee</div>
+                <div class="step-org">BSRM Steels Limited // Heavy Re-Rolling Mills</div>
+                <div class="step-period">Chittagong, Bangladesh</div>
+                <p class="step-desc">
+                  Supervised 132/33 kV substation operation, auxiliary transformers, high-power arc furnace drives, automated speed controllers, and industrial QA.
+                </p>
+              </div>
+            </div>
+
+            <div class="career-step-item">
+              <div class="step-indicator">
+                <div class="step-dot"></div>
+              </div>
+              <div class="step-content">
+                <div class="step-role">Apparatus Testing &amp; Manufacturing Trainee</div>
+                <div class="step-org">GEMCO (General Electrical Manufacturing Co.)</div>
+                <div class="step-period">Chittagong, Bangladesh</div>
+                <p class="step-desc">
+                  Core assembly fabrication, high-voltage breakdown insulation testing, winding ratio validation, and transformer dielectric oil testing protocols.
+                </p>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="message-form-card">
-          <div class="form-header-row">
-            <h4 class="form-heading">DISPATCH CONSOLE</h4>
-            <div class="form-status-indicator">
-              <span class="form-status-dot"></span>
-              TERMINAL ONLINE
+        <!-- Box 2: Academic Honors & Leadership -->
+        <div class="career-bento-box">
+          <div class="career-bento-header">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-sky)" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+            Academic Foundation &amp; Executive Leadership
+          </div>
+
+          <div class="career-step-list">
+            <div class="career-step-item">
+              <div class="step-indicator">
+                <div class="step-dot"></div>
+                <div class="step-line"></div>
+              </div>
+              <div class="step-content">
+                <div class="step-role">B.Sc. in Electrical &amp; Electronic Engineering</div>
+                <div class="step-org">International Islamic University Chittagong (IIUC)</div>
+                <div class="step-period">Graduated with High Standing // 5x Merit Scholarship Awardee</div>
+                <p class="step-desc">
+                  Rigorous curriculum in power system analysis, microgrids, renewable energy economics, and high-frequency antenna metamaterials.
+                </p>
+              </div>
+            </div>
+
+            <div class="career-step-item">
+              <div class="step-indicator">
+                <div class="step-dot"></div>
+                <div class="step-line"></div>
+              </div>
+              <div class="step-content">
+                <div class="step-role">Former Finance &amp; Cultural Secretary</div>
+                <div class="step-org">IIUC EEE Club &amp; IEEE Student Branch</div>
+                <div class="step-period">Student Leadership // 2020 – 2022</div>
+                <p class="step-desc">
+                  Coordinated university-wide engineering workshops, allocated budgets for technical project symposiums, and mentored junior EEE researchers.
+                </p>
+              </div>
+            </div>
+
+            <div class="career-step-item">
+              <div class="step-indicator">
+                <div class="step-dot"></div>
+              </div>
+              <div class="step-content">
+                <div class="step-role">National Idea Generation Champion</div>
+                <div class="step-org">Engineering Innovation Challenge</div>
+                <div class="step-period">First Place Winner</div>
+                <p class="step-desc">
+                  Champion for designing an intelligent energy storage optimization controller for off-grid hybrid renewable networks.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: ABOUT & TOOLKIT BENTO -->
+    <section class="bento-section" id="about">
+      <div class="section-wrap-header">
+        <span class="section-tag-pill">ENGINEER PROFILE</span>
+        <h2 class="section-heading-lg">ABOUT &amp; TECHNICAL TOOLKIT</h2>
+        <p class="section-heading-sub">Software proficiencies, analytical toolchains, and verified engineering credentials.</p>
+      </div>
+
+      <div class="about-bento-grid">
+        <!-- Profile Card -->
+        <div class="profile-bento-card">
+          <div class="profile-avatar-frame">
+            <img src="profile.png" alt="Engr. Arman Hossain" class="profile-avatar-img">
+          </div>
+          <div>
+            <div class="profile-name">Engr. Arman Hossain</div>
+            <div class="profile-role-pill" style="margin-top: 6px;">Electrical &amp; Electronic Engineer</div>
+          </div>
+          <p class="profile-bio-text">
+            Chittagong native, currently based at Munshiganj in Dhaka. Driven by a lifelong passion for heavy power plant erection, industrial automation, and published IEEE research. Looking for demanding professional projects and international graduate research opportunities.
+          </p>
+          <div class="bento-tag-pills" style="justify-content: center;">
+            <span class="bento-tag-pill">Akij Resources Ltd.</span>
+            <span class="bento-tag-pill">IEEE Member</span>
+            <span class="bento-tag-pill">Six Sigma Yellow Belt</span>
+          </div>
+        </div>
+
+        <!-- Toolkit Card -->
+        <div class="toolkit-bento-card">
+          <div>
+            <div class="toolkit-bento-header">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-sky)" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+              Core Software &amp; Computational Toolchain
+            </div>
+            <p style="font-size: 12.5px; color: var(--text-slate); margin-top: 8px;">
+              Industry-standard software suites used daily for power plant design, transient circuit simulation, and microgrid modeling:
+            </p>
+          </div>
+
+          <div class="toolkit-pills-grid">
+            <div class="toolkit-pill-box">
+              <div class="toolkit-pill-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"></path></svg></div>
+              <div class="toolkit-pill-name">MATLAB</div>
+            </div>
+            <div class="toolkit-pill-box">
+              <div class="toolkit-pill-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg></div>
+              <div class="toolkit-pill-name">HOMER PRO</div>
+            </div>
+            <div class="toolkit-pill-box">
+              <div class="toolkit-pill-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect></svg></div>
+              <div class="toolkit-pill-name">AUTOCAD</div>
+            </div>
+            <div class="toolkit-pill-box">
+              <div class="toolkit-pill-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></div>
+              <div class="toolkit-pill-name">LTSPICE</div>
+            </div>
+            <div class="toolkit-pill-box">
+              <div class="toolkit-pill-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"></circle></svg></div>
+              <div class="toolkit-pill-name">CST STUDIO</div>
+            </div>
+            <div class="toolkit-pill-box">
+              <div class="toolkit-pill-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg></div>
+              <div class="toolkit-pill-name">TIA PORTAL</div>
+            </div>
+            <div class="toolkit-pill-box">
+              <div class="toolkit-pill-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg></div>
+              <div class="toolkit-pill-name">PYTHON</div>
+            </div>
+            <div class="toolkit-pill-box">
+              <div class="toolkit-pill-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg></div>
+              <div class="toolkit-pill-name">POWER BI</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: CREDENTIALS BENTO GRID -->
+    <section class="bento-section" id="credentials">
+      <div class="section-wrap-header">
+        <span class="section-tag-pill">QUALIFICATIONS</span>
+        <h2 class="section-heading-lg">VERIFIED CREDENTIALS &amp; RECOGNITION</h2>
+        <p class="section-heading-sub">Professional certifications, specialized safety leadership, and academic honors.</p>
+      </div>
+
+      <div class="bento-cred-grid">
+        <!-- Box 1 -->
+        <div class="cred-bento-box">
+          <div class="cred-bento-title-row">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-sky)" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+            Certifications &amp; Skills
+          </div>
+          <div class="cred-item-card">
+            <div class="cred-item-top">
+              <div class="cred-item-name">Six Sigma Yellow Belt</div>
+              <span class="cred-item-badge">ID: 881599</span>
+            </div>
+            <p class="cred-item-desc">DMAIC methodology, process capability analysis, and industrial defect reduction.</p>
+          </div>
+          <div class="cred-item-card">
+            <div class="cred-item-top">
+              <div class="cred-item-name">Industrial Automation &amp; SCADA</div>
+              <span class="cred-item-badge">PLC Certified</span>
+            </div>
+            <p class="cred-item-desc">Siemens TIA Portal, HMI design, VFD speed controllers, and Modbus telemetry.</p>
+          </div>
+          <div class="cred-item-card">
+            <div class="cred-item-top">
+              <div class="cred-item-name">Electrical AutoCAD &amp; Substation</div>
+              <span class="cred-item-badge">AutoCAD 2D/3D</span>
+            </div>
+            <p class="cred-item-desc">Single-line diagrams (SLD), HT/LT switchgear layouts, and cable routing schedules.</p>
+          </div>
+        </div>
+
+        <!-- Box 2 -->
+        <div class="cred-bento-box">
+          <div class="cred-bento-title-row">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-sky)" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+            In-Plant Industrial Training
+          </div>
+          <div class="cred-item-card">
+            <div class="cred-item-top">
+              <div class="cred-item-name">BSRM Steels Ltd.</div>
+              <span class="cred-item-badge">Steel Re-Rolling</span>
+            </div>
+            <p class="cred-item-desc">132/33 kV substation operation, induction furnace drives, and continuous casters.</p>
+          </div>
+          <div class="cred-item-card">
+            <div class="cred-item-top">
+              <div class="cred-item-name">GEMCO Ltd.</div>
+              <span class="cred-item-badge">Transformer MFG</span>
+            </div>
+            <p class="cred-item-desc">Core fabrication, high-voltage breakdown tests, and dielectric oil testing.</p>
+          </div>
+          <div class="cred-item-card">
+            <div class="cred-item-top">
+              <div class="cred-item-name">Samsung C&amp;T Safety Academy</div>
+              <span class="cred-item-badge">Safety Leadership</span>
+            </div>
+            <p class="cred-item-desc">LOTO systems, hazard identification, and risk mitigation in high-voltage plants.</p>
+          </div>
+        </div>
+
+        <!-- Box 3 -->
+        <div class="cred-bento-box">
+          <div class="cred-bento-title-row">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-sky)" stroke-width="2"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+            Academic Honors &amp; Leadership
+          </div>
+          <div class="cred-item-card">
+            <div class="cred-item-top">
+              <div class="cred-item-name">5x Merit Scholarship Awards</div>
+              <span class="cred-item-badge">IIUC Honors</span>
+            </div>
+            <p class="cred-item-desc">Awarded for consistent top academic standing throughout B.Sc in EEE.</p>
+          </div>
+          <div class="cred-item-card">
+            <div class="cred-item-top">
+              <div class="cred-item-name">Idea Generation Champion</div>
+              <span class="cred-item-badge">1st Place</span>
+            </div>
+            <p class="cred-item-desc">First place champion for presenting novel renewable storage optimization architectures.</p>
+          </div>
+          <div class="cred-item-card">
+            <div class="cred-item-top">
+              <div class="cred-item-name">Organizing Committee - ICISET</div>
+              <span class="cred-item-badge">IEEE Conf.</span>
+            </div>
+            <p class="cred-item-desc">Core organizing member for international engineering symposium ICISET.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: SERVICES BENTO -->
+    <section class="bento-section" id="services">
+      <div class="section-wrap-header">
+        <span class="section-tag-pill">FREELANCE CONSULTING</span>
+        <h2 class="section-heading-lg">ENGINEERING SERVICES BENTO</h2>
+        <p class="section-heading-sub">Professional CAD schematics, technical paper writing, and microgrid feasibility studies.</p>
+      </div>
+
+      <div class="bento-services-grid">
+        <div class="service-bento-card">
+          <div>
+            <div class="service-card-title">AUTOCAD ELECTRICAL &amp; SUB-STATION DESIGN</div>
+            <p class="service-card-desc" style="margin-top: 8px;">
+              Single-line diagrams (SLD), industrial wiring layouts, HT/LT panel modeling, breaker selection, and distribution schematics compliant with IEC standards.
+            </p>
+          </div>
+          <div class="service-card-actions">
+            <a href="https://www.fiverr.com/arman_ecap" target="_blank" class="service-action-btn btn-fiverr">Order on Fiverr ↗</a>
+            <a href="https://wa.link/618kfv" target="_blank" class="service-action-btn btn-whatsapp">WhatsApp Direct ↗</a>
+          </div>
+        </div>
+
+        <div class="service-bento-card">
+          <div>
+            <div class="service-card-title">ACADEMIC RESEARCH &amp; THESIS CONSULTING</div>
+            <p class="service-card-desc" style="margin-top: 8px;">
+              Assistance with renewable microgrid modeling (HOMER Pro), MATLAB Simulink circuits, IEEE paper drafting, techno-economic assessments, and LaTeX typesetting.
+            </p>
+          </div>
+          <div class="service-card-actions">
+            <a href="https://www.fiverr.com/arman_ecap" target="_blank" class="service-action-btn btn-fiverr">Order on Fiverr ↗</a>
+            <a href="https://wa.link/618kfv" target="_blank" class="service-action-btn btn-whatsapp">WhatsApp Direct ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: DIRECT CONTACT & DISPATCH BENTO -->
+    <section class="bento-section" id="message-section">
+      <div class="section-wrap-header">
+        <span class="section-tag-pill">CONNECT DIRECTLY</span>
+        <h2 class="section-heading-lg">DIRECT DISPATCH CONSOLE</h2>
+        <p class="section-heading-sub">Have an engineering project, research collaboration, sub-station CAD inquiry, or graduate opportunity? Send a dispatch below.</p>
+      </div>
+
+      <div class="bento-contact-grid">
+        <!-- Direct Channels Card -->
+        <div class="contact-channels-bento">
+          <div>
+            <div class="hero-status-pill" style="margin-bottom: 14px;">
+              <span class="nav-brand-dot"></span>
+              Direct Response Desk
+            </div>
+            <div style="font-size: 18px; font-weight: 700; color: #FFFFFF;">Fast Contact Channels</div>
+            <p style="font-size: 12.5px; color: var(--text-slate); margin-top: 6px; line-height: 1.5;">
+              Reach out directly for plant erection consultations, IEEE collaboration, or industrial CAD projects:
+            </p>
+
+            <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 18px;">
+              <a href="mailto:armanhossain.eee.info@gmail.com" class="channel-item-row">
+                <div class="channel-left-meta">
+                  <div class="channel-icon-circle" style="background: rgba(56, 189, 248, 0.15); color: #38BDF8;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                  </div>
+                  <div>
+                    <div class="channel-title-tag">Direct Email</div>
+                    <div class="channel-value-text">armanhossain.eee.info@gmail.com</div>
+                  </div>
+                </div>
+                <div>&rarr;</div>
+              </a>
+
+              <a href="https://wa.link/618kfv" target="_blank" class="channel-item-row">
+                <div class="channel-left-meta">
+                  <div class="channel-icon-circle" style="background: rgba(37, 211, 102, 0.15); color: #25D366;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.93 11.93 0 0 0 12.07 0C5.46 0 .09 5.37.09 11.98c0 2.11.55 4.17 1.6 6L0 24l6.2-1.63a11.95 11.95 0 0 0 5.87 1.51h.01c6.61 0 11.98-5.37 11.98-11.98 0-3.2-1.25-6.21-3.54-8.4zM12.08 21.88a9.92 9.92 0 0 1-5.06-1.39l-.36-.22-3.76.99 1-3.66-.24-.38a9.92 9.92 0 0 1-1.52-5.24C2.14 6.5 6.6 2.05 12.08 2.05c2.66 0 5.15 1.03 7.03 2.91a9.88 9.88 0 0 1 2.92 7.02c0 5.49-4.46 9.9-9.95 9.9zm5.45-7.44c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/></svg>
+                  </div>
+                  <div>
+                    <div class="channel-title-tag">WhatsApp Direct</div>
+                    <div class="channel-value-text">+880 1724-472229</div>
+                  </div>
+                </div>
+                <div>&rarr;</div>
+              </a>
+
+              <a href="https://www.fiverr.com/arman_ecap" target="_blank" class="channel-item-row">
+                <div class="channel-left-meta">
+                  <div class="channel-icon-circle" style="background: rgba(29, 191, 115, 0.15); color: #1DBF73;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+                  </div>
+                  <div>
+                    <div class="channel-title-tag">Fiverr Pro Profile</div>
+                    <div class="channel-value-text">fiverr.com/arman_ecap</div>
+                  </div>
+                </div>
+                <div>&rarr;</div>
+              </a>
+            </div>
+          </div>
+
+          <div style="margin-top: 10px;">
+            <div style="font-size: 11px; font-weight: 700; color: #FFFFFF; text-transform: uppercase;">Inquiry Topics:</div>
+            <div class="bento-tag-pills" style="margin-top: 8px;">
+              <span class="bento-tag-pill" style="cursor: pointer;" onclick="selectTopic('Power Plant Erection')">Power Plant Erection</span>
+              <span class="bento-tag-pill" style="cursor: pointer;" onclick="selectTopic('Sub-station AutoCAD')">Sub-station AutoCAD</span>
+              <span class="bento-tag-pill" style="cursor: pointer;" onclick="selectTopic('Research Collaboration')">Research Collaboration</span>
+              <span class="bento-tag-pill" style="cursor: pointer;" onclick="selectTopic('SCADA Automation')">SCADA Automation</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bento Form Card -->
+        <div class="bento-form-card">
+          <div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 12px; border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
+            <div style="font-size: 17px; font-weight: 700; color: #FFFFFF;">Interactive Dispatch Form</div>
+            <div class="hero-status-pill" style="padding: 4px 10px; font-size: 10.5px;">
+              ● Online
             </div>
           </div>
 
           <form id="portfolio-msg-form" onsubmit="event.preventDefault();">
             <div class="form-row-2col">
-              <div class="form-group no-margin">
-                <label class="form-label" for="msg-name">YOUR NAME / ORG *</label>
+              <div class="form-group">
+                <label class="form-label" for="msg-name">Your Name / Organization *</label>
                 <input type="text" id="msg-name" class="form-input" placeholder="e.g. Dr. Rahman / Tesla Grid" required autocomplete="name">
               </div>
-              <div class="form-group no-margin">
-                <label class="form-label" for="msg-email">EMAIL ADDRESS *</label>
+              <div class="form-group">
+                <label class="form-label" for="msg-email">Email Address *</label>
                 <input type="email" id="msg-email" class="form-input" placeholder="e.g. client@organization.com" required autocomplete="email">
               </div>
             </div>
 
-            <div class="form-group">
-              <label class="form-label" for="msg-category">PROJECT CATEGORY</label>
+            <div class="form-group" style="margin-top: 12px;">
+              <label class="form-label" for="msg-category">Project Category</label>
               <select id="msg-category" class="form-select">
                 <option value="Power Plant Erection & Commissioning">Power Plant Erection &amp; Commissioning</option>
                 <option value="Sub-station Single-Line Diagram (AutoCAD)">Sub-station Single-Line Diagram (AutoCAD)</option>
@@ -3020,120 +2593,68 @@
               </select>
             </div>
 
-            <div class="form-group">
-              <label class="form-label" for="msg-body">MESSAGE DETAILS *</label>
+            <div class="form-group" style="margin-top: 12px;">
+              <label class="form-label" for="msg-body">Message Details *</label>
               <textarea id="msg-body" class="form-textarea" placeholder="Detail your project requirements, scope of work, timeline, or research collaboration questions..." required></textarea>
             </div>
 
-            <div class="form-action-row">
-              <button type="button" class="btn-submit-email" id="btn-submit-email" onclick="handleSendEmail()">
+            <div class="bento-btn-row" style="margin-top: 16px;">
+              <button type="button" class="btn-bento-submit-email" id="btn-submit-email" onclick="handleSendEmail()">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13"></path><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
-                SEND VIA EMAIL
+                Send via Email
               </button>
-              <button type="button" class="btn-submit-whatsapp" onclick="handleSendWhatsApp()">
+              <button type="button" class="btn-bento-submit-whatsapp" onclick="handleSendWhatsApp()">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.93 11.93 0 0 0 12.07 0C5.46 0 .09 5.37.09 11.98c0 2.11.55 4.17 1.6 6L0 24l6.2-1.63a11.95 11.95 0 0 0 5.87 1.51h.01c6.61 0 11.98-5.37 11.98-11.98 0-3.2-1.25-6.21-3.54-8.4zM12.08 21.88a9.92 9.92 0 0 1-5.06-1.39l-.36-.22-3.76.99 1-3.66-.24-.38a9.92 9.92 0 0 1-1.52-5.24C2.14 6.5 6.6 2.05 12.08 2.05c2.66 0 5.15 1.03 7.03 2.91a9.88 9.88 0 0 1 2.92 7.02c0 5.49-4.46 9.9-9.95 9.9zm5.45-7.44c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/></svg>
-                DISPATCH ON WHATSAPP
+                Send via WhatsApp
               </button>
-              <button type="button" class="btn-copy-msg" id="btn-copy-msg" onclick="handleCopyMessage()" title="Copy formatted message to clipboard">
-                COPY DISPATCH
+              <button type="button" class="btn-bento-copy" id="btn-copy-msg" onclick="handleCopyMessage()" title="Copy formatted message to clipboard">
+                Copy Message
               </button>
             </div>
 
-            <div id="msg-feedback" class="msg-feedback"></div>
+            <div id="msg-feedback" class="msg-feedback" style="margin-top: 12px;"></div>
           </form>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 9: FOOTER -->
-    <footer class="footer-section">
-      <div class="collab-info">
-        <h4 class="collab-title">LET'S COLLABORATE</h4>
-        <p class="collab-desc">Have an engineering project, research collaboration, or graduate opportunity? I'd love to hear from you.</p>
-        <div class="contact-list">
-          <a href="mailto:armanhossain.eee.info@gmail.com" class="contact-item">
-            <div class="contact-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></div>
-            armanhossain.eee.info@gmail.com
-          </a>
-          <a href="https://wa.link/618kfv" target="_blank" class="contact-item">
-            <div class="contact-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.93 11.93 0 0 0 12.07 0C5.46 0 .09 5.37.09 11.98c0 2.11.55 4.17 1.6 6L0 24l6.2-1.63a11.95 11.95 0 0 0 5.87 1.51h.01c6.61 0 11.98-5.37 11.98-11.98 0-3.2-1.25-6.21-3.54-8.4z"/></svg></div>
-            +880 1724-472229
-          </a>
+    <!-- EXECUTIVE FOOTER -->
+    <footer class="bento-footer">
+      <div class="footer-left-meta">
+        <div class="footer-brand">ENGR. ARMAN HOSSAIN</div>
+        <p class="footer-desc">
+          Electrical &amp; Electronic Engineer • Assistant Electrical Engineer at Akij Resources Limited • Published IEEE Researcher.
+        </p>
+        <div style="font-size: 11px; color: var(--text-dim); margin-top: 4px;">
+          &copy; 2026 Engr. Arman Hossain. All rights reserved.
         </div>
       </div>
 
-      <div class="scan-wrap">
-        <div class="scan-title">QUICK SCAN ACCESS</div>
-        <div class="qr-row">
-          <a href="https://wa.link/618kfv" target="_blank" class="qr-card">
-            <div class="qr-box">
-              <svg viewBox="0 0 100 100" width="68" height="68">
-                <rect width="100" height="100" fill="#fff" />
-                <rect x="10" y="10" width="25" height="25" fill="#000" />
-                <rect x="15" y="15" width="15" height="15" fill="#fff" />
-                <rect x="18" y="18" width="9" height="9" fill="#000" />
-                <rect x="65" y="10" width="25" height="25" fill="#000" />
-                <rect x="70" y="15" width="15" height="15" fill="#fff" />
-                <rect x="73" y="18" width="9" height="9" fill="#000" />
-                <rect x="10" y="65" width="25" height="25" fill="#000" />
-                <rect x="15" y="70" width="15" height="15" fill="#fff" />
-                <rect x="18" y="73" width="9" height="9" fill="#000" />
-                <rect x="42" y="10" width="6" height="18" fill="#000" />
-                <rect x="52" y="16" width="6" height="12" fill="#000" />
-                <rect x="42" y="42" width="16" height="16" fill="#25D366" />
-                <rect x="65" y="42" width="12" height="6" fill="#000" />
-                <rect x="80" y="48" width="10" height="6" fill="#000" />
-                <rect x="42" y="65" width="12" height="6" fill="#000" />
-                <rect x="58" y="72" width="6" height="18" fill="#000" />
-                <rect x="72" y="65" width="18" height="12" fill="#000" />
-              </svg>
-            </div>
-            <span class="qr-label">WHATSAPP</span>
-          </a>
-
-          <a href="https://ieeexplore.ieee.org/author/37089320934" target="_blank" class="qr-card">
-            <div class="qr-box">
-              <svg viewBox="0 0 100 100" width="68" height="68">
-                <rect width="100" height="100" fill="#fff" />
-                <rect x="10" y="10" width="25" height="25" fill="#000" />
-                <rect x="15" y="15" width="15" height="15" fill="#fff" />
-                <rect x="18" y="18" width="9" height="9" fill="#000" />
-                <rect x="65" y="10" width="25" height="25" fill="#000" />
-                <rect x="70" y="15" width="15" height="15" fill="#fff" />
-                <rect x="73" y="18" width="9" height="9" fill="#000" />
-                <rect x="10" y="65" width="25" height="25" fill="#000" />
-                <rect x="15" y="70" width="15" height="15" fill="#fff" />
-                <rect x="18" y="73" width="9" height="9" fill="#000" />
-                <rect x="42" y="10" width="6" height="18" fill="#000" />
-                <rect x="42" y="42" width="16" height="16" fill="#00629B" />
-                <rect x="65" y="42" width="12" height="6" fill="#000" />
-                <rect x="72" y="65" width="18" height="12" fill="#000" />
-              </svg>
-            </div>
-            <span class="qr-label">IEEE XPLORE</span>
-          </a>
-        </div>
-      </div>
-
-      <div class="slogan-wrap">
-        <svg class="slogan-icon" viewBox="0 0 30 30" fill="none">
-          <circle cx="15" cy="15" r="14" stroke="var(--accent-cyan)" stroke-width="1.5" />
-          <path d="M15 7v16M7 15h16" stroke="var(--accent-cyan)" stroke-width="1.5" stroke-linecap="round" />
-        </svg>
-        <div class="slogan-text">ENGINEERING<br>EXCELLENCE</div>
+      <div class="footer-links-row">
+        <a href="#expertise" class="footer-link">Overview</a>
+        <a href="#research" class="footer-link">Research</a>
+        <a href="#career" class="footer-link">Career</a>
+        <a href="#about" class="footer-link">About</a>
+        <a href="https://ieeexplore.ieee.org/author/37089320934" target="_blank" class="footer-link">IEEE Profile ↗</a>
+        <a href="mailto:armanhossain.eee.info@gmail.com" class="footer-link">Email ↗</a>
       </div>
     </footer>
 
   </div>
 
+  <!-- Bento Tab Filter & Scroll Spy Script -->
   <script>
-    // Tabbed Research Filter Controller
-    function filterResearch(category) {
-      const tabs = document.querySelectorAll('.filter-tab-btn');
+    function filterResearch(category, btn) {
+      const tabs = document.querySelectorAll('.bento-filter-btn');
       tabs.forEach(tab => tab.classList.remove('active'));
-      event.target.classList.add('active');
+      if (btn) {
+        btn.classList.add('active');
+      } else if (typeof event !== 'undefined' && event && event.target) {
+        var targetBtn = event.target.closest('.bento-filter-btn') || event.target;
+        targetBtn.classList.add('active');
+      }
 
-      const cards = document.querySelectorAll('#research-cards-container .project-card');
+      const cards = document.querySelectorAll('#research-cards-container .bento-pub-card');
       cards.forEach(card => {
         if (category === 'all' || card.getAttribute('data-category') === category) {
           card.style.display = 'flex';
@@ -3145,23 +2666,26 @@
 
     // Active Section Scroll Spy for Floating Dock
     window.addEventListener('scroll', () => {
-      const sections = document.querySelectorAll('section[id], section.hero-viewport-section');
+      const sections = document.querySelectorAll('section[id]');
       const navLinks = document.querySelectorAll('.nav-link-item a');
       let current = '';
 
       sections.forEach(sec => {
-        const top = sec.offsetTop - 140;
-        if (window.scrollY >= top) {
+        const rect = sec.getBoundingClientRect();
+        if (rect.top <= 220 && rect.bottom >= 100) {
           current = sec.getAttribute('id');
         }
       });
 
-      navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (current && link.getAttribute('href') === '#' + current) {
-          link.classList.add('active');
-        }
-      });
+      if (current) {
+        navLinks.forEach(link => {
+          if (link.getAttribute('href') === '#' + current) {
+            link.classList.add('active');
+          } else {
+            link.classList.remove('active');
+          }
+        });
+      }
     }, { passive: true });
   </script>
 <!-- Smooth Scroll Animation Script -->
