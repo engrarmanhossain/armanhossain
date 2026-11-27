@@ -168,7 +168,7 @@
       border-radius: 40px;
       padding: 8px 16px 8px 20px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 240, 255, 0.15);
-      max-width: 1080px;
+      max-width: 1180px;
       width: 100%;
       transition: all 0.3s ease;
     }
@@ -2129,6 +2129,9 @@
       .nav-links {
         display: none;
       }
+      .nav-mobile-apply {
+        display: inline-flex !important;
+      }
       .telemetry-hud-row {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -2242,6 +2245,535 @@
       }
     }
 
+    /* ==========================================================================
+       SECTION: CAREER-OPS JOB APPLY COMMAND CENTER
+       ========================================================================== */
+    .nav-job-apply-link {
+      border: 1px solid rgba(0, 240, 255, 0.35);
+      color: var(--accent-cyan) !important;
+      background: rgba(0, 240, 255, 0.08);
+    }
+
+    .nav-job-apply-link:hover,
+    .nav-job-apply-link.active {
+      color: #04070D !important;
+      background: var(--accent-cyan) !important;
+    }
+
+    .career-ops-section {
+      margin-bottom: 90px;
+      scroll-margin-top: 90px;
+    }
+
+    .co-shell {
+      background: rgba(8, 13, 22, 0.84);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(0, 240, 255, 0.24);
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 18px 50px rgba(0, 0, 0, 0.65), 0 0 30px rgba(0, 240, 255, 0.08);
+    }
+
+    .co-topbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid rgba(0, 240, 255, 0.14);
+      margin-bottom: 20px;
+    }
+
+    .co-skill-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 20px;
+      background: rgba(0, 240, 255, 0.1);
+      border: 1px solid rgba(0, 240, 255, 0.3);
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--accent-cyan);
+      text-decoration: none;
+      letter-spacing: 0.06em;
+      transition: all 0.2s ease;
+    }
+
+    .co-skill-badge:hover {
+      background: rgba(0, 240, 255, 0.2);
+      box-shadow: 0 0 14px rgba(0, 240, 255, 0.35);
+    }
+
+    .co-hitl-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-mono);
+      font-size: 10.5px;
+      color: #34D399;
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      padding: 5px 12px;
+      border-radius: 20px;
+    }
+
+    .co-mode-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 22px;
+    }
+
+    .co-tab-btn {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      padding: 9px 15px;
+      border-radius: 10px;
+      background: rgba(12, 20, 34, 0.8);
+      border: 1px solid rgba(0, 240, 255, 0.18);
+      color: var(--text-slate);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .co-tab-btn:hover {
+      border-color: var(--accent-cyan);
+      color: var(--text-white);
+    }
+
+    .co-tab-btn.active {
+      background: linear-gradient(135deg, var(--accent-cyan) 0%, var(--accent-cobalt) 100%);
+      border-color: var(--accent-cyan);
+      color: #04070D;
+      box-shadow: 0 0 18px rgba(0, 240, 255, 0.4);
+    }
+
+    .co-tab-count {
+      background: rgba(4, 7, 13, 0.35);
+      padding: 1px 6px;
+      border-radius: 10px;
+      font-size: 10px;
+    }
+
+    .co-pane {
+      display: none;
+    }
+
+    .co-pane.active {
+      display: block;
+      animation: coFadeIn 0.22s ease-out;
+    }
+
+    @keyframes coFadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .co-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      gap: 22px;
+      align-items: start;
+    }
+
+    .co-panel {
+      background: rgba(4, 8, 15, 0.72);
+      border: 1px solid rgba(0, 240, 255, 0.14);
+      border-radius: 12px;
+      padding: 18px;
+    }
+
+    .co-panel-title {
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--accent-cyan);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .co-preset-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 14px;
+    }
+
+    .co-preset-btn {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      padding: 5px 10px;
+      border-radius: 6px;
+      background: rgba(56, 189, 248, 0.08);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      color: var(--accent-blue);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .co-preset-btn:hover {
+      background: rgba(0, 240, 255, 0.18);
+      border-color: var(--accent-cyan);
+      color: var(--text-white);
+    }
+
+    .co-field {
+      margin-bottom: 12px;
+    }
+
+    .co-label {
+      display: block;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    .co-input,
+    .co-textarea,
+    .co-select {
+      width: 100%;
+      background: rgba(8, 14, 24, 0.9);
+      border: 1px solid rgba(0, 240, 255, 0.2);
+      border-radius: 8px;
+      padding: 10px 12px;
+      color: var(--text-white);
+      font-family: var(--font-body);
+      font-size: 13px;
+      outline: none;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .co-textarea {
+      min-height: 150px;
+      resize: vertical;
+      line-height: 1.5;
+    }
+
+    .co-textarea.co-mono-area {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      min-height: 290px;
+    }
+
+    .co-input:focus,
+    .co-textarea:focus,
+    .co-select:focus {
+      border-color: var(--accent-cyan);
+      box-shadow: 0 0 0 2px rgba(0, 240, 255, 0.15);
+    }
+
+    .co-btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .co-btn-primary {
+      background: linear-gradient(135deg, var(--accent-cyan) 0%, var(--accent-cobalt) 100%);
+      color: #04070D;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 18px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .co-btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 0 20px rgba(0, 240, 255, 0.5);
+    }
+
+    .co-btn-secondary {
+      background: rgba(15, 23, 42, 0.85);
+      color: var(--text-slate);
+      border: 1px solid rgba(0, 240, 255, 0.25);
+      border-radius: 8px;
+      padding: 9px 14px;
+      font-family: var(--font-mono);
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .co-btn-secondary:hover {
+      border-color: var(--accent-cyan);
+      color: var(--accent-cyan);
+    }
+
+    .co-btn-submit {
+      background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+      color: #04120C;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 18px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .co-btn-submit:hover {
+      box-shadow: 0 0 18px rgba(16, 185, 129, 0.5);
+      transform: translateY(-1px);
+    }
+
+    .co-score-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 14px;
+      border-radius: 10px;
+      background: rgba(8, 15, 28, 0.9);
+      border: 1px solid rgba(0, 240, 255, 0.2);
+      margin-bottom: 14px;
+    }
+
+    .co-score-badge {
+      min-width: 74px;
+      height: 74px;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      border: 2px solid var(--accent-cyan);
+      background: rgba(0, 240, 255, 0.08);
+    }
+
+    .co-score-num {
+      font-size: 30px;
+      line-height: 1;
+      color: var(--text-white);
+    }
+
+    .co-score-scale {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      color: var(--text-muted);
+    }
+
+    .co-verdict-pill {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 10.5px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 14px;
+      margin-bottom: 4px;
+    }
+
+    .co-verdict-strong { background: rgba(16, 185, 129, 0.16); color: #34D399; border: 1px solid rgba(16, 185, 129, 0.4); }
+    .co-verdict-apply { background: rgba(0, 240, 255, 0.14); color: var(--accent-cyan); border: 1px solid rgba(0, 240, 255, 0.4); }
+    .co-verdict-borderline { background: rgba(245, 158, 11, 0.16); color: #FBBF24; border: 1px solid rgba(245, 158, 11, 0.4); }
+    .co-verdict-skip { background: rgba(239, 68, 68, 0.16); color: #F87171; border: 1px solid rgba(239, 68, 68, 0.4); }
+
+    .co-blocks-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    .co-block-card {
+      background: rgba(10, 17, 30, 0.78);
+      border: 1px solid rgba(0, 240, 255, 0.12);
+      border-radius: 8px;
+      padding: 12px;
+    }
+
+    .co-block-label {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--accent-cyan);
+      margin-bottom: 5px;
+      letter-spacing: 0.06em;
+    }
+
+    .co-block-text {
+      font-size: 12px;
+      color: var(--text-slate);
+      line-height: 1.5;
+    }
+
+    .co-kw-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-top: 6px;
+    }
+
+    .co-kw-hit {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      padding: 2px 7px;
+      border-radius: 4px;
+      background: rgba(16, 185, 129, 0.14);
+      color: #34D399;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    .co-kw-miss {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      padding: 2px 7px;
+      border-radius: 4px;
+      background: rgba(245, 158, 11, 0.12);
+      color: #FBBF24;
+      border: 1px solid rgba(245, 158, 11, 0.3);
+    }
+
+    .co-doc-box {
+      background: rgba(4, 7, 13, 0.9);
+      border: 1px solid rgba(0, 240, 255, 0.18);
+      border-radius: 10px;
+      padding: 14px;
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      line-height: 1.6;
+      color: var(--text-cream);
+      white-space: pre-wrap;
+      max-height: 360px;
+      overflow-y: auto;
+    }
+
+    .co-prep-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    .co-prep-item {
+      background: rgba(4, 8, 15, 0.78);
+      border: 1px solid rgba(0, 240, 255, 0.16);
+      border-radius: 10px;
+      padding: 14px 16px;
+    }
+
+    .co-prep-q {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--accent-cyan);
+      margin-bottom: 8px;
+    }
+
+    .co-prep-a {
+      font-size: 13px;
+      color: var(--text-slate);
+      line-height: 1.55;
+    }
+
+    .co-table-wrap {
+      overflow-x: auto;
+    }
+
+    .co-tracker-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12.5px;
+    }
+
+    .co-tracker-table th {
+      text-align: left;
+      font-family: var(--font-mono);
+      font-size: 10.5px;
+      letter-spacing: 0.08em;
+      color: var(--accent-cyan);
+      padding: 10px 12px;
+      border-bottom: 1px solid rgba(0, 240, 255, 0.22);
+    }
+
+    .co-tracker-table td {
+      padding: 10px 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      color: var(--text-slate);
+      vertical-align: middle;
+    }
+
+    .co-portal-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .co-portal-card {
+      background: rgba(4, 8, 15, 0.78);
+      border: 1px solid rgba(0, 240, 255, 0.16);
+      border-radius: 10px;
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .co-portal-name {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-white);
+    }
+
+    .co-portal-meta {
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+
+    .co-toast {
+      margin-top: 10px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: #34D399;
+      min-height: 16px;
+    }
+
+    @media (max-width: 1024px) {
+      .co-grid-2 { grid-template-columns: 1fr; }
+      .co-portal-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 640px) {
+      .co-shell { padding: 16px; }
+      .co-blocks-grid { grid-template-columns: 1fr; }
+      .co-portal-grid { grid-template-columns: 1fr; }
+    }
+
     @media (max-width: 380px) {
       .tools-bar {
         grid-template-columns: repeat(2, 1fr);
@@ -2337,10 +2869,16 @@
           <li class="nav-link-item"><a href="#research">// RESEARCH</a></li>
           <li class="nav-link-item"><a href="#credentials">// CREDENTIALS</a></li>
           <li class="nav-link-item"><a href="#services">// SERVICES</a></li>
+          <li class="nav-link-item"><a href="#job-apply" class="nav-job-apply-link">// JOB APPLY</a></li>
         </ul>
-        <a href="#message-section" class="nav-cta-btn">
-          DISPATCH ✉
-        </a>
+        <div style="display:flex; align-items:center; gap:8px;">
+          <a href="#job-apply" class="nav-cta-btn nav-mobile-apply" style="display:none; background: rgba(0, 240, 255, 0.14); color: var(--accent-cyan); border: 1px solid rgba(0, 240, 255, 0.4); box-shadow:none;">
+            JOB APPLY
+          </a>
+          <a href="#message-section" class="nav-cta-btn">
+            DISPATCH ✉
+          </a>
+        </div>
       </nav>
     </div>
 
@@ -2908,6 +3446,253 @@
       </div>
     </section>
 
+    <!-- SECTION 7B: JOB APPLY COMMAND CENTER (CAREER-OPS SKILL) -->
+    <section class="career-ops-section" id="job-apply">
+      <div class="section-title-wrap">
+        <div class="section-eyebrow">CAREER-OPS SKILL // AI JOB SEARCH AGENT</div>
+        <h2 class="section-title">JOB APPLY COMMAND CENTER</h2>
+        <div class="section-bar"></div>
+      </div>
+
+      <div class="co-shell">
+        <div class="co-topbar">
+          <a href="https://github.com/career-ops-hq/career-ops" target="_blank" rel="noopener noreferrer" class="co-skill-badge">
+            <span class="status-dot"></span>
+            SKILL // career-ops-hq/career-ops &nearr;
+          </a>
+          <div class="co-hitl-pill">
+            &#9679; HUMAN-IN-THE-LOOP: AI TAILORS, YOU PRESS SUBMIT
+          </div>
+        </div>
+
+        <div class="co-mode-tabs" role="tablist">
+          <button type="button" class="co-tab-btn active" onclick="coSwitchTab('evaluate', this)">[1] EVALUATE (1-5)</button>
+          <button type="button" class="co-tab-btn" onclick="coSwitchTab('tailor', this)">[2] TAILOR CV &amp; COVER</button>
+          <button type="button" class="co-tab-btn" onclick="coSwitchTab('prep', this)">[3] INTERVIEW PREP</button>
+          <button type="button" class="co-tab-btn" onclick="coSwitchTab('tracker', this)">[4] TRACKER <span class="co-tab-count" id="co-tracker-count">0</span></button>
+          <button type="button" class="co-tab-btn" onclick="coSwitchTab('portals', this)">[5] PORTALS &amp; CLI</button>
+          <button type="button" class="co-tab-btn" onclick="coSwitchTab('cv', this)">[6] MASTER CV (cv.md)</button>
+        </div>
+
+        <!-- TAB 1: EVALUATE (1-5 SCORING + BLOCKS A-F) -->
+        <div id="co-pane-evaluate" class="co-pane active">
+          <div class="co-grid-2">
+            <div class="co-panel">
+              <div class="co-panel-title">
+                <span>OFERTA MODE // JOB INPUT</span>
+                <span style="color: var(--text-muted); font-size: 10px;">PRESETS:</span>
+              </div>
+              <div class="co-preset-row">
+                <button type="button" class="co-preset-btn" onclick="coLoadPreset('power')">Power Plant / Grid Engineer</button>
+                <button type="button" class="co-preset-btn" onclick="coLoadPreset('scada')">SCADA &amp; Automation Engineer</button>
+                <button type="button" class="co-preset-btn" onclick="coLoadPreset('research')">Microgrid / M.Sc. Researcher</button>
+              </div>
+
+              <div class="co-field">
+                <label class="co-label" for="co-job-title">TARGET ROLE TITLE *</label>
+                <input type="text" id="co-job-title" class="co-input" placeholder="e.g. Electrical &amp; Power Plant Commissioning Engineer">
+              </div>
+
+              <div class="co-field">
+                <label class="co-label" for="co-company">COMPANY / INSTITUTION *</label>
+                <input type="text" id="co-company" class="co-input" placeholder="e.g. Siemens Energy / Summit Power">
+              </div>
+
+              <div class="co-field">
+                <label class="co-label" for="co-job-url">JOB PORTAL URL (GREENHOUSE / ASHBY / LEVER / LINKEDIN)</label>
+                <input type="url" id="co-job-url" class="co-input" placeholder="https://boards.greenhouse.io/...">
+              </div>
+
+              <div class="co-field">
+                <label class="co-label" for="co-job-jd">JOB DESCRIPTION (PASTE FULL JD) *</label>
+                <textarea id="co-job-jd" class="co-textarea" placeholder="Paste the job requirements, responsibilities, tools (SCADA, AutoCAD, MATLAB, Rolls-Royce/MTU gas engines, IEEE, etc.)..."></textarea>
+              </div>
+
+              <div class="co-btn-row">
+                <button type="button" class="co-btn-primary" onclick="coEvaluateJob()">RUN 1-5 FIT EVALUATION</button>
+                <button type="button" class="co-btn-secondary" onclick="coSaveToTracker('Evaluated')">+ LOG TO TRACKER</button>
+              </div>
+              <div id="co-eval-toast" class="co-toast"></div>
+            </div>
+
+            <div class="co-panel">
+              <div class="co-panel-title">
+                <span>CAREER-OPS // BLOCKS A-F EVALUATION</span>
+                <span id="co-eval-timestamp" style="color: var(--text-muted); font-size: 10px;">READY</span>
+              </div>
+
+              <div class="co-score-header">
+                <div class="co-score-badge" id="co-score-badge">
+                  <div class="co-score-num" id="co-score-num">--</div>
+                  <div class="co-score-scale">/ 5.0</div>
+                </div>
+                <div>
+                  <div class="co-verdict-pill co-verdict-apply" id="co-verdict-pill">AWAITING JOB INPUT</div>
+                  <div style="font-size: 13px; color: var(--text-slate); margin-top: 4px;" id="co-score-summary">
+                    Select a preset or paste a job description to score it 1-5 against Arman's master CV before applying.
+                  </div>
+                </div>
+              </div>
+
+              <div class="co-blocks-grid">
+                <div class="co-block-card">
+                  <div class="co-block-label">BLOCK A // NORTH STAR ALIGNMENT</div>
+                  <div class="co-block-text" id="co-block-a">Evaluates domain fit across Power Plant Erection, Substation AutoCAD, SCADA Automation, and IEEE Microgrid Research.</div>
+                </div>
+                <div class="co-block-card">
+                  <div class="co-block-label">BLOCK B // CV MATCH &amp; GAP ANALYSIS</div>
+                  <div class="co-block-text" id="co-block-b">Matched &amp; missing ATS keywords will appear here.</div>
+                  <div class="co-kw-wrap" id="co-kw-wrap"></div>
+                </div>
+                <div class="co-block-card">
+                  <div class="co-block-label">BLOCK C // LEVEL &amp; SENIORITY STRATEGY</div>
+                  <div class="co-block-text" id="co-block-c">Maps 3+ yrs utility plant erection &amp; IIUC Teaching Assistantship to target role level.</div>
+                </div>
+                <div class="co-block-card">
+                  <div class="co-block-label">BLOCK D // COMP &amp; MARKET SIGNALS</div>
+                  <div class="co-block-text" id="co-block-d">Checks regional/global energy, EPC, and graduate research benchmarks.</div>
+                </div>
+                <div class="co-block-card">
+                  <div class="co-block-label">BLOCK E // PERSONALIZATION HOOKS</div>
+                  <div class="co-block-text" id="co-block-e">Extracts high-impact proof points (30 MW Rolls-Royce, 22 MW O&amp;M, 6 IEEE papers).</div>
+                </div>
+                <div class="co-block-card">
+                  <div class="co-block-label">BLOCK F // RECOMMENDED ACTION</div>
+                  <div class="co-block-text" id="co-block-f">Threshold rule: &ge;3.5 Tailor &amp; Apply; &lt;3.0 Skip to protect focus.</div>
+                </div>
+              </div>
+
+              <div class="co-btn-row" style="margin-top: 14px;">
+                <button type="button" class="co-btn-primary" onclick="coGenerateTailoredDocs(); coSwitchTabByName('tailor');">GENERATE TAILORED CV &amp; COVER &rarr;</button>
+                <button type="button" class="co-btn-secondary" onclick="coGenerateInterviewPrep(); coSwitchTabByName('prep');">BUILD INTERVIEW PREP &rarr;</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 2: TAILOR ATS CV & COVER LETTER -->
+        <div id="co-pane-tailor" class="co-pane">
+          <div class="co-grid-2">
+            <div class="co-panel">
+              <div class="co-panel-title">
+                <span>ATS-TAILORED RESUME MARKDOWN</span>
+                <button type="button" class="co-btn-secondary" onclick="coCopyText('co-tailored-cv', 'Tailored ATS CV copied!')">COPY CV</button>
+              </div>
+              <div class="co-doc-box" id="co-tailored-cv">Run a job evaluation in [1] EVALUATE first, or click "Generate Tailored Docs" to synthesize an ATS-optimized resume tailored to the target role.</div>
+            </div>
+
+            <div class="co-panel">
+              <div class="co-panel-title">
+                <span>TAILORED COVER LETTER &amp; HITL SUBMIT</span>
+                <button type="button" class="co-btn-secondary" onclick="coCopyText('co-tailored-cover', 'Cover letter copied!')">COPY LETTER</button>
+              </div>
+              <div class="co-doc-box" id="co-tailored-cover">Your tailored cover letter will be generated here with specific proof points from your 30 MW / 22 MW power plant experience and IEEE publications.</div>
+              <div class="co-btn-row">
+                <button type="button" class="co-btn-secondary" onclick="coDownloadBundle()">DOWNLOAD .MD BUNDLE</button>
+                <button type="button" class="co-btn-submit" onclick="coHumanSubmit()">OPEN PORTAL &amp; MARK APPLIED &#10003;</button>
+              </div>
+              <div id="co-tailor-toast" class="co-toast"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 3: INTERVIEW PREP & STAR+R STORY BANK -->
+        <div id="co-pane-prep" class="co-pane">
+          <div class="co-panel">
+            <div class="co-panel-title">
+              <span>INTERVIEW PREP // STAR+REFLECTION STORY BANK</span>
+              <button type="button" class="co-btn-secondary" onclick="coGenerateInterviewPrep()">REFRESH FOR CURRENT JD</button>
+            </div>
+            <div class="co-prep-list" id="co-prep-list"></div>
+          </div>
+        </div>
+
+        <!-- TAB 4: APPLICATION TRACKER -->
+        <div id="co-pane-tracker" class="co-pane">
+          <div class="co-panel">
+            <div class="co-panel-title">
+              <span>LOCAL PIPELINE // data/applications.md</span>
+              <div style="display:flex; gap:8px; flex-wrap:wrap;">
+                <button type="button" class="co-btn-secondary" onclick="coExportTrackerMd()">EXPORT applications.md</button>
+                <button type="button" class="co-btn-secondary" onclick="coClearTracker()">CLEAR ALL</button>
+              </div>
+            </div>
+            <div class="co-table-wrap">
+              <table class="co-tracker-table">
+                <thead>
+                  <tr>
+                    <th>SCORE</th>
+                    <th>ROLE</th>
+                    <th>COMPANY</th>
+                    <th>STATUS</th>
+                    <th>DATE</th>
+                    <th>ACTION</th>
+                  </tr>
+                </thead>
+                <tbody id="co-tracker-body"></tbody>
+              </table>
+            </div>
+            <div id="co-tracker-toast" class="co-toast"></div>
+          </div>
+        </div>
+
+        <!-- TAB 5: PORTALS & CLI SKILL -->
+        <div id="co-pane-portals" class="co-pane">
+          <div class="co-panel" style="margin-bottom: 16px;">
+            <div class="co-panel-title">
+              <span>LOCAL CLI SKILL COMMANDS (career-ops)</span>
+              <a href="https://github.com/career-ops-hq/career-ops" target="_blank" rel="noopener noreferrer" style="color: var(--accent-blue); text-decoration: none; font-size: 10.5px;">GITHUB REPO &nearr;</a>
+            </div>
+            <div class="co-doc-box" style="max-height: 160px;"># Install &amp; run career-ops locally in Claude Code / Codex / OpenCode:
+git clone https://github.com/career-ops-hq/career-ops.git
+cd career-ops
+/career-ops scan        # Scan portals.yml watchlist (Greenhouse, Ashby, Lever)
+/career-ops oferta URL  # Score 1-5 &amp; run Blocks A-F evaluation
+/career-ops ofertas     # Compare multiple offers on 10 weighted dimensions</div>
+          </div>
+
+          <div class="co-portal-grid">
+            <div class="co-portal-card">
+              <div>
+                <div class="co-portal-name">GREENHOUSE // ENERGY &amp; GRID</div>
+                <div class="co-portal-meta">Direct ATS board scanning for power systems, grid integration, and industrial automation roles.</div>
+              </div>
+              <a href="https://www.google.com/search?q=site:boards.greenhouse.io+%22Electrical+Engineer%22+OR+%22SCADA%22+OR+%22Power+Plant%22" target="_blank" rel="noopener noreferrer" class="co-btn-secondary" style="text-decoration:none; justify-content:center;">SCAN GREENHOUSE &nearr;</a>
+            </div>
+            <div class="co-portal-card">
+              <div>
+                <div class="co-portal-name">LEVER &amp; ASHBY // CLEAN TECH</div>
+                <div class="co-portal-meta">Target microgrid, BESS, renewable energy, and substation engineering openings.</div>
+              </div>
+              <a href="https://www.google.com/search?q=(site:jobs.lever.co+OR+site:jobs.ashbyhq.com)+%22Electrical+Engineer%22+OR+%22Microgrid%22" target="_blank" rel="noopener noreferrer" class="co-btn-secondary" style="text-decoration:none; justify-content:center;">SCAN LEVER / ASHBY &nearr;</a>
+            </div>
+            <div class="co-portal-card">
+              <div>
+                <div class="co-portal-name">IEEE &amp; GRADUATE RESEARCH</div>
+                <div class="co-portal-meta">Ph.D. / M.Sc. research assistantships and IEEE Power &amp; Energy Society career portals.</div>
+              </div>
+              <a href="https://careers.ieee.org/" target="_blank" rel="noopener noreferrer" class="co-btn-secondary" style="text-decoration:none; justify-content:center;">OPEN IEEE CAREERS &nearr;</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 6: MASTER CV (cv.md) -->
+        <div id="co-pane-cv" class="co-pane">
+          <div class="co-panel">
+            <div class="co-panel-title">
+              <span>MASTER PROFILE // cv.md (PRE-LOADED FOR ENGR. ARMAN HOSSAIN)</span>
+              <div style="display:flex; gap:8px;">
+                <button type="button" class="co-btn-secondary" onclick="coResetMasterCv()">RESET DEFAULT</button>
+                <button type="button" class="co-btn-primary" onclick="coSaveMasterCv()">SAVE cv.md</button>
+              </div>
+            </div>
+            <textarea id="co-master-cv" class="co-textarea co-mono-area"></textarea>
+            <div id="co-cv-toast" class="co-toast"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- SECTION 8: SEND DIRECT MESSAGE -->
     <section class="message-section" id="message-section">
       <div class="section-title-wrap">
@@ -3157,6 +3942,7 @@
         }
       });
     }, { passive: true });
+
   </script>
 <!-- Smooth Scroll Animation Script -->
   <script>
@@ -3475,6 +4261,7 @@
       // Start animation loop
       requestAnimationFrame(animationLoop);
     })();
+
   </script>
 
   <!-- Custom Mouse Pointer Elements -->
@@ -3610,6 +4397,7 @@
 
       requestAnimationFrame(renderFollower);
     })();
+
   </script>
 
   <!-- Portfolio Message Form Dispatch Handler -->
@@ -3727,6 +4515,483 @@
         showMsgFeedback('&#9888; Clipboard not available in this browser. Please copy manually.', false);
       }
     }
+    // =========================================================================
+    // CAREER-OPS JOB APPLY COMMAND CENTER
+    // =========================================================================
+    var CO_STORAGE_CV = 'arman_career_ops_cv_v1';
+    var CO_STORAGE_TRACKER = 'arman_career_ops_tracker_v1';
+
+    var CO_DEFAULT_CV = [
+      '# Engr. Arman Hossain — Master CV (cv.md)',
+      'Role: Assistant Electrical Engineer | Grid Erection & IEEE Researcher',
+      'Location: Munshiganj / Dhaka, Bangladesh (Open to Global / Remote / M.Sc.)',
+      'Email: armanhossain.eee@gmail.com | Phone: +880 1860-618458',
+      '',
+      '## Core Competencies',
+      '- Power Plant Erection & Commissioning: 30 MW (Rolls-Royce B35:40 9.34 MW gas engines), 22 MW (Rolls-Royce, MWM, Caterpillar), 5 MW (2x 2.5 MW MTU gas engines)',
+      '- Electrical Design & Grid: Substation Single-Line Diagrams (SLD), Switchgear, Load Distribution, Auxiliary Systems, Transient Stability, Microgrid Modeling',
+      '- Automation & Control: SCADA Operation, Industrial Automation, PLC/IoT Telemetry, Maintenance & Troubleshooting',
+      '- Software & Tools: Electrical AutoCAD, MATLAB / Simulink, HOMER Pro, LTspice, Aspen Plus, Autodesk Revit, SketchUp, Microsoft Project, Power BI, LaTeX / Overleaf, Python, C, C++',
+      '- Research & Publications: 6 IEEE / Peer-Reviewed Papers in Renewable Microgrids, IoT Automation, Power Electronics & Mini-Hydro GIS Site Mapping',
+      '',
+      '## Experience',
+      '- Assistant Electrical Engineer — Akij Resources Limited (Mar 2023 – Present)',
+      '  * Akij Ispat Ltd (30 MW Power Plant): Managing erection & commissioning of 30 MW plant with Rolls-Royce B35:40 gas engines.',
+      '  * Akij Cement Co. Ltd (22 MW Power Plant): Directed O&M, load distribution, switchgear, substation, and compressors; reduced downtime.',
+      '  * Akij Essential Ltd (5 MW Power Plant): Managed erection of 5 MW plant with two 2.5 MW MTU gas engines.',
+      '- University Teaching Assistant — International Islamic University Chittagong (Jan 2022 – Jun 2022)',
+      '  * Electrical Machine Lab tutorials, lab supervision, grading, and student mentoring.',
+      '',
+      '## Education',
+      '- B.Sc. in Electrical & Electronic Engineering (EEE) — International Islamic University Chittagong (2018–2022)'
+    ].join('\n');
+
+    var CO_PRESETS = {
+      power: {
+        title: 'Electrical Commissioning & Power Plant Engineer',
+        company: 'Siemens Energy / EPC Utility Division',
+        url: 'https://boards.greenhouse.io/siemens-energy',
+        jd: 'Seeking an Electrical Engineer with hands-on experience in gas engine power plant erection, commissioning, switchgear, and substation operations (5 MW to 30+ MW). Must be proficient in Electrical AutoCAD single-line diagrams (SLD), load distribution, SCADA monitoring, maintenance troubleshooting, and auxiliary systems. Familiarity with Rolls-Royce, MTU, or Caterpillar gas generators and MS Project is strongly preferred.'
+      },
+      scada: {
+        title: 'SCADA & Industrial Automation Engineer',
+        company: 'ABB Grid Automation',
+        url: 'https://jobs.lever.co/abb-automation',
+        jd: 'We are hiring an Industrial Automation & SCADA Engineer to design control architectures, monitor plant auxiliaries, and optimize substation reliability. Required skills: SCADA operation, electrical troubleshooting, MATLAB, Python/C++, AutoCAD electrical schematics, Power BI reporting, and team leadership across technician crews.'
+      },
+      research: {
+        title: 'Graduate Research Assistant — Renewable Microgrids',
+        company: 'IEEE / Clean Energy Systems Lab',
+        url: 'https://careers.ieee.org/',
+        jd: 'Looking for an M.Sc. / Graduate Researcher in Electrical Engineering focusing on hybrid renewable microgrids, transient stability analysis, power electronics, and techno-economic optimization. Required: HOMER Pro, MATLAB Simulink, LTspice, LaTeX/Overleaf, and peer-reviewed IEEE publication experience.'
+      }
+    };
+
+    var CO_SKILL_DICT = [
+      'power plant', 'erection', 'commissioning', 'gas engine', 'rolls-royce', 'rolls royce',
+      'mtu', 'caterpillar', 'mwm', 'substation', 'switchgear', 'single-line', 'sld',
+      'autocad', 'scada', 'automation', 'load distribution', 'maintenance', 'troubleshooting',
+      'auxiliary', 'microgrid', 'homer pro', 'matlab', 'simulink', 'ltspice', 'ieee',
+      'renewable', 'power electronics', 'transient stability', 'gis', 'python', 'c++',
+      'power bi', 'ms project', 'microsoft project', 'latex', 'overleaf', 'revit',
+      'electrical engineering', 'eee', 'team leadership', 'o&m'
+    ];
+
+    var coLastEval = null;
+
+    function coSwitchTab(name, btnEl) {
+      var panes = document.querySelectorAll('.co-pane');
+      for (var i = 0; i < panes.length; i++) panes[i].classList.remove('active');
+      var btns = document.querySelectorAll('.co-tab-btn');
+      for (var j = 0; j < btns.length; j++) btns[j].classList.remove('active');
+      var target = document.getElementById('co-pane-' + name);
+      if (target) target.classList.add('active');
+      if (btnEl) btnEl.classList.add('active');
+    }
+
+    function coSwitchTabByName(name) {
+      var btns = document.querySelectorAll('.co-tab-btn');
+      var map = { evaluate: 0, tailor: 1, prep: 2, tracker: 3, portals: 4, cv: 5 };
+      var idx = map[name];
+      coSwitchTab(name, typeof idx === 'number' ? btns[idx] : null);
+    }
+
+    function coSetToast(id, msg) {
+      var el = document.getElementById(id);
+      if (!el) return;
+      el.textContent = msg;
+      setTimeout(function() {
+        if (el.textContent === msg) el.textContent = '';
+      }, 3500);
+    }
+
+    function coLoadPreset(key) {
+      var p = CO_PRESETS[key];
+      if (!p) return;
+      document.getElementById('co-job-title').value = p.title;
+      document.getElementById('co-company').value = p.company;
+      document.getElementById('co-job-url').value = p.url;
+      document.getElementById('co-job-jd').value = p.jd;
+      coEvaluateJob();
+    }
+
+    function coGetMasterCv() {
+      var saved = localStorage.getItem(CO_STORAGE_CV);
+      return saved || CO_DEFAULT_CV;
+    }
+
+    function coSaveMasterCv() {
+      var el = document.getElementById('co-master-cv');
+      if (!el) return;
+      localStorage.setItem(CO_STORAGE_CV, el.value);
+      coSetToast('co-cv-toast', 'Saved cv.md locally in browser storage.');
+    }
+
+    function coResetMasterCv() {
+      localStorage.removeItem(CO_STORAGE_CV);
+      var el = document.getElementById('co-master-cv');
+      if (el) el.value = CO_DEFAULT_CV;
+      coSetToast('co-cv-toast', 'Reset cv.md to Engr. Arman Hossain default profile.');
+    }
+
+    function coEvaluateJob() {
+      var title = (document.getElementById('co-job-title').value || '').trim();
+      var company = (document.getElementById('co-company').value || '').trim();
+      var url = (document.getElementById('co-job-url').value || '').trim();
+      var jd = (document.getElementById('co-job-jd').value || '').trim();
+
+      if (!title || !jd) {
+        coSetToast('co-eval-toast', 'Please enter a Role Title and Job Description first.');
+        return;
+      }
+
+      var cvText = coGetMasterCv().toLowerCase();
+      var jdLower = (title + ' ' + jd).toLowerCase();
+
+      var jdSkills = [];
+      var matched = [];
+      var missing = [];
+
+      for (var i = 0; i < CO_SKILL_DICT.length; i++) {
+        var kw = CO_SKILL_DICT[i];
+        if (jdLower.indexOf(kw) !== -1) {
+          jdSkills.push(kw);
+          if (cvText.indexOf(kw) !== -1) {
+            matched.push(kw);
+          } else {
+            missing.push(kw);
+          }
+        }
+      }
+
+      // Compute 1.0 - 5.0 holistic score
+      var ratio = jdSkills.length > 0 ? (matched.length / jdSkills.length) : 0.55;
+      var domainBonus = 0;
+      if (/(power|electrical|substation|scada|microgrid|grid|energy|ieee|autocad)/.test(jdLower)) {
+        domainBonus = 0.65;
+      }
+      var rawScore = 1.6 + (ratio * 2.8) + domainBonus;
+      var score = Math.min(5.0, Math.max(1.0, Math.round(rawScore * 10) / 10));
+
+      var verdictText = 'SKIP (<3.0)';
+      var verdictClass = 'co-verdict-skip';
+      var actionText = 'Low alignment with EEE / Power Plant / Research core. Skip to preserve focus.';
+
+      if (score >= 4.0) {
+        verdictText = 'STRONG APPLY (' + score.toFixed(1) + '/5)';
+        verdictClass = 'co-verdict-strong';
+        actionText = 'High-priority target! Generate tailored ATS CV & Cover Letter and submit via HITL review.';
+      } else if (score >= 3.5) {
+        verdictText = 'APPLY (' + score.toFixed(1) + '/5)';
+        verdictClass = 'co-verdict-apply';
+        actionText = 'Solid match. Tailor resume keywords and highlight 30 MW / 22 MW plant impact.';
+      } else if (score >= 3.0) {
+        verdictText = 'BORDERLINE (' + score.toFixed(1) + '/5)';
+        verdictClass = 'co-verdict-borderline';
+        actionText = 'Partial fit. Address missing keywords before deciding whether to apply.';
+      }
+
+      document.getElementById('co-score-num').textContent = score.toFixed(1);
+      var pill = document.getElementById('co-verdict-pill');
+      pill.textContent = verdictText;
+      pill.className = 'co-verdict-pill ' + verdictClass;
+
+      document.getElementById('co-score-summary').textContent =
+        title + (company ? ' @ ' + company : '') + ' — Matched ' + matched.length + ' of ' + (jdSkills.length || 1) + ' detected technical signals.';
+      document.getElementById('co-eval-timestamp').textContent = 'EVALUATED JUST NOW';
+
+      document.getElementById('co-block-a').textContent =
+        domainBonus > 0
+          ? 'Direct North Star fit: aligns with Engr. Arman Hossain\'s core in Power Systems, Grid Erection, SCADA, or IEEE Research.'
+          : 'Adjacent domain: transferable engineering & analytical skills apply, but core domain signals are limited.';
+
+      document.getElementById('co-block-b').textContent =
+        matched.length + ' matched ' + (matched.length === 1 ? 'keyword' : 'keywords') + ', ' +
+        missing.length + ' ' + (missing.length === 1 ? 'gap' : 'gaps') + ' to bridge in tailored summary.';
+
+      var kwWrap = document.getElementById('co-kw-wrap');
+      kwWrap.innerHTML = '';
+      matched.slice(0, 8).forEach(function(k) {
+        var s = document.createElement('span');
+        s.className = 'co-kw-hit';
+        s.textContent = '✓ ' + k;
+        kwWrap.appendChild(s);
+      });
+      missing.slice(0, 5).forEach(function(k) {
+        var s = document.createElement('span');
+        s.className = 'co-kw-miss';
+        s.textContent = '+ ' + k;
+        kwWrap.appendChild(s);
+      });
+
+      document.getElementById('co-block-c').textContent =
+        /(senior|lead|principal|manager|director)/.test(jdLower)
+          ? 'Lead/Senior framing: emphasize directing 22 MW O&M & leading technician teams across 30 MW / 5 MW erections.'
+          : 'Engineer / Researcher framing: highlight hands-on commissioning (30 MW Rolls-Royce, 5 MW MTU) & IIUC Teaching Assistantship.';
+
+      document.getElementById('co-block-d').textContent =
+        /(research|m\.sc|phd|graduate|ieee)/.test(jdLower)
+          ? 'Academic/Research track: leverage 6 IEEE publications, HOMER Pro, MATLAB Simulink, and LaTeX.'
+          : 'Industry/EPC track: benchmark compensation against utility power generation & SCADA automation tiers.';
+
+      document.getElementById('co-block-e').textContent =
+        'Hook: "Managed erection of 30 MW Rolls-Royce B35:40 & 5 MW MTU power plants and directed 22 MW O&M to cut downtime."';
+
+      document.getElementById('co-block-f').textContent = actionText;
+
+      coLastEval = {
+        title: title,
+        company: company || 'Target Organization',
+        url: url,
+        jd: jd,
+        score: score,
+        matched: matched,
+        missing: missing,
+        verdict: verdictText
+      };
+
+      coGenerateTailoredDocs();
+      coGenerateInterviewPrep();
+    }
+
+    function coGenerateTailoredDocs() {
+      if (!coLastEval) {
+        coSetToast('co-eval-toast', 'Run an evaluation first!');
+        return;
+      }
+      var e = coLastEval;
+      var topSkills = e.matched.length ? e.matched.join(', ').toUpperCase() : 'POWER PLANT ERECTION, SCADA, ELECTRICAL AUTOCAD, MATLAB';
+
+      var tailoredCv = [
+        '# ENGR. ARMAN HOSSAIN',
+        'Electrical & Electronic Engineer | ' + e.title,
+        'Email: armanhossain.eee@gmail.com | Phone: +880 1860-618458 | IEEE Author ID: 37089320934',
+        '',
+        '## TAILORED PROFESSIONAL SUMMARY (ATS-OPTIMIZED)',
+        'Results-driven Electrical & Electronic Engineer (B.Sc. EEE, IIUC) with hands-on leadership in 30 MW, 22 MW, and 5 MW gas-engine power plant erection, commissioning, and O&M at Akij Resources Limited. Proven track record in ' + topSkills + ', backed by 6 IEEE / peer-reviewed research publications.',
+        '',
+        '## TARGETED KEYWORD ALIGNMENT',
+        '- Matched Signals: ' + (e.matched.join(', ') || 'Electrical Engineering, Power Systems, AutoCAD, SCADA'),
+        (e.missing.length ? '- Bridge / Ramp-Up Areas: ' + e.missing.join(', ') : '- Full core keyword coverage achieved.'),
+        '',
+        '## HIGH-IMPACT ENGINEERING EXPERIENCE',
+        'Assistant Electrical Engineer — Akij Resources Limited (Mar 2023 – Present)',
+        '- 30 MW Power Plant (Akij Ispat Ltd): Managed erection & commissioning utilizing Rolls-Royce B35:40 9.34 MW gas engines.',
+        '- 22 MW Power Plant (Akij Cement Co. Ltd): Directed O&M (Rolls-Royce, MWM, Caterpillar), load distribution, switchgear, and substation auxiliaries to minimize downtime.',
+        '- 5 MW Power Plant (Akij Essential Ltd): Led erection of twin 2.5 MW MTU gas engine units and SCADA telemetry integration.',
+        '',
+        'University Teaching Assistant — International Islamic University Chittagong (Jan 2022 – Jun 2022)',
+        '- Conducted Electrical Machine Lab sessions, tutorials, and technical evaluations.',
+        '',
+        '## TECHNICAL STACK',
+        'Electrical AutoCAD (SLD), SCADA, MATLAB/Simulink, HOMER Pro, LTspice, Aspen Plus, MS Project, Power BI, Python, C/C++, LaTeX'
+      ].join('\n');
+
+      var coverLetter = [
+        'Dear Hiring Team at ' + e.company + ',',
+        '',
+        'I am writing to express my strong interest in the ' + e.title + ' position at ' + e.company + '. As an Electrical & Electronic Engineer currently serving as Assistant Electrical Engineer at Akij Resources Limited, I bring direct, field-proven experience across 57 MW of combined utility power plant erection, commissioning, and operations.',
+        '',
+        'Key highlights aligned with your requirements:',
+        '1. Power Plant Erection & Commissioning: Managed the erection of a 30 MW power plant (Rolls-Royce B35:40 9.34 MW gas engines) and a 5 MW plant (twin 2.5 MW MTU gas engines).',
+        '2. Reliability, SCADA & Substation O&M: Directed 22 MW plant operations (Rolls-Royce, MWM, Caterpillar), overseeing switchgear, substation load distribution, and auxiliary systems to reduce downtime.',
+        '3. Simulation & IEEE Research Rigor: Published 6 research papers in renewable microgrids, IoT automation, and power electronics using MATLAB, HOMER Pro, LTspice, and Electrical AutoCAD.',
+        '',
+        'I would welcome the opportunity to discuss how my hands-on plant engineering and analytical background can contribute to ' + e.company + '.',
+        '',
+        'Sincerely,',
+        'Engr. Arman Hossain',
+        'armanhossain.eee@gmail.com | +880 1860-618458'
+      ].join('\n');
+
+      document.getElementById('co-tailored-cv').textContent = tailoredCv;
+      document.getElementById('co-tailored-cover').textContent = coverLetter;
+    }
+
+    function coGenerateInterviewPrep() {
+      var role = coLastEval ? coLastEval.title : 'Electrical / Power Systems / Research Role';
+      var items = [
+        {
+          q: 'Q1 // Tell me about a complex commissioning or erection challenge you led. (STAR+R)',
+          a: 'Situation/Task: Erection of the 30 MW power plant at Akij Ispat Ltd using Rolls-Royce B35:40 (9.34 MW) gas engines & 5 MW MTU plant at Akij Essential. Action: Coordinated switchgear, substation SLD verification, auxiliary systems, and technician teams. Result: Safe, compliant erection milestones met. Reflection: Early auxiliary & SLD cross-checks prevent costly commissioning delays.'
+        },
+        {
+          q: 'Q2 // How do you reduce downtime and maintain load stability in live utility plants? (STAR+R)',
+          a: 'Situation/Task: Operating the 22 MW power plant at Akij Cement (Rolls-Royce, MWM, Caterpillar). Action: Implemented proactive auxiliary monitoring, SCADA diagnostics, and balanced switchgear load distribution. Result: Improved plant uptime and efficiency. Reflection: Combining SCADA telemetry with disciplined preventive maintenance is key for ' + role + '.'
+        },
+        {
+          q: 'Q3 // How does your IEEE research background translate to practical engineering?',
+          a: 'Across 6 publications in renewable microgrids (HOMER Pro), transient stability (MATLAB/Simulink), and IoT automation, I bridge theoretical modeling with real-world grid constraints—enabling data-driven techno-economic and protection decisions.'
+        },
+        {
+          q: 'Q4 // Why this role and why now?',
+          a: 'Having proven myself across 5 MW, 22 MW, and 30 MW utility plants and university lab instruction at IIUC, I am ready to scale my impact in ' + role + ' where grid reliability, automation, and continuous R&D intersect.'
+        }
+      ];
+
+      var listEl = document.getElementById('co-prep-list');
+      if (!listEl) return;
+      listEl.innerHTML = '';
+      items.forEach(function(item) {
+        var div = document.createElement('div');
+        div.className = 'co-prep-item';
+        div.innerHTML = '<div class="co-prep-q"></div><div class="co-prep-a"></div>';
+        div.querySelector('.co-prep-q').textContent = item.q;
+        div.querySelector('.co-prep-a').textContent = item.a;
+        listEl.appendChild(div);
+      });
+    }
+
+    function coCopyText(elementId, successMsg) {
+      var el = document.getElementById(elementId);
+      if (!el) return;
+      var text = el.textContent || '';
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(function() {
+          coSetToast('co-tailor-toast', successMsg);
+        });
+      }
+    }
+
+    function coDownloadBundle() {
+      var cv = document.getElementById('co-tailored-cv').textContent || '';
+      var cover = document.getElementById('co-tailored-cover').textContent || '';
+      var content = cv + '\n\n---\n\n# TAILORED COVER LETTER\n\n' + cover;
+      var blob = new Blob([content], { type: 'text/markdown;charset=utf-8' });
+      var a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      var slug = coLastEval ? coLastEval.company.toLowerCase().replace(/[^a-z0-9]+/g, '-') : 'career-ops';
+      a.download = 'arman-hossain-' + slug + '-application.md';
+      a.click();
+      coSetToast('co-tailor-toast', 'Downloaded tailored .md application bundle!');
+    }
+
+    function coHumanSubmit() {
+      if (!coLastEval) {
+        coSetToast('co-tailor-toast', 'Evaluate a job first before submitting.');
+        return;
+      }
+      coSaveToTracker('Applied');
+      if (coLastEval.url) {
+        window.open(coLastEval.url, '_blank', 'noopener,noreferrer');
+        coSetToast('co-tailor-toast', 'Logged as Applied! Portal opened in new tab — press Submit there.');
+      } else {
+        coSetToast('co-tailor-toast', 'Logged as Applied in Tracker!');
+      }
+    }
+
+    function coGetTracker() {
+      try {
+        var raw = localStorage.getItem(CO_STORAGE_TRACKER);
+        return raw ? JSON.parse(raw) : [];
+      } catch (e) {
+        return [];
+      }
+    }
+
+    function coSaveTracker(list) {
+      localStorage.setItem(CO_STORAGE_TRACKER, JSON.stringify(list));
+      coRenderTracker();
+    }
+
+    function coSaveToTracker(status) {
+      if (!coLastEval) {
+        coSetToast('co-eval-toast', 'Run a 1-5 evaluation first!');
+        return;
+      }
+      var list = coGetTracker();
+      var today = new Date().toISOString().slice(0, 10);
+      list.unshift({
+        id: Date.now(),
+        score: coLastEval.score.toFixed(1),
+        title: coLastEval.title,
+        company: coLastEval.company,
+        url: coLastEval.url,
+        status: status || 'Evaluated',
+        date: today
+      });
+      coSaveTracker(list);
+      coSetToast('co-eval-toast', 'Logged "' + coLastEval.title + '" to Tracker (' + status + ').');
+    }
+
+    function coUpdateTrackerStatus(id, newStatus) {
+      var list = coGetTracker();
+      for (var i = 0; i < list.length; i++) {
+        if (list[i].id === id) list[i].status = newStatus;
+      }
+      coSaveTracker(list);
+    }
+
+    function coDeleteTrackerItem(id) {
+      var list = coGetTracker().filter(function(item) { return item.id !== id; });
+      coSaveTracker(list);
+    }
+
+    function coClearTracker() {
+      localStorage.removeItem(CO_STORAGE_TRACKER);
+      coRenderTracker();
+      coSetToast('co-tracker-toast', 'Application tracker cleared.');
+    }
+
+    function coExportTrackerMd() {
+      var list = coGetTracker();
+      var lines = [
+        '# Career-Ops Application Tracker (data/applications.md)',
+        '',
+        '| Score | Role | Company | Status | Date | Portal |',
+        '|---|---|---|---|---|---|'
+      ];
+      list.forEach(function(item) {
+        lines.push('| ' + item.score + '/5 | ' + item.title + ' | ' + item.company + ' | ' + item.status + ' | ' + item.date + ' | ' + (item.url || '-') + ' |');
+      });
+      var blob = new Blob([lines.join('\n')], { type: 'text/markdown;charset=utf-8' });
+      var a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'applications.md';
+      a.click();
+      coSetToast('co-tracker-toast', 'Exported applications.md!');
+    }
+
+    function coRenderTracker() {
+      var list = coGetTracker();
+      var countEl = document.getElementById('co-tracker-count');
+      if (countEl) countEl.textContent = String(list.length);
+
+      var tbody = document.getElementById('co-tracker-body');
+      if (!tbody) return;
+      tbody.innerHTML = '';
+
+      if (list.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="6" style="text-align:center; color: var(--text-dim); padding: 20px;">No applications logged yet. Evaluate a job in [1] EVALUATE and click "+ LOG TO TRACKER".</td></tr>';
+        return;
+      }
+
+      var statuses = ['Evaluated', 'Tailored', 'Applied', 'Interview', 'Offer', 'Skipped'];
+      list.forEach(function(item) {
+        var tr = document.createElement('tr');
+        var selectHtml = '<select class="co-select" style="padding:4px 8px; font-size:11px; width:auto;" onchange="coUpdateTrackerStatus(' + item.id + ', this.value)">';
+        statuses.forEach(function(st) {
+          selectHtml += '<option value="' + st + '"' + (item.status === st ? ' selected' : '') + '>' + st + '</option>';
+        });
+        selectHtml += '</select>';
+
+        tr.innerHTML =
+          '<td><strong style="color: var(--accent-cyan);">' + item.score + '/5</strong></td>' +
+          '<td>' + (item.url ? '<a href="' + item.url + '" target="_blank" rel="noopener noreferrer" style="color: var(--text-white); text-decoration:none;">' + item.title + ' &nearr;</a>' : item.title) + '</td>' +
+          '<td>' + item.company + '</td>' +
+          '<td>' + selectHtml + '</td>' +
+          '<td>' + item.date + '</td>' +
+          '<td><button type="button" class="co-btn-secondary" style="padding:4px 8px; font-size:10px;" onclick="coDeleteTrackerItem(' + item.id + ')">DEL</button></td>';
+        tbody.appendChild(tr);
+      });
+    }
+
+    (function coInit() {
+      var cvEl = document.getElementById('co-master-cv');
+      if (cvEl) cvEl.value = coGetMasterCv();
+      coGenerateInterviewPrep();
+      coRenderTracker();
+    })();
   </script>
 </body>
 </html>
